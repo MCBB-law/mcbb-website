@@ -165,6 +165,7 @@ export const practices: Practice[] = [
       {
         heading: 'Areas of focus',
         list: [
+          'Counsel to bankruptcy trustees',
           'Adversary proceedings, including preference and fraudulent-transfer actions',
           'Chapter 11 disputes',
           'Claims objections and priority disputes',
@@ -174,7 +175,7 @@ export const practices: Practice[] = [
         ],
       },
     ],
-    draft: 'New page. The current site has no Bankruptcy page, though three bios list it as a practice area. This text is a starting draft for the bankruptcy lawyers to rewrite.',
+    draft: 'New page, not on the current site. Trevor Lee, Brett Gilmore, and Austin Sabin list Bankruptcy in their bios. The “Areas of focus” list is a starting draft: keep only what the firm actually handles.',
   },
   {
     slug: 'appellate',

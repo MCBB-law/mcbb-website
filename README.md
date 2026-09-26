@@ -34,7 +34,7 @@ Quick alternative with no GitHub: run `npm run build`, then drag the `dist` fold
 ## Launch checklist
 
 - [ ] Resolve the items in `CONTENT-NOTES.md`
-- [ ] Download headshots into `public/people/` (they load from Squarespace for now) and add the real logo
+- [ ] Run `bash scripts/import-headshots.sh` so headshots live in the site (they load from Squarespace for now)
 - [ ] Partners proofread every page, including the disclaimer
 - [ ] Add current news or hide the News page
 - [ ] Set `PREVIEW = false` in `src/data/site.ts`
