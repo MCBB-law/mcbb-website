@@ -1,17 +1,21 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { practices } from '../../data/practices';
+import PageHero from '../../components/PageHero.astro';
+import { practiceImages } from '../../data/images';
+const img = practiceImages.index;
 ---
 <Base title="Practices" description="MCBB's litigation practices: business litigation, government defense, labor & employment, insurance coverage, IP, real estate & construction, bankruptcy, and appeals.">
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">Practices</p>
-      <h1>Litigation across the matters that matter to business.</h1>
-      <p class="lede">Primarily a litigation firm, we also counsel clients on transactions and day-to-day business questions, in state and federal courts across Utah and the Mountain West.</p>
-    </div>
-  </section>
+  <PageHero
+    variant="split"
+    eyebrow="Practices"
+    title="Litigation across the matters that matter to business."
+    lede="Primarily a litigation firm, we also counsel clients on transactions and day-to-day business questions, in state and federal courts across Utah and the Mountain West."
+    image={img.src}
+    alt={img.alt}
+  />
   <section class="section">
-    <div class="wrap list">
+    <div class="wrap list reveal-stagger">
       {practices.map((p, i) => (
         <a class="row" href={`/practices/${p.slug}/`}>
           <span class="num">{String(i + 1).padStart(2, '0')}</span>
@@ -19,6 +23,7 @@ import { practices } from '../../data/practices';
             <h2>{p.title}</h2>
             <p>{p.summary}</p>
           </div>
+          <span class="thumb" aria-hidden="true"><img src={practiceImages[p.slug].src} alt="" loading="lazy" style={`object-position:${practiceImages[p.slug].position ?? 'center'}`} /></span>
           <span class="arrow" aria-hidden="true">→</span>
         </a>
       ))}
@@ -27,22 +32,25 @@ import { practices } from '../../data/practices';
 </Base>
 
 <style>
-  .list { border-top: 1px solid var(--line); }
+  .row:first-child { border-top: 1px solid var(--line); }
   .row {
     display: grid;
-    grid-template-columns: 56px 1fr 32px;
-    gap: 16px;
-    align-items: start;
+    grid-template-columns: 64px 1fr 120px 40px;
+    gap: 24px;
+    align-items: center;
     padding: 28px 0;
     border-bottom: 1px solid var(--line);
     text-decoration: none;
     color: inherit;
   }
-  .row h2 { font-size: 1.5rem; margin-bottom: .25em; }
+  .row h2 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); margin-bottom: .25em; transition: transform .35s var(--ease); }
+  .thumb { aspect-ratio: 4 / 3; overflow: hidden; background: #f4f4f2; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: transform .6s var(--ease); }
+  .row:hover .thumb img { transform: scale(1.08); }
   .row p { color: var(--muted); margin: 0; max-width: 48rem; }
-  .num { font-family: var(--serif); color: var(--brass); font-size: 1.1rem; padding-top: 6px; }
-  .arrow { color: var(--brass); font-size: 1.3rem; padding-top: 4px; transition: transform .15s; }
-  .row:hover h2 { color: var(--brass); }
+  .num { font-family: var(--display); color: var(--muted); font-size: 1rem; letter-spacing: .1em; }
+  .arrow { color: var(--ink); font-size: 1.4rem; transition: transform .25s var(--ease); }
+  .row:hover h2 { transform: translateX(8px); }
   .row:hover .arrow { transform: translateX(4px); }
-  @media (max-width: 600px) { .row { grid-template-columns: 1fr 24px; } .num { display: none; } }
+  @media (max-width: 700px) { .row { grid-template-columns: 1fr 24px; } .num, .thumb { display: none; } }
 </style>

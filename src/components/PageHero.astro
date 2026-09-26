@@ -1,0 +1,87 @@
+---
+// Page header with a photo.
+//  variant="banner": full-width landscape photo with the title over it (main pages).
+//  variant="split":  title on the left, tall architecture photo on the right (practice pages).
+interface Props {
+  eyebrow?: string;
+  eyebrowHref?: string;
+  title: string;
+  lede?: string;
+  image: string;
+  alt?: string;
+  variant?: 'banner' | 'split';
+  position?: string; // CSS object-position for the photo
+  fit?: 'cover' | 'contain';
+}
+const { eyebrow, eyebrowHref, title, lede, image, alt = '', variant = 'banner', position = 'center', fit = 'cover' } = Astro.props;
+---
+{variant === 'banner' ? (
+  <section class="hero-banner">
+    <img src={image} alt={alt} class="bg" style={`object-position:${position}`} fetchpriority="high" />
+    <div class="shade" aria-hidden="true"></div>
+    <div class="wrap inner reveal">
+      {eyebrow && <p class="eyebrow">{eyebrowHref ? <a href={eyebrowHref}>{eyebrow}</a> : eyebrow}</p>}
+      <h1>{title}</h1>
+      {lede && <p class="lede">{lede}</p>}
+      <slot />
+    </div>
+  </section>
+) : (
+  <section class="hero-split">
+    <div class="wrap grid-split">
+      <div class="text reveal">
+        {eyebrow && <p class="eyebrow">{eyebrowHref ? <a href={eyebrowHref}>{eyebrow}</a> : eyebrow}</p>}
+        <h1>{title}</h1>
+        {lede && <p class="lede">{lede}</p>}
+        <slot />
+      </div>
+      <figure class={`photo ${fit}`}>
+        <img src={image} alt={alt} style={`object-position:${position}`} fetchpriority="high" />
+      </figure>
+    </div>
+  </section>
+)}
+
+<style>
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; }
+
+  /* Banner */
+  .hero-banner {
+    position: relative;
+    min-height: clamp(380px, 58vh, 620px);
+    display: flex;
+    align-items: flex-end;
+    color: #e6e6e6;
+    background: #000;
+    overflow: hidden;
+  }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: settle 2.4s var(--ease) both; }
+  .shade { position: absolute; inset: 0; background:
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 60%, rgba(0,0,0,0) 90%),
+    linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.3) 45%, rgba(0,0,0,.78) 100%); }
+  .inner { position: relative; width: 100%; padding-top: 96px; padding-bottom: clamp(40px, 6vw, 72px); }
+  .hero-banner h1 { color: #fff; max-width: 16ch; }
+  .hero-banner .eyebrow { color: rgba(255,255,255,.8); }
+  .hero-banner .lede { color: rgba(255,255,255,.85); }
+  @keyframes settle { from { transform: scale(1.06); } to { transform: scale(1); } }
+  @media (prefers-reduced-motion: reduce) { .bg { animation: none; } }
+
+  /* Split */
+  .hero-split { border-bottom: 1px solid var(--line); background: var(--white); overflow-x: clip; }
+  .grid-split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: stretch; min-height: clamp(420px, 62vh, 640px); }
+  .text { padding: clamp(56px, 8vw, 104px) clamp(24px, 5vw, 72px) clamp(40px, 6vw, 72px) 0; border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero-split h1 { font-size: clamp(2.1rem, 4.6vw, 3.8rem); }
+  .photo { margin: 0 calc(-1 * (max(0px, (100vw - var(--wrap)) / 2) + var(--gutter))) 0 0; position: relative; overflow: hidden; background: #f4f4f2; }
+  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: settle 2.4s var(--ease) both; }
+  .photo.contain { background: #fff; }
+  .photo.contain img { object-fit: contain; padding: clamp(8px, 2vw, 24px); animation: none; }
+
+  @media (max-width: 860px) {
+    .grid-split { grid-template-columns: 1fr; min-height: 0; }
+    .text { border-right: 0; padding-right: 0; padding-bottom: 32px; }
+    .photo { aspect-ratio: 16 / 10; margin: 0 calc(var(--gutter) * -1); }
+    .photo.contain img { padding: 16px; }
+    .photo.contain { aspect-ratio: 4 / 5; }
+  }
+</style>

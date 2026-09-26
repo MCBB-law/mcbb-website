@@ -1,4 +1,6 @@
 ---
+import PageHero from '../../components/PageHero.astro';
+import { pageImages } from '../../data/images';
 import Base from '../../layouts/Base.astro';
 import PersonCard from '../../components/PersonCard.astro';
 import { getPeople } from '../../data/people';
@@ -8,13 +10,14 @@ const partners = people.filter((p) => p.data.title === 'Partner');
 const others = people.filter((p) => p.data.title !== 'Partner');
 ---
 <Base title="People" description="Meet the lawyers of Manning Curtis Bradshaw & Bednar.">
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">People</p>
-      <h1>Sharp. Experienced. People-first.</h1>
-      <p class="lede">Many of our lawyers served as law review editors and judicial clerks before trying cases. Here’s who you’ll work with.</p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="People"
+    title="Sharp. Experienced. People-first."
+    lede="Many of our lawyers served as law review editors and judicial clerks before trying cases. Here’s who you’ll work with."
+    image={pageImages.people.src}
+    alt={pageImages.people.alt}
+    position={pageImages.people.position}
+  />
   <section class="section">
     <div class="wrap">
       <h2 class="group">Partners</h2>

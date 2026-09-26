@@ -47,6 +47,7 @@ const orgSchema = {
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={site.name} />
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <a class="sr-only" href="#main">Skip to content</a>
@@ -56,13 +57,25 @@ const orgSchema = {
       <slot />
     </main>
     <Footer />
+    <script>
+      // Fade elements in as they scroll into view.
+      const els = document.querySelectorAll('.reveal, .reveal-stagger');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }, { rootMargin: '0px 0px -8% 0px' });
+        els.forEach((el) => io.observe(el));
+      } else {
+        els.forEach((el) => el.classList.add('in'));
+      }
+    </script>
   </body>
 </html>
 
 <style>
   .preview-ribbon {
-    background: var(--brass-light);
-    color: var(--ink);
+    background: var(--ink);
+    color: #bdbdbd;
     text-align: center;
     font-size: .78rem;
     font-weight: 600;
