@@ -2,10 +2,12 @@
 import Base from '../layouts/Base.astro';
 import PersonCard from '../components/PersonCard.astro';
 import { practices } from '../data/practices';
-import { people } from '../data/people';
+import { getPeople } from '../data/people';
 import { site } from '../data/site';
 
 const years = new Date().getFullYear() - site.founded;
+const people = await getPeople();
+const featured = people.filter((p) => p.data.title === 'Partner');
 ---
 <Base>
   <section class="hero">
@@ -79,10 +81,10 @@ const years = new Date().getFullYear() - site.founded;
           <p class="eyebrow">Our people</p>
           <h2>Sharp. Experienced. People-first.</h2>
         </div>
-        <a href="/people/" class="more">Meet the firm →</a>
+        <a href="/people/" class="more">All our lawyers →</a>
       </div>
       <div class="grid grid-4">
-        {people.slice(0, 4).map((p) => <PersonCard person={p} />)}
+        {featured.map((p) => <PersonCard person={p} />)}
       </div>
     </div>
   </section>

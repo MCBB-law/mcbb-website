@@ -1,66 +1,63 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { people, initials, type Person } from '../../data/people';
+import { render } from 'astro:content';
+import { getPeople, initials, practiceSlugsFor, type Person } from '../../data/people';
 import { practices } from '../../data/practices';
-import { site } from '../../data/site';
+import { site, PREVIEW } from '../../data/site';
 
-export function getStaticPaths() {
-  return people.map((p) => ({ params: { slug: p.slug }, props: { person: p } }));
+export async function getStaticPaths() {
+  const people = await getPeople();
+  return people.map((p) => ({ params: { slug: p.id }, props: { person: p } }));
 }
 const { person } = Astro.props as { person: Person };
-const myPractices = practices.filter((p) => person.practices.includes(p.slug));
+const d = person.data;
+const { Content } = await render(person);
+const mine = practiceSlugsFor(person);
+const myPractices = practices.filter((p) => mine.includes(p.slug));
+const telHref = d.phone ? 'tel:+1' + d.phone.replace(/\D/g, '') : site.phoneHref;
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: person.name,
-  jobTitle: person.title,
+  name: d.name,
+  jobTitle: d.title,
   worksFor: { '@type': 'LegalService', name: site.name },
-  ...(person.email ? { email: person.email } : {}),
+  ...(d.email ? { email: d.email } : {}),
+  ...(d.phone ? { telephone: d.phone } : {}),
 };
 ---
-<Base title={person.name} description={`${person.name}, ${person.title} at ${site.name}.`}>
+<Base title={d.name} description={`${d.name}, ${d.title.toLowerCase()} at ${site.name}. ${d.practiceAreas.join(', ')}.`}>
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <section class="page-head">
     <div class="wrap bio-head">
       <div class="photo">
-        {person.photo
-          ? <img src={person.photo} alt={`Portrait of ${person.name}`} width="400" height="500" />
-          : <span aria-hidden="true">{initials(person.name)}</span>}
+        {d.photo
+          ? <img src={d.photo} alt={`Portrait of ${d.name}`} width="400" height="500" />
+          : <span aria-hidden="true">{initials(d.name)}</span>}
       </div>
       <div>
         <p class="eyebrow"><a href="/people/">People</a></p>
-        <h1>{person.name}</h1>
-        <p class="lede">{person.title}</p>
+        <h1>{d.name}</h1>
+        <p class="lede">{d.founder ? 'Founding Partner' : d.title}</p>
         <p class="contact">
-          {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
-          <a href={site.phoneHref}>{site.phone}</a>
+          {d.phone && <a href={telHref}>{d.phone}</a>}
+          {d.email && <a href={`mailto:${d.email}`}>{d.email}</a>}
         </p>
+        <p class="areas">{d.practiceAreas.join(' · ')}</p>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap layout">
-      <article class="prose">
-        {person.bio.map((para) => <p>{para}</p>)}
+      <article class="prose bio">
+        {PREVIEW && d.draftNote && <p class="draft-note"><strong>Draft note:</strong> {d.draftNote}</p>}
+        <Content />
       </article>
       <aside>
         {myPractices.length > 0 && (
-          <div class="block">
+          <div class="card">
             <p class="eyebrow">Practices</p>
             <ul>{myPractices.map((p) => <li><a href={`/practices/${p.slug}/`}>{p.title}</a></li>)}</ul>
-          </div>
-        )}
-        {person.education && (
-          <div class="block">
-            <p class="eyebrow">Education</p>
-            <ul>{person.education.map((e) => <li>{e}</li>)}</ul>
-          </div>
-        )}
-        {person.admissions && (
-          <div class="block">
-            <p class="eyebrow">Admissions</p>
-            <ul>{person.admissions.map((e) => <li>{e}</li>)}</ul>
           </div>
         )}
       </aside>
@@ -70,23 +67,39 @@ const personSchema = {
 
 <style>
   .page-head .eyebrow a { color: inherit; text-decoration: none; }
-  .bio-head { display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 48px); align-items: end; }
+  .bio-head { display: grid; grid-template-columns: 240px 1fr; gap: clamp(24px, 4vw, 48px); align-items: end; }
   .photo {
     aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden;
     background: linear-gradient(160deg, var(--ink-2), var(--ink));
     display: grid; place-items: center;
   }
-  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
   .photo span { font-family: var(--serif); font-size: 3.4rem; color: var(--brass-light); }
-  .contact { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; font-weight: 500; }
-  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(32px, 5vw, 72px); align-items: start; }
-  .prose p { font-size: 1.05rem; }
-  .block { margin-bottom: 28px; }
-  .block ul { list-style: none; margin: 0; padding: 0; }
-  .block li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
-  @media (max-width: 800px) {
-    .bio-head { grid-template-columns: 140px 1fr; align-items: center; }
+  .page-head h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  .page-head .lede { margin-bottom: .6rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: 6px 24px; margin: 0 0 .6rem; font-weight: 500; }
+  .areas { color: var(--muted); font-size: .92rem; margin: 0; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: clamp(32px, 5vw, 72px); align-items: start; }
+  aside .card { position: sticky; top: 100px; padding: 24px; }
+  aside ul { list-style: none; margin: 0; padding: 0; }
+  aside li { border-bottom: 1px solid var(--line); }
+  aside li:last-child { border-bottom: 0; }
+  aside a { display: block; padding: 8px 0; text-decoration: none; font-size: .95rem; }
+
+  /* Bio body (Markdown) */
+  .bio :global(p) { font-size: 1.05rem; }
+  .bio :global(h2) { font-size: 1.05rem; font-family: var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 2.4em 0 .8em; }
+  .bio :global(h3) { font-size: 1.15rem; margin: 1.4em 0 .5em; }
+  .bio :global(ul) { list-style: none; padding: 0; margin: 0 0 1em; }
+  .bio :global(li) { padding: 7px 0; border-bottom: 1px solid var(--line); margin: 0; }
+  .bio :global(li ul) { margin: 4px 0 0; }
+  .bio :global(li li) { border-bottom: 0; padding: 2px 0 2px 18px; color: var(--muted); font-size: .95rem; position: relative; }
+  .bio :global(li li)::before { content: '–'; position: absolute; left: 2px; color: var(--brass); }
+
+  @media (max-width: 860px) {
+    .bio-head { grid-template-columns: 160px 1fr; align-items: center; }
     .layout { grid-template-columns: 1fr; }
+    aside .card { position: static; }
   }
-  @media (max-width: 480px) { .bio-head { grid-template-columns: 1fr; } .photo { max-width: 200px; } }
+  @media (max-width: 520px) { .bio-head { grid-template-columns: 1fr; } .photo { max-width: 220px; } }
 </style>

@@ -2,14 +2,14 @@
 import Base from '../../layouts/Base.astro';
 import PersonCard from '../../components/PersonCard.astro';
 import { practices, type Practice } from '../../data/practices';
-import { people } from '../../data/people';
+import { getPeople, practiceSlugsFor } from '../../data/people';
 import { site, PREVIEW } from '../../data/site';
 
 export function getStaticPaths() {
   return practices.map((p) => ({ params: { slug: p.slug }, props: { practice: p } }));
 }
 const { practice } = Astro.props as { practice: Practice };
-const team = people.filter((p) => p.practices.includes(practice.slug));
+const team = (await getPeople()).filter((p) => practiceSlugsFor(p).includes(practice.slug));
 const others = practices.filter((p) => p.slug !== practice.slug);
 const contactEmail = practice.email ?? site.email;
 ---
@@ -29,11 +29,12 @@ const contactEmail = practice.email ?? site.email;
         {practice.intro.map((para) => <p>{para}</p>)}
         {practice.sections.map((s) => (
           <>
-            <h2>{s.heading}</h2>
+            {s.heading && <h2>{s.heading}</h2>}
             {s.body?.map((para) => <p>{para}</p>)}
             {s.list && <ul class="cols">{s.list.map((li) => <li>{li}</li>)}</ul>}
           </>
         ))}
+        {practice.outro?.map((para) => <p>{para}</p>)}
       </article>
 
       <aside>

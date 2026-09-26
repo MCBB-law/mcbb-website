@@ -2,15 +2,16 @@
 import { initials, type Person } from '../data/people';
 interface Props { person: Person }
 const { person } = Astro.props;
+const d = person.data;
 ---
-<a class="person" href={`/people/${person.slug}/`}>
+<a class="person" href={`/people/${person.id}/`}>
   <div class="photo">
-    {person.photo
-      ? <img src={person.photo} alt={`Portrait of ${person.name}`} loading="lazy" width="400" height="500" />
-      : <span aria-hidden="true">{initials(person.name)}</span>}
+    {d.photo
+      ? <img src={d.photo} alt={`Portrait of ${d.name}`} loading="lazy" width="400" height="500" />
+      : <span aria-hidden="true">{initials(d.name)}</span>}
   </div>
-  <p class="name">{person.name}</p>
-  <p class="title">{person.title}</p>
+  <p class="name">{d.name}</p>
+  <p class="title">{d.founder ? 'Founding Partner' : d.title}</p>
 </a>
 
 <style>
@@ -24,10 +25,10 @@ const { person } = Astro.props;
     margin-bottom: 14px;
     border-radius: var(--radius);
   }
-  .photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform .3s; }
   .photo span { font-family: var(--serif); font-size: 3rem; color: var(--brass-light); letter-spacing: .05em; }
   .person:hover img { transform: scale(1.03); }
-  .name { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--ink); margin: 0; }
+  .name { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); margin: 0; line-height: 1.25; }
   .person:hover .name { color: var(--brass); }
   .title { color: var(--muted); font-size: .9rem; margin: 2px 0 0; }
 </style>

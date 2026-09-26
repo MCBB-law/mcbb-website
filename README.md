@@ -8,7 +8,7 @@ Draft rebuild of www.mc2b.com, made with [Astro](https://astro.build) and meant 
 |---|---|
 | Address, phone, email, menu | `src/data/site.ts` |
 | Practice pages | `src/data/practices.ts` |
-| Attorneys and bios | `src/data/people.ts` (headshots go in `public/people/`) |
+| Attorney bios | One Markdown file per lawyer in `src/content/people/` (headshots go in `public/people/`) |
 | News items | `src/pages/news.astro` |
 | Home, About, Careers, Contact | `src/pages/*.astro` |
 | Colors and fonts | `src/styles/global.css` |
@@ -33,7 +33,8 @@ Quick alternative with no GitHub: run `npm run build`, then drag the `dist` fold
 
 ## Launch checklist
 
-- [ ] Replace all placeholder practice text and bios; add headshots and the real logo
+- [ ] Resolve the items in `CONTENT-NOTES.md`
+- [ ] Download headshots into `public/people/` (they load from Squarespace for now) and add the real logo
 - [ ] Partners proofread every page, including the disclaimer
 - [ ] Add current news or hide the News page
 - [ ] Set `PREVIEW = false` in `src/data/site.ts`

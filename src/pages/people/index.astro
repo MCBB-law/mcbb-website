@@ -1,21 +1,31 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PersonCard from '../../components/PersonCard.astro';
-import { people } from '../../data/people';
-import { PREVIEW } from '../../data/site';
+import { getPeople } from '../../data/people';
+
+const people = await getPeople();
+const partners = people.filter((p) => p.data.title === 'Partner');
+const others = people.filter((p) => p.data.title !== 'Partner');
 ---
 <Base title="People" description="Meet the lawyers of Manning Curtis Bradshaw & Bednar.">
   <section class="page-head">
     <div class="wrap">
       <p class="eyebrow">People</p>
       <h1>Sharp. Experienced. People-first.</h1>
-      <p class="lede">Most of our lawyers served as law review editors and judicial clerks before trying cases. Here’s who you’ll work with.</p>
+      <p class="lede">Many of our lawyers served as law review editors and judicial clerks before trying cases. Here’s who you’ll work with.</p>
     </div>
   </section>
   <section class="section">
     <div class="wrap">
-      {PREVIEW && <p class="draft-note"><strong>Draft note:</strong> This roster is incomplete. Titles, bios, and headshots still need to be copied from the current site.</p>}
-      <div class="grid grid-4">{people.map((p) => <PersonCard person={p} />)}</div>
+      <h2 class="group">Partners</h2>
+      <div class="grid grid-4">{partners.map((p) => <PersonCard person={p} />)}</div>
+      <h2 class="group">Associates</h2>
+      <div class="grid grid-4">{others.map((p) => <PersonCard person={p} />)}</div>
     </div>
   </section>
 </Base>
+
+<style>
+  .group { font-size: 1.4rem; border-bottom: 1px solid var(--line); padding-bottom: .5rem; margin-bottom: 1.5rem; }
+  .group:not(:first-child) { margin-top: 4rem; }
+</style>
