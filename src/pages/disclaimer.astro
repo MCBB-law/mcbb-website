@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Disclaimer">
+  <section class="page-head">
+    <div class="wrap narrow"><p class="eyebrow">Legal</p><h1>Disclaimer</h1></div>
+  </section>
+  <section class="section">
+    <div class="wrap narrow prose">
+      <p class="draft-note"><strong>Draft note:</strong> Starter language. Have the firm review it before launch.</p>
+      <p>This website is attorney advertising. It is provided by {site.name} for general information only. Nothing on it is legal advice, and you should not act on anything here without advice from a lawyer about your specific situation.</p>
+      <p>Using this site, or contacting the firm through it by email, phone, or the contact form, does not create an attorney-client relationship. An attorney-client relationship is formed only by a written engagement agreement. Please do not send confidential information until the firm has agreed to represent you.</p>
+      <p>Past results do not guarantee a similar outcome in any other matter. Descriptions of prior cases depend on their own facts.</p>
+      <p>Links to other websites are provided for convenience; the firm is not responsible for their content.</p>
+    </div>
+  </section>
+</Base>

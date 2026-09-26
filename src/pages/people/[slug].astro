@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+import { people, initials, type Person } from '../../data/people';
+import { practices } from '../../data/practices';
+import { site } from '../../data/site';
+
+export function getStaticPaths() {
+  return people.map((p) => ({ params: { slug: p.slug }, props: { person: p } }));
+}
+const { person } = Astro.props as { person: Person };
+const myPractices = practices.filter((p) => person.practices.includes(p.slug));
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: person.name,
+  jobTitle: person.title,
+  worksFor: { '@type': 'LegalService', name: site.name },
+  ...(person.email ? { email: person.email } : {}),
+};
+---
+<Base title={person.name} description={`${person.name}, ${person.title} at ${site.name}.`}>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  <section class="page-head">
+    <div class="wrap bio-head">
+      <div class="photo">
+        {person.photo
+          ? <img src={person.photo} alt={`Portrait of ${person.name}`} width="400" height="500" />
+          : <span aria-hidden="true">{initials(person.name)}</span>}
+      </div>
+      <div>
+        <p class="eyebrow"><a href="/people/">People</a></p>
+        <h1>{person.name}</h1>
+        <p class="lede">{person.title}</p>
+        <p class="contact">
+          {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
+          <a href={site.phoneHref}>{site.phone}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap layout">
+      <article class="prose">
+        {person.bio.map((para) => <p>{para}</p>)}
+      </article>
+      <aside>
+        {myPractices.length > 0 && (
+          <div class="block">
+            <p class="eyebrow">Practices</p>
+            <ul>{myPractices.map((p) => <li><a href={`/practices/${p.slug}/`}>{p.title}</a></li>)}</ul>
+          </div>
+        )}
+        {person.education && (
+          <div class="block">
+            <p class="eyebrow">Education</p>
+            <ul>{person.education.map((e) => <li>{e}</li>)}</ul>
+          </div>
+        )}
+        {person.admissions && (
+          <div class="block">
+            <p class="eyebrow">Admissions</p>
+            <ul>{person.admissions.map((e) => <li>{e}</li>)}</ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head .eyebrow a { color: inherit; text-decoration: none; }
+  .bio-head { display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 48px); align-items: end; }
+  .photo {
+    aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden;
+    background: linear-gradient(160deg, var(--ink-2), var(--ink));
+    display: grid; place-items: center;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .photo span { font-family: var(--serif); font-size: 3.4rem; color: var(--brass-light); }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; font-weight: 500; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .prose p { font-size: 1.05rem; }
+  .block { margin-bottom: 28px; }
+  .block ul { list-style: none; margin: 0; padding: 0; }
+  .block li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+  @media (max-width: 800px) {
+    .bio-head { grid-template-columns: 140px 1fr; align-items: center; }
+    .layout { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) { .bio-head { grid-template-columns: 1fr; } .photo { max-width: 200px; } }
+</style>

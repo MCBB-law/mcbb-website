@@ -1,0 +1,94 @@
+---
+import { nav, site } from '../data/site';
+const path = Astro.url.pathname;
+const isActive = (href: string) => path.startsWith(href);
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="/" class="brand" aria-label={`${site.name}, home`}>
+      <span class="brand-mark">MCBB</span>
+      <span class="brand-name">Manning Curtis<br />Bradshaw &amp; Bednar</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main">
+      {nav.map((item) => (
+        <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
+      ))}
+    </nav>
+
+    <details class="nav-mobile">
+      <summary aria-label="Menu"><span></span><span></span><span></span></summary>
+      <nav aria-label="Main (mobile)">
+        {nav.map((item) => (
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
+        ))}
+        <a href={site.phoneHref} class="nav-phone">{site.phone}</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
+  .brand-mark {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: .08em;
+    color: var(--white);
+    background: var(--ink);
+    padding: 8px 10px;
+    border-radius: 2px;
+  }
+  .brand-name { font-family: var(--serif); font-size: 1rem; line-height: 1.15; font-weight: 600; }
+  .nav-desktop { display: flex; gap: 28px; }
+  .nav-desktop a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: .95rem;
+    font-weight: 500;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-desktop a:hover, .nav-desktop a[aria-current] { color: var(--ink); border-bottom-color: var(--brass); }
+
+  .nav-mobile { display: none; }
+  .nav-mobile summary {
+    list-style: none;
+    cursor: pointer;
+    width: 44px; height: 44px;
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    padding: 0 10px;
+  }
+  .nav-mobile summary::-webkit-details-marker { display: none; }
+  .nav-mobile summary span { display: block; height: 2px; background: var(--ink); }
+  .nav-mobile nav {
+    position: absolute;
+    left: 0; right: 0; top: 100%;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 8px var(--gutter) 20px;
+    display: flex; flex-direction: column;
+  }
+  .nav-mobile nav a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .nav-mobile .nav-phone { border-bottom: 0; color: var(--brass); }
+
+  @media (max-width: 900px) {
+    .nav-desktop { display: none; }
+    .nav-mobile { display: block; }
+  }
+</style>

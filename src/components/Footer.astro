@@ -1,0 +1,50 @@
+---
+import { site, nav } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <p class="f-name">{site.name}</p>
+      <address>
+        {site.address.street}<br />
+        {site.address.city}, {site.address.state} {site.address.zip}
+      </address>
+      <p><a href={site.mapUrl} rel="noopener">Map &amp; directions</a></p>
+    </div>
+    <div>
+      <p class="f-label">Contact</p>
+      <p>
+        Tel <a href={site.phoneHref}>{site.phone}</a><br />
+        Fax {site.fax}<br />
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+      <p><a href={site.linkedin} rel="noopener">LinkedIn</a></p>
+    </div>
+    <div>
+      <p class="f-label">Explore</p>
+      <ul>
+        {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <p>
+      © {year} {site.name}. Attorney advertising. The information on this site is general and is not legal advice.
+      Contacting us does not create an attorney-client relationship. <a href="/disclaimer/">Full disclaimer</a>.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--ink); color: #c8cfdc; font-size: .93rem; padding: 64px 0 24px; }
+  .site-footer a { color: #e6eaf1; }
+  .site-footer a:hover { color: var(--brass-light); }
+  .cols { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  .f-name { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: .6em; }
+  .f-label { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brass-light); font-weight: 600; margin-bottom: .6em; }
+  address { font-style: normal; margin-bottom: .8em; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin-bottom: .3em; }
+  .legal { border-top: 1px solid rgba(255,255,255,.12); margin-top: 48px; padding-top: 20px; font-size: .8rem; color: #9aa4b6; }
+</style>

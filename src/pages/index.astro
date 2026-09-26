@@ -1,0 +1,135 @@
+---
+import Base from '../layouts/Base.astro';
+import PersonCard from '../components/PersonCard.astro';
+import { practices } from '../data/practices';
+import { people } from '../data/people';
+import { site } from '../data/site';
+
+const years = new Date().getFullYear() - site.founded;
+---
+<Base>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Salt Lake City · Since {site.founded}</p>
+      <h1>Business litigation where judgment shapes results.</h1>
+      <p class="hero-lede">
+        Big-firm experience with small-firm service. Our lawyers are trial lawyers, and we build every case with the courtroom in mind.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn--light" href="/contact/">Talk to a lawyer</a>
+        <a class="btn btn--ghost-light" href="/practices/">Our practices</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="wrap">
+      <p><strong>We’ve moved.</strong> Our new office is at {site.address.street}, {site.address.city}. <a href={site.mapUrl} rel="noopener">Directions</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid grid-2 approach">
+      <div>
+        <p class="eyebrow">Our approach</p>
+        <h2>We do what we do best.</h2>
+      </div>
+      <div>
+        <h3>Trial lawyers first</h3>
+        <p>We approach every case with the courtroom in mind. Opponents know we are prepared to try the case, and that shapes how cases resolve.</p>
+        <h3>Judgment over activity</h3>
+        <p>We focus on understanding the client’s objectives, evaluating risk realistically, and choosing strategies that advance outcomes, not just activity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <p class="eyebrow">Practices</p>
+          <h2>Where we work</h2>
+        </div>
+        <a href="/practices/" class="more">All practices →</a>
+      </div>
+      <div class="grid grid-3">
+        {practices.map((p) => (
+          <a class="card practice" href={`/practices/${p.slug}/`}>
+            <h3>{p.title}</h3>
+            <p>{p.summary}</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink">
+    <div class="wrap grid grid-3 stats">
+      <div><p class="stat">{years}+</p><p>years trying complex cases in Utah and beyond</p></div>
+      <div><p class="stat">$37M</p><p>jury verdict, one of the largest in Utah history</p></div>
+      <div><p class="stat">Pro&nbsp;Bono</p><p>Federal Bar Association Pro Bono Firm of the Year</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <p class="eyebrow">Our people</p>
+          <h2>Sharp. Experienced. People-first.</h2>
+        </div>
+        <a href="/people/" class="more">Meet the firm →</a>
+      </div>
+      <div class="grid grid-4">
+        {people.slice(0, 4).map((p) => <PersonCard person={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap cta">
+      <h2>Have a dispute that matters?</h2>
+      <p class="lede">Tell us what’s at stake. We’ll get back to you promptly.</p>
+      <a class="btn" href="/contact/">Contact us</a>
+      <a class="btn btn--ghost" href={site.phoneHref}>Call {site.phone}</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(201,168,106,.18), transparent 60%),
+      linear-gradient(180deg, var(--ink), #0f1a2e);
+    color: #dfe4ee;
+    padding: clamp(80px, 12vw, 160px) 0 clamp(72px, 10vw, 128px);
+  }
+  .hero h1 { color: var(--white); max-width: 18ch; }
+  .hero-lede { font-size: clamp(1.1rem, 2vw, 1.3rem); max-width: 40rem; color: #c8cfdc; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2rem; }
+  .btn--ghost-light { background: transparent; border: 1px solid rgba(255,255,255,.4); color: var(--white); }
+  .btn--ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); }
+
+  .notice { background: var(--white); border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .notice p { margin: 0; padding: 14px 0; }
+
+  .approach h3 { font-size: 1.25rem; }
+
+  .head-row { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+  .head-row h2 { margin: 0; }
+  .more { font-weight: 600; text-decoration: none; }
+
+  .practice { text-decoration: none; color: inherit; position: relative; transition: border-color .15s, transform .15s; }
+  .practice:hover { border-color: var(--brass); transform: translateY(-2px); }
+  .practice p { color: var(--muted); margin: 0; font-size: .96rem; }
+  .practice .arrow { position: absolute; right: 24px; top: 26px; color: var(--brass); }
+  .practice h3 { padding-right: 24px; }
+
+  .stats .stat { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.4rem); color: var(--brass-light); margin: 0; line-height: 1.1; }
+  .stats p:last-child { margin: 6px 0 0; }
+
+  .cta { text-align: center; }
+  .cta .lede { margin: 0 auto 1.6rem; }
+  .cta .btn { margin: 4px; }
+</style>

@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+import { practices } from '../data/practices';
+---
+<Base title="Contact" description={`Contact MCBB at ${site.address.street}, ${site.address.city}. Tel ${site.phone}.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s talk about your matter.</h1>
+      <p class="lede">Call, email, or send a short note below. Please don’t include confidential details until we’ve confirmed we can help.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap layout">
+      <!-- Netlify Forms: submissions show up in the Netlify dashboard and can be emailed to info@mc2b.com. -->
+      <form name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company_website" class="card form">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hp"><label>Leave blank <input name="company_website" /></label></p>
+        <div class="row2">
+          <label>Name<input name="name" autocomplete="name" required /></label>
+          <label>Company (optional)<input name="company" autocomplete="organization" /></label>
+        </div>
+        <div class="row2">
+          <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" /></label>
+        </div>
+        <label>Practice area
+          <select name="practice">
+            <option value="">Not sure</option>
+            {practices.map((p) => <option>{p.title}</option>)}
+          </select>
+        </label>
+        <label>Briefly, what’s going on?<textarea name="message" rows="5" required></textarea></label>
+        <label class="check">
+          <input type="checkbox" name="acknowledge" required />
+          <span>I understand that submitting this form does not make me a client of MCBB, and I have not included confidential information.</span>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+
+      <aside>
+        <div class="block">
+          <p class="eyebrow">Office</p>
+          <address>{site.address.street}<br />{site.address.city}, {site.address.state} {site.address.zip}</address>
+          <p><a href={site.mapUrl} rel="noopener">Map &amp; directions</a></p>
+        </div>
+        <div class="block">
+          <p class="eyebrow">Phone &amp; email</p>
+          <p>Tel <a href={site.phoneHref}>{site.phone}</a><br />Fax {site.fax}<br /><a href={`mailto:${site.email}`}>{site.email}</a></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .form { display: grid; gap: 18px; }
+  .form label { display: grid; gap: 6px; font-size: .9rem; font-weight: 600; color: var(--ink); }
+  .form input, .form select, .form textarea {
+    font: inherit; font-weight: 400; color: var(--text);
+    padding: 11px 12px; border: 1px solid #cfcabd; border-radius: var(--radius); background: var(--white); width: 100%;
+  }
+  .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--brass); outline-offset: 0; border-color: var(--brass); }
+  .row2 { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  .check { grid-template-columns: 20px 1fr !important; align-items: start; font-weight: 400 !important; color: var(--muted) !important; }
+  .check input { width: 18px; height: 18px; margin-top: 3px; }
+  .form .btn { justify-self: start; cursor: pointer; }
+  .hp { position: absolute; left: -9999px; }
+  address { font-style: normal; }
+  .block { margin-bottom: 28px; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+</style>

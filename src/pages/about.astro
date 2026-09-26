@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+
+const clients = ['AON plc', 'British Petroleum', 'Franklin Covey', 'Intermountain Healthcare', 'Target Corporation', 'Workfront, Inc.'];
+const proBono = [
+  {
+    title: 'Permanent resident spared deportation',
+    body: 'In December 2020, the Ninth Circuit reversed the Board of Immigration Appeals and ruled in favor of our pro bono client, Mr. Sodhi.',
+  },
+  {
+    title: 'Pro Bono Firm of the Year',
+    body: 'The Federal Bar Association named MCBB its Pro Bono Firm of the Year in 2011, recognizing, among other work, a First Amendment case protecting visual artists’ rights.',
+  },
+  {
+    title: 'Electronic ballot signatures',
+    body: 'MCBB represented an independent gubernatorial candidate before the Utah Supreme Court on the validity of electronic signatures on nominating petitions.',
+  },
+  {
+    title: 'Goodnight v. Chater',
+    body: 'MCBB lawyers served as class counsel for more than 5,000 people in a Social Security class action that produced $22 million plus future benefits.',
+  },
+];
+---
+<Base title="About" description={`Founded in ${site.founded}, MCBB is a Salt Lake City litigation firm with big-firm credentials and a small-firm culture.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">About MCBB</p>
+      <h1>Big-firm work. Small-firm everything else.</h1>
+      <p class="lede">Manning Curtis Bradshaw &amp; Bednar was founded in May {site.founded} and has concentrated on complex commercial litigation ever since.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div>
+        <h2>Our practice</h2>
+        <p>MCBB handles complex commercial litigation, including labor and employment, securities, antitrust, class actions, products liability, government defense, intellectual property, real property and construction, environmental, bankruptcy, and insurance coverage matters. While primarily a litigation firm, our lawyers also provide transactional and business counseling.</p>
+        <p>We appear before state and federal courts in Utah and surrounding states and in administrative proceedings, and we regularly handle cases across the country.</p>
+      </div>
+      <div>
+        <h2>Our history</h2>
+        <p>The firm’s four founders, Brent V. Manning, LeGrand R. Curtis Jr., Alan C. Bradshaw, and Steven C. Bednar, practiced together as the litigation department of a regional law firm before forming MCBB. They trained at Harvard, the University of Michigan, the University of Utah, and Brigham Young University law schools.</p>
+        <p>Most of our lawyers served as law review editors and completed federal or state judicial clerkships before joining the firm.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap">
+      <p class="eyebrow">Representative clients</p>
+      <h2>Trusted by national companies and local businesses</h2>
+      <p class="lede">We represent clients in healthcare, automotive, insurance, hospitality, energy, and professional services, including:</p>
+      <ul class="clients">{clients.map((c) => <li>{c}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Pro bono</p>
+      <h2>Service is part of the job</h2>
+      <p class="lede">We treat pro bono work as a professional responsibility, and time spent on it counts toward partnership evaluation just like billable work.</p>
+      <div class="grid grid-2 pb">
+        {proBono.map((p) => <div class="card"><h3>{p.title}</h3><p>{p.body}</p></div>)}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .clients { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+  .clients li { background: var(--white); border: 1px solid var(--line); padding: 18px 20px; font-family: var(--serif); font-size: 1.1rem; color: var(--ink); border-radius: var(--radius); }
+  .pb { margin-top: 2rem; }
+  .pb p { margin: 0; color: var(--muted); }
+</style>

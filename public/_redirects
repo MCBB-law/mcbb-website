@@ -1,0 +1,16 @@
+# Old Squarespace URLs -> new pages (301 = permanent, keeps search ranking)
+/business-litigation        /practices/business-litigation/        301
+/government-defense         /practices/government-defense/         301
+/labor-employment           /practices/labor-employment/           301
+/insurance-coverage         /practices/insurance-coverage/         301
+/property                   /practices/intellectual-property/      301
+/real-estate-construction   /practices/real-estate-construction/   301
+/apellate-law               /practices/appellate/                  301
+/covid19                    /practices/                            301
+/brent-manning              /people/brent-manning/                 301
+/alan-bradshaw              /people/alan-bradshaw/                 301
+/steven-bednar              /people/steven-bednar/                 301
+/matthew-church             /people/matthew-church/                301
+/carson-fuller              /people/carson-fuller/                 301
+/taylor-kordsiemon          /people/taylor-kordsiemon/             301
+/search                     /                                      301

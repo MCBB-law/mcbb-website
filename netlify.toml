@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# PREVIEW MODE: keep search engines out until launch.
+# Delete this block (and set PREVIEW=false in src/data/site.ts) on launch day.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

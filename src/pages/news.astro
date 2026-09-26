@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { PREVIEW } from '../data/site';
+
+// Newest first. Add items here; anything older than a few years probably belongs off the site.
+const items = [
+  { date: '2022-07-01', title: 'MCBB Newsletter, 3rd Quarter 2022', summary: 'A Utah Supreme Court decision, wage-fixing agreements, and DOJ antitrust enforcement.' },
+  { date: '2022-05-13', title: 'MCBB Newsletter, 2nd Quarter 2022', summary: 'Emotional-distress damages, tip-pool regulations, and the new federal law on forced arbitration.' },
+  { date: '2014-03-03', title: 'MCBB wins one of the largest jury verdicts in Utah history', summary: 'A $37.05 million award for the inventor of a spine-surgery device.' },
+];
+const fmt = (d: string) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title="News" description="News and updates from Manning Curtis Bradshaw & Bednar.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">News</p>
+      <h1>News &amp; insights</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap narrow">
+      {PREVIEW && <p class="draft-note"><strong>Draft note:</strong> The newest item is from 2022. Before launch, either add a few current items (new hires, the office move, recent results) or hide this page from the menu.</p>}
+      <ol class="news">
+        {items.map((n) => (
+          <li>
+            <time datetime={n.date}>{fmt(n.date)}</time>
+            <h2>{n.title}</h2>
+            <p>{n.summary}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .news { list-style: none; padding: 0; margin: 0; }
+  .news li { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .news time { font-size: .85rem; color: var(--brass); font-weight: 600; letter-spacing: .04em; }
+  .news h2 { font-size: 1.45rem; margin: .3em 0 .3em; }
+  .news p { margin: 0; color: var(--muted); }
+</style>

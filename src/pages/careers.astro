@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Careers" description="Work at MCBB: early responsibility, real trial experience, and a firm with few rules and high expectations.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Careers</p>
+      <h1>Few rules. No bureaucracy. High expectations.</h1>
+      <p class="lede">The quality of our work and our client base are decidedly big firm. Virtually everything else is different.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div>
+        <h2>Why MCBB</h2>
+        <p>New lawyers get early responsibility on significant matters, with close mentoring from senior lawyers who have tried many cases. We want people who are interested in litigation, self-directed, ambitious, and committed to making a difference, with strong analytical and writing skills and the judgment to lead.</p>
+        <h3>Compensation and benefits</h3>
+        <p>Competitive market compensation, including profit sharing and discretionary bonuses, 401(k) matching, and health, dental, vision, and life insurance.</p>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Law students</h3>
+          <p>We hire 2L summer associates, primarily from top law schools including the University of Utah and Brigham Young University. We look for strong academic records, law journal experience, and an interest in public service.</p>
+          <h3>Lateral lawyers</h3>
+          <p>We consider experienced lawyers with complex-litigation backgrounds. Judicial clerkship experience is a plus.</p>
+          <p><a class="btn" href={`mailto:${site.email}?subject=Employment%20inquiry`}>Send your materials</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--tint">
+    <div class="wrap narrow">
+      <h2>Equal opportunity</h2>
+      <p>MCBB does not discriminate on the basis of race, age, sex, disability, national origin, sexual orientation, or religion, and we work to build a firm where lawyers of every background can do their best work.</p>
+    </div>
+  </section>
+</Base>

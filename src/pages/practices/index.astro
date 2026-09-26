@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+import { practices } from '../../data/practices';
+---
+<Base title="Practices" description="MCBB's litigation practices: business litigation, government defense, labor & employment, insurance coverage, IP, real estate & construction, bankruptcy, and appeals.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Practices</p>
+      <h1>Litigation across the matters that matter to business.</h1>
+      <p class="lede">Primarily a litigation firm, we also counsel clients on transactions and day-to-day business questions, in state and federal courts across Utah and the Mountain West.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap list">
+      {practices.map((p, i) => (
+        <a class="row" href={`/practices/${p.slug}/`}>
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <div>
+            <h2>{p.title}</h2>
+            <p>{p.summary}</p>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .list { border-top: 1px solid var(--line); }
+  .row {
+    display: grid;
+    grid-template-columns: 56px 1fr 32px;
+    gap: 16px;
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+  }
+  .row h2 { font-size: 1.5rem; margin-bottom: .25em; }
+  .row p { color: var(--muted); margin: 0; max-width: 48rem; }
+  .num { font-family: var(--serif); color: var(--brass); font-size: 1.1rem; padding-top: 6px; }
+  .arrow { color: var(--brass); font-size: 1.3rem; padding-top: 4px; transition: transform .15s; }
+  .row:hover h2 { color: var(--brass); }
+  .row:hover .arrow { transform: translateX(4px); }
+  @media (max-width: 600px) { .row { grid-template-columns: 1fr 24px; } .num { display: none; } }
+</style>

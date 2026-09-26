@@ -1,0 +1,6 @@
+# Preview build: block all crawlers. Replace on launch with:
+# User-agent: *
+# Allow: /
+# Sitemap: https://www.mc2b.com/sitemap-index.xml
+User-agent: *
+Disallow: /
