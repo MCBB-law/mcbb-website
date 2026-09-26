@@ -1,15 +1,18 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import { pageImages } from '../data/images';
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 ---
 <Base title="Careers" description="Work at MCBB: early responsibility, real trial experience, and a firm with few rules and high expectations.">
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">Careers</p>
-      <h1>Few rules. No bureaucracy. High expectations.</h1>
-      <p class="lede">The quality of our work and our client base are decidedly big firm. Virtually everything else is different.</p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Careers"
+    title="Few rules. No bureaucracy. High expectations."
+    lede="The quality of our work and our client base are decidedly big firm. Virtually everything else is different."
+    image={pageImages.careers.src}
+    alt={pageImages.careers.alt}
+    position={pageImages.careers.position}
+  />
   <section class="section">
     <div class="wrap grid grid-2">
       <div>

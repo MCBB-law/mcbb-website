@@ -1,4 +1,6 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import { pageImages } from '../data/images';
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 
@@ -23,13 +25,14 @@ const proBono = [
 ];
 ---
 <Base title="About" description={`Founded in ${site.founded}, MCBB is a Salt Lake City litigation firm with big-firm credentials and a small-firm culture.`}>
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">About MCBB</p>
-      <h1>Big-firm work. Small-firm everything else.</h1>
-      <p class="lede">Manning Curtis Bradshaw &amp; Bednar was founded in May {site.founded} and has concentrated on complex commercial litigation ever since.</p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="About MCBB"
+    title="Big-firm work. Small-firm everything else."
+    lede={`Manning Curtis Bradshaw & Bednar was founded in May ${site.founded} and has concentrated on complex commercial litigation ever since.`}
+    image={pageImages.about.src}
+    alt={pageImages.about.alt}
+    position={pageImages.about.position}
+  />
 
   <section class="section">
     <div class="wrap grid grid-2">
@@ -69,7 +72,7 @@ const proBono = [
 
 <style>
   .clients { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
-  .clients li { background: var(--white); border: 1px solid var(--line); padding: 18px 20px; font-family: var(--serif); font-size: 1.1rem; color: var(--ink); border-radius: var(--radius); }
+  .clients li { background: var(--white); border: 1px solid var(--line); padding: 22px 20px; font-family: var(--display); text-transform: uppercase; letter-spacing: .06em; font-size: 1rem; color: var(--ink); border-radius: var(--radius); }
   .pb { margin-top: 2rem; }
   .pb p { margin: 0; color: var(--muted); }
 </style>

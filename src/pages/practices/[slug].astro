@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PersonCard from '../../components/PersonCard.astro';
+import PageHero from '../../components/PageHero.astro';
+import { practiceImages } from '../../data/images';
 import { practices, type Practice } from '../../data/practices';
 import { getPeople, practiceSlugsFor } from '../../data/people';
 import { site, PREVIEW } from '../../data/site';
@@ -12,19 +14,24 @@ const { practice } = Astro.props as { practice: Practice };
 const team = (await getPeople()).filter((p) => practiceSlugsFor(p).includes(practice.slug));
 const others = practices.filter((p) => p.slug !== practice.slug);
 const contactEmail = practice.email ?? site.email;
+const img = practiceImages[practice.slug];
 ---
 <Base title={practice.title} description={practice.summary}>
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow"><a href="/practices/">Practices</a></p>
-      <h1>{practice.title}</h1>
-      <p class="lede">{practice.summary}</p>
-    </div>
-  </section>
+  <PageHero
+    variant="split"
+    eyebrow="Practices"
+    eyebrowHref="/practices/"
+    title={practice.title}
+    lede={practice.summary}
+    image={img.src}
+    alt={img.alt}
+    fit={img.fit}
+    position={img.position}
+  />
 
   <section class="section">
     <div class="wrap layout">
-      <article class="prose">
+      <article class="prose reveal">
         {PREVIEW && practice.draft && <p class="draft-note"><strong>Draft note:</strong> {practice.draft}</p>}
         {practice.intro.map((para) => <p>{para}</p>)}
         {practice.sections.map((s) => (
@@ -55,16 +62,19 @@ const contactEmail = practice.email ?? site.email;
     <section class="section section--tint">
       <div class="wrap">
         <p class="eyebrow">Lawyers in this practice</p>
-        <div class="grid grid-4">{team.map((p) => <PersonCard person={p} />)}</div>
+        <div class="grid grid-4 reveal-stagger">{team.map((p) => <PersonCard person={p} />)}</div>
       </div>
     </section>
   )}
 </Base>
 
 <style>
-  .page-head .eyebrow a { color: inherit; text-decoration: none; }
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: clamp(32px, 5vw, 72px); align-items: start; }
-  .prose > p:first-of-type:not(.draft-note), .prose > .draft-note + p { font-size: 1.12rem; }
+  .prose > p:first-of-type:not(.draft-note), .prose > .draft-note + p { font-size: 1.2rem; line-height: 1.6; color: var(--ink); }
+  .prose :global(h2) { padding-top: 1.2em; border-top: 1px solid var(--line); }
+  .cols li { list-style: none; position: relative; padding-left: 20px; }
+  .cols li::before { content: ''; position: absolute; left: 0; top: .8em; width: 10px; height: 1px; background: var(--ink); }
+  .cols { padding-left: 0 !important; }
   .cols { columns: 2 260px; column-gap: 32px; }
   .cols li { break-inside: avoid; }
   .sticky { position: sticky; top: 100px; }
@@ -72,6 +82,8 @@ const contactEmail = practice.email ?? site.email;
   .others { margin-top: 32px; }
   .others ul { list-style: none; padding: 0; margin: 0; }
   .others li { border-bottom: 1px solid var(--line); }
-  .others a { display: block; padding: 10px 0; text-decoration: none; font-size: .95rem; }
+  .others a { display: flex; justify-content: space-between; padding: 12px 0; text-decoration: none; font-size: .95rem; }
+  .others a::after { content: '→'; opacity: 0; transform: translateX(-6px); transition: .25s var(--ease); }
+  .others a:hover::after { opacity: 1; transform: none; }
   @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .sticky { position: static; } }
 </style>

@@ -1,4 +1,6 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import { pageImages } from '../data/images';
 import Base from '../layouts/Base.astro';
 import { PREVIEW } from '../data/site';
 
@@ -12,12 +14,13 @@ const items: { date: string; title: string; summary: string; href?: string }[] =
 const fmt = (d: string) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <Base title="News" description="News and updates from Manning Curtis Bradshaw & Bednar.">
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">News</p>
-      <h1>News &amp; insights</h1>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="News"
+    title="News & insights"
+    image={pageImages.news.src}
+    alt={pageImages.news.alt}
+    position={pageImages.news.position}
+  />
   <section class="section">
     <div class="wrap narrow">
       {PREVIEW && <p class="draft-note"><strong>Draft note:</strong> Only one item is newer than 2022. Before launch, add a few more (other recent hires, the office move, recent results) or hide this page from the menu.</p>}
@@ -37,9 +40,9 @@ const fmt = (d: string) => new Date(d + 'T12:00:00').toLocaleDateString('en-US',
 <style>
   .news { list-style: none; padding: 0; margin: 0; }
   .news li { padding: 28px 0; border-bottom: 1px solid var(--line); }
-  .news time { font-size: .85rem; color: var(--brass); font-weight: 600; letter-spacing: .04em; }
+  .news time { font-size: .72rem; color: var(--muted); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
   .news h2 { font-size: 1.45rem; margin: .3em 0 .3em; }
   .news p { margin: 0; color: var(--muted); }
   .news h2 a { color: inherit; text-decoration: none; }
-  .news h2 a:hover { color: var(--brass); }
+  .news h2 a:hover { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
 </style>

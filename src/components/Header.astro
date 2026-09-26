@@ -36,29 +36,31 @@ const isActive = (href: string) => path.startsWith(href);
     top: 0;
     z-index: 20;
   }
-  .bar { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 24px; }
+  .bar { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 24px; }
   .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
   .brand-mark {
-    font-family: var(--serif);
-    font-weight: 700;
+    font-family: var(--display);
+    font-weight: 600;
     font-size: 1.05rem;
-    letter-spacing: .08em;
+    letter-spacing: .14em;
     color: var(--white);
     background: var(--ink);
-    padding: 8px 10px;
-    border-radius: 2px;
+    padding: 9px 10px 9px 12px;
   }
-  .brand-name { font-family: var(--serif); font-size: 1rem; line-height: 1.15; font-weight: 600; }
-  .nav-desktop { display: flex; gap: 28px; }
+  .brand-name { font-family: var(--display); font-size: .82rem; line-height: 1.25; font-weight: 500; text-transform: uppercase; letter-spacing: .12em; }
+  .nav-desktop { display: flex; gap: 32px; }
   .nav-desktop a {
     text-decoration: none;
     color: var(--text);
-    font-size: .95rem;
-    font-weight: 500;
+    font-size: .74rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
     padding: 6px 0;
-    border-bottom: 2px solid transparent;
+    background: linear-gradient(var(--ink), var(--ink)) left bottom / 0 1px no-repeat;
+    transition: background-size .3s var(--ease);
   }
-  .nav-desktop a:hover, .nav-desktop a[aria-current] { color: var(--ink); border-bottom-color: var(--brass); }
+  .nav-desktop a:hover, .nav-desktop a[aria-current] { color: var(--ink); background-size: 100% 1px; }
 
   .nav-mobile { display: none; }
   .nav-mobile summary {
@@ -83,9 +85,12 @@ const isActive = (href: string) => path.startsWith(href);
     border-bottom: 1px solid var(--line);
     text-decoration: none;
     color: var(--ink);
-    font-weight: 500;
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
   }
-  .nav-mobile .nav-phone { border-bottom: 0; color: var(--brass); }
+  .nav-mobile .nav-phone { border-bottom: 0; color: var(--muted); }
 
   @media (max-width: 900px) {
     .nav-desktop { display: none; }

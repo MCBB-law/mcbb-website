@@ -4,16 +4,20 @@ import PersonCard from '../components/PersonCard.astro';
 import { practices } from '../data/practices';
 import { getPeople } from '../data/people';
 import { site } from '../data/site';
+import { pageImages, practiceImages } from '../data/images';
 
 const years = new Date().getFullYear() - site.founded;
 const people = await getPeople();
-const featured = people.filter((p) => p.data.title === 'Partner');
+// Everyone appears on the home page, alphabetical by last name (getPeople handles the order).
+const featured = people;
 ---
 <Base>
   <section class="hero">
+    <img class="bg" src={pageImages.home.src} alt={pageImages.home.alt} style={`object-position:${pageImages.home.position}`} fetchpriority="high" />
+    <div class="shade" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <p class="eyebrow">Salt Lake City · Since {site.founded}</p>
-      <h1>Business litigation where judgment shapes results.</h1>
+      <h1><span class="line">Business litigation</span> <span class="line">where judgment</span> <span class="line">shapes results.</span></h1>
       <p class="hero-lede">
         Big-firm experience with small-firm service. Our lawyers are trial lawyers, and we build every case with the courtroom in mind.
       </p>
@@ -22,6 +26,7 @@ const featured = people.filter((p) => p.data.title === 'Partner');
         <a class="btn btn--ghost-light" href="/practices/">Our practices</a>
       </div>
     </div>
+    <a class="scroll-cue" href="#approach" aria-label="Scroll down"><span></span></a>
   </section>
 
   <section class="notice">
@@ -30,36 +35,45 @@ const featured = people.filter((p) => p.data.title === 'Partner');
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap grid grid-2 approach">
-      <div>
+  <section class="section" id="approach">
+    <div class="wrap approach">
+      <div class="reveal">
         <p class="eyebrow">Our approach</p>
-        <h2>We do what we do best.</h2>
+        <h2>We do what<br />we do best.</h2>
       </div>
-      <div>
-        <h3>Trial lawyers first</h3>
-        <p>We approach every case with the courtroom in mind. Opponents know we are prepared to try the case, and that shapes how cases resolve.</p>
-        <h3>Judgment over activity</h3>
-        <p>We focus on understanding the client’s objectives, evaluating risk realistically, and choosing strategies that advance outcomes, not just activity.</p>
+      <div class="points reveal-stagger">
+        <div>
+          <span class="n">01</span>
+          <h3>Trial lawyers first</h3>
+          <p>We approach every case with the courtroom in mind. Opponents know we are prepared to try the case, and that shapes how cases resolve.</p>
+        </div>
+        <div>
+          <span class="n">02</span>
+          <h3>Judgment over activity</h3>
+          <p>We focus on understanding the client’s objectives, evaluating risk realistically, and choosing strategies that advance outcomes, not just activity.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section section--tint">
     <div class="wrap">
-      <div class="head-row">
+      <div class="head-row reveal">
         <div>
           <p class="eyebrow">Practices</p>
           <h2>Where we work</h2>
         </div>
-        <a href="/practices/" class="more">All practices →</a>
+        <a href="/practices/" class="btn btn--ghost">All practices</a>
       </div>
-      <div class="grid grid-3">
-        {practices.map((p) => (
-          <a class="card practice" href={`/practices/${p.slug}/`}>
-            <h3>{p.title}</h3>
-            <p>{p.summary}</p>
-            <span class="arrow" aria-hidden="true">→</span>
+      <div class="line-grid tiles reveal-stagger">
+        {practices.map((p, i) => (
+          <a class="tile" href={`/practices/${p.slug}/`}>
+            <span class="tile-img"><img src={practiceImages[p.slug].src} alt="" loading="lazy" style={`object-position:${practiceImages[p.slug].position ?? 'center'}`} /></span>
+            <span class="tile-body">
+              <span class="n">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{p.title}</h3>
+              <span class="arrow" aria-hidden="true">→</span>
+            </span>
           </a>
         ))}
       </div>
@@ -67,7 +81,7 @@ const featured = people.filter((p) => p.data.title === 'Partner');
   </section>
 
   <section class="section section--ink">
-    <div class="wrap grid grid-3 stats">
+    <div class="wrap stats reveal-stagger">
       <div><p class="stat">{years}+</p><p>years trying complex cases in Utah and beyond</p></div>
       <div><p class="stat">$37M</p><p>jury verdict, one of the largest in Utah history</p></div>
       <div><p class="stat">Pro&nbsp;Bono</p><p>Federal Bar Association Pro Bono Firm of the Year</p></div>
@@ -76,62 +90,109 @@ const featured = people.filter((p) => p.data.title === 'Partner');
 
   <section class="section">
     <div class="wrap">
-      <div class="head-row">
+      <div class="head-row reveal">
         <div>
           <p class="eyebrow">Our people</p>
           <h2>Sharp. Experienced. People-first.</h2>
         </div>
-        <a href="/people/" class="more">All our lawyers →</a>
+        <a href="/people/" class="btn btn--ghost">All our lawyers</a>
       </div>
-      <div class="grid grid-4">
+      <div class="grid team reveal-stagger">
         {featured.map((p) => <PersonCard person={p} />)}
       </div>
     </div>
   </section>
 
-  <section class="section section--tint">
-    <div class="wrap cta">
+  <section class="cta-band">
+    <img class="bg" src={pageImages.contact.src} alt="" loading="lazy" />
+    <div class="shade" aria-hidden="true"></div>
+    <div class="wrap cta reveal">
       <h2>Have a dispute that matters?</h2>
       <p class="lede">Tell us what’s at stake. We’ll get back to you promptly.</p>
-      <a class="btn" href="/contact/">Contact us</a>
-      <a class="btn btn--ghost" href={site.phoneHref}>Call {site.phone}</a>
+      <div class="cta-btns">
+        <a class="btn btn--light" href="/contact/">Contact us</a>
+        <a class="btn btn--ghost-light" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
     </div>
   </section>
 </Base>
 
 <style>
   .hero {
-    background:
-      radial-gradient(1200px 500px at 85% -10%, rgba(201,168,106,.18), transparent 60%),
-      linear-gradient(180deg, var(--ink), #0f1a2e);
-    color: #dfe4ee;
-    padding: clamp(80px, 12vw, 160px) 0 clamp(72px, 10vw, 128px);
+    position: relative;
+    min-height: calc(100svh - 110px);
+    min-height: max(560px, calc(100svh - 110px));
+    display: flex;
+    align-items: flex-end;
+    background: #000;
+    color: #e6e6e6;
+    overflow: hidden;
   }
-  .hero h1 { color: var(--white); max-width: 18ch; }
-  .hero-lede { font-size: clamp(1.1rem, 2vw, 1.3rem); max-width: 40rem; color: #c8cfdc; }
-  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2rem; }
-  .btn--ghost-light { background: transparent; border: 1px solid rgba(255,255,255,.4); color: var(--white); }
-  .btn--ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero .bg { animation: settle 3s var(--ease) both; }
+  .shade { position: absolute; inset: 0; background:
+    linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.45) 45%, rgba(0,0,0,0) 80%),
+    linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%); }
+  .hero-inner { position: relative; width: 100%; padding-top: 120px; padding-bottom: clamp(56px, 9vh, 104px); }
+  .hero .eyebrow { color: rgba(255,255,255,.8); }
+  .hero h1 { color: #fff; font-size: clamp(2.4rem, 6.2vw, 5.2rem); line-height: 1; }
+  .hero h1 .line { display: block; animation: rise 1.1s var(--ease) both; }
+  .hero h1 .line:nth-child(2) { animation-delay: .12s; }
+  .hero h1 .line:nth-child(3) { animation-delay: .24s; }
+  .hero-lede { font-size: clamp(1.05rem, 1.8vw, 1.25rem); max-width: 38rem; color: rgba(255,255,255,.85); animation: rise 1.1s .36s var(--ease) both; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2rem; animation: rise 1.1s .46s var(--ease) both; }
+  .scroll-cue { position: absolute; right: var(--gutter); bottom: 32px; width: 1px; height: 64px; background: rgba(255,255,255,.3); overflow: hidden; }
+  .scroll-cue span { position: absolute; left: 0; top: -40%; width: 1px; height: 40%; background: #fff; animation: drip 2.2s ease-in-out infinite; }
+  @keyframes settle { from { transform: scale(1.08); } to { transform: scale(1); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes drip { 0% { top: -40%; } 100% { top: 100%; } }
+  @media (prefers-reduced-motion: reduce) {
+    .hero .bg, .hero h1 .line, .hero-lede, .hero-cta, .scroll-cue span { animation: none; }
+  }
 
-  .notice { background: var(--white); border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .notice { background: var(--white); border-bottom: 1px solid var(--line); font-size: .92rem; }
   .notice p { margin: 0; padding: 14px 0; }
 
-  .approach h3 { font-size: 1.25rem; }
+  .approach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+  .points { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .points > div { padding: 28px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 56px 1fr; column-gap: 16px; }
+  .points .n { grid-row: span 2; font-family: var(--display); color: var(--muted); letter-spacing: .1em; padding-top: 2px; }
+  .points h3 { text-transform: uppercase; letter-spacing: .04em; font-size: 1.15rem; margin-bottom: .4em; }
+  .points p { margin: 0; color: var(--muted); }
 
-  .head-row { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+  .head-row { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
   .head-row h2 { margin: 0; }
-  .more { font-weight: 600; text-decoration: none; }
 
-  .practice { text-decoration: none; color: inherit; position: relative; transition: border-color .15s, transform .15s; }
-  .practice:hover { border-color: var(--brass); transform: translateY(-2px); }
-  .practice p { color: var(--muted); margin: 0; font-size: .96rem; }
-  .practice .arrow { position: absolute; right: 24px; top: 26px; color: var(--brass); }
-  .practice h3 { padding-right: 24px; }
+  .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tile { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--paper); }
+  .tile-img { aspect-ratio: 4 / 3; overflow: hidden; background: #f4f4f2; }
+  .tile-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+  .tile:hover .tile-img img { transform: scale(1.06); }
+  .tile-body { position: relative; padding: 22px 56px 26px 22px; flex: 1; }
+  .tile .n { display: block; font-family: var(--display); font-size: .82rem; letter-spacing: .14em; color: var(--muted); margin-bottom: 8px; }
+  .tile h3 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .05em; margin: 0; }
+  .tile .arrow { position: absolute; right: 22px; bottom: 24px; transition: transform .25s var(--ease); }
+  .tile:hover .arrow { transform: translateX(5px); }
+  .tile:hover { background: var(--white); }
+  @media (max-width: 1000px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .tiles { grid-template-columns: 1fr; } .tile { flex-direction: row; } .tile-img { width: 38%; aspect-ratio: 1; } }
 
-  .stats .stat { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.4rem); color: var(--brass-light); margin: 0; line-height: 1.1; }
-  .stats p:last-child { margin: 6px 0 0; }
+  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stats > div { padding: 8px clamp(16px, 3vw, 40px); border-left: 1px solid var(--line-dark); }
+  .stats > div:first-child { border-left: 0; padding-left: 0; }
+  .stats .stat { font-family: var(--display); font-size: clamp(2.6rem, 6vw, 4.4rem); color: #fff; margin: 0; line-height: 1.05; text-transform: uppercase; }
+  .stats p:last-child { margin: 10px 0 0; color: #bdbdbd; }
+  @media (max-width: 760px) { .stats { grid-template-columns: 1fr; } .stats > div { border-left: 0; border-top: 1px solid var(--line-dark); padding: 24px 0; } .stats > div:first-child { border-top: 0; } }
 
-  .cta { text-align: center; }
-  .cta .lede { margin: 0 auto 1.6rem; }
-  .cta .btn { margin: 4px; }
+  .cta-band { position: relative; background: #000; overflow: hidden; }
+  .cta-band .shade { background: rgba(0,0,0,.62); }
+  .cta { position: relative; text-align: center; padding: clamp(80px, 12vw, 160px) var(--gutter); }
+  .cta h2 { color: #fff; font-size: clamp(2rem, 4.6vw, 3.6rem); }
+  .cta .lede { margin: 0 auto 2rem; color: rgba(255,255,255,.85); }
+  .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+  .team { grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: 28px 20px; }
+  @media (max-width: 520px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  @media (max-width: 860px) { .approach { grid-template-columns: 1fr; } }
 </style>

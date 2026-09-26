@@ -1,16 +1,19 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import { pageImages } from '../data/images';
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 import { practices } from '../data/practices';
 ---
 <Base title="Contact" description={`Contact MCBB at ${site.address.street}, ${site.address.city}. Tel ${site.phone}.`}>
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h1>Let’s talk about your matter.</h1>
-      <p class="lede">Call, email, or send a short note below. Please don’t include confidential details until we’ve confirmed we can help.</p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Contact"
+    title="Let’s talk about your matter."
+    lede="Call, email, or send a short note below. Please don’t include confidential details until we’ve confirmed we can help."
+    image={pageImages.contact.src}
+    alt={pageImages.contact.alt}
+    position={pageImages.contact.position}
+  />
 
   <section class="section">
     <div class="wrap layout">
@@ -61,9 +64,9 @@ import { practices } from '../data/practices';
   .form label { display: grid; gap: 6px; font-size: .9rem; font-weight: 600; color: var(--ink); }
   .form input, .form select, .form textarea {
     font: inherit; font-weight: 400; color: var(--text);
-    padding: 11px 12px; border: 1px solid #cfcabd; border-radius: var(--radius); background: var(--white); width: 100%;
+    padding: 11px 12px; border: 1px solid #bcbcbc; border-radius: var(--radius); background: var(--white); width: 100%;
   }
-  .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--brass); outline-offset: 0; border-color: var(--brass); }
+  .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
   .row2 { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
   .check { grid-template-columns: 20px 1fr !important; align-items: start; font-weight: 400 !important; color: var(--muted) !important; }
   .check input { width: 18px; height: 18px; margin-top: 3px; }
