@@ -8,7 +8,8 @@ import { pageImages, practiceImages } from '../data/images';
 
 const years = new Date().getFullYear() - site.founded;
 const people = await getPeople();
-const featured = people.filter((p) => p.data.title === 'Partner');
+// Everyone appears on the home page: partners first, then associates (getPeople handles the order).
+const featured = people;
 ---
 <Base>
   <section class="hero">
@@ -96,7 +97,7 @@ const featured = people.filter((p) => p.data.title === 'Partner');
         </div>
         <a href="/people/" class="btn btn--ghost">All our lawyers</a>
       </div>
-      <div class="grid grid-4 reveal-stagger">
+      <div class="grid team reveal-stagger">
         {featured.map((p) => <PersonCard person={p} />)}
       </div>
     </div>
@@ -189,6 +190,9 @@ const featured = people.filter((p) => p.data.title === 'Partner');
   .cta h2 { color: #fff; font-size: clamp(2rem, 4.6vw, 3.6rem); }
   .cta .lede { margin: 0 auto 2rem; color: rgba(255,255,255,.85); }
   .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+  .team { grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: 28px 20px; }
+  @media (max-width: 520px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
   @media (max-width: 860px) { .approach { grid-template-columns: 1fr; } }
 </style>
