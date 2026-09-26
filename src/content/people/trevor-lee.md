@@ -4,7 +4,7 @@ lastName: Lee
 title: Partner
 phone: 801-303-0049
 email: tlee@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/1ae5b3ae-9914-47ca-98f2-40006d0a8c56/TrevorL.jpg?format=750w
+photo: /people/trevor-lee.jpg
 practiceAreas: [Commercial Litigation, Appellate, Intellectual Property and Technology, Construction, Bankruptcy]
 oldPath: /trevor-lee
 ---

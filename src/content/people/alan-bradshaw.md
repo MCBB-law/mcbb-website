@@ -5,7 +5,7 @@ title: Partner
 founder: true
 phone: 801-303-0039
 email: abradshaw@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/eb426391-de39-467d-baed-32a4beab4613/MCBB-Web-AustenDiamondPhotography-16.jpg?format=750w
+photo: /people/alan-bradshaw.jpg
 practiceAreas: [Appellate Law, Business Litigation, Insurance Coverage]
 oldPath: /alan-bradshaw
 ---

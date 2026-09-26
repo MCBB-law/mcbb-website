@@ -4,7 +4,7 @@ lastName: Gilmore
 title: Partner
 phone: 801-303-0030
 email: bgilmore@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/5af24ea4-1509-4d85-8032-76c56c79f466/Profile+Picture+2.png?format=750w
+photo: /people/brett-gilmore.jpg
 practiceAreas: [Appellate Law, Bankruptcy, Business Litigation, Commercial Litigation, Labor & Employment]
 oldPath: /brett-gilmore
 ---

@@ -4,7 +4,7 @@ lastName: Kelly
 title: Associate
 phone: 801-303-0041
 email: mkelly@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/b3db349d-c59a-479c-a44d-a8afb92b862a/low+res+%2883+of+286%29.png?format=750w
+photo: /people/meg-kelly.jpg
 practiceAreas: [Business Litigation, Labor & Employment, Municipal Government Defense]
 oldPath: /meg-kelly
 ---

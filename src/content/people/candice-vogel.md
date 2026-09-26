@@ -4,7 +4,7 @@ lastName: Vogel
 title: Partner
 phone: 801-303-0037
 email: cvogel@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/93023226-2444-474a-8c37-5bab9ad95c4a/mc2b_staff_three_quarter_Candice-Vogel.jpg?format=750w
+photo: /people/candice-vogel.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Employment Law Consulting & Counseling]
 oldPath: /candice-vogel
 ---

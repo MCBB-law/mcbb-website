@@ -4,7 +4,7 @@ lastName: Ferrin
 title: Associate
 phone: 801-303-0034
 email: tferrin@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/7753cf2d-ff0c-4f60-bed5-5e87cf8ea5c3/MCBB-Web-AustenDiamondPhotography-14.jpg?format=750w
+photo: /people/trent-ferrin.jpg
 practiceAreas: [Business Litigation, Government Defense, Labor & Employment]
 oldPath: /trent-ferrin
 ---

@@ -4,7 +4,7 @@ lastName: Church
 title: Partner
 phone: 801-303-0045
 email: mchurch@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/d5385645-1e63-4501-be0a-9c0ef01a9866/low+res+%28222+of+286%29.png?format=750w
+photo: /people/matthew-church.jpg
 practiceAreas: [ERISA Litigation, Insurance Coverage, Municipal Defense, Commercial Litigation, Local Counsel]
 oldPath: /matthew-church
 ---

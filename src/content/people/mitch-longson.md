@@ -4,7 +4,7 @@ lastName: Longson
 title: Partner
 phone: 801-303-0036
 email: mlongson@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/16794dc0-79f7-48a3-9997-c40d308c0879/MCBB-Web-AustenDiamondPhotography-52.jpg?format=750w
+photo: /people/mitch-longson.jpg
 practiceAreas: [Labor & Employment, Business Litigation]
 oldPath: /mitch-longson
 ---

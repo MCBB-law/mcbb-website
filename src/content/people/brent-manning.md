@@ -5,7 +5,7 @@ title: Partner
 founder: true
 phone: 801-303-0038
 email: bmanning@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/d3effa0c-a787-4e09-b8cb-63ffd59d7624/MCBB-Web-AustenDiamondPhotography-2.jpg?format=750w
+photo: /people/brent-manning.jpg
 practiceAreas: [Business Litigation, Intellectual Property & Technology, Class Actions, Antitrust & Trade]
 oldPath: /brent-manning
 ---

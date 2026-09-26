@@ -4,7 +4,7 @@ lastName: Sabin
 title: Associate
 phone: 801-303-0050
 email: asabin@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/25802c9e-ab0f-4817-b80f-9cf449d6a27e/low+res+%28197+of+286%29.png?format=750w
+photo: /people/austin-c-sabin.jpg
 practiceAreas: [Business Litigation, Bankruptcy, Government Defense, Labor & Employment]
 oldPath: /austin-c-sabin
 ---

@@ -4,7 +4,7 @@ lastName: Derum
 title: Partner
 phone: 801-303-0047
 email: cderum@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/6f6edc5a-5105-4b40-8878-de3e0bf64832/MCBB-Web-AustenDiamondPhotography-28.jpg?format=750w
+photo: /people/chad-derum.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Appellate Law, Intellectual Property & Technology]
 oldPath: /chad-derum
 ---

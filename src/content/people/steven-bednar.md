@@ -5,7 +5,7 @@ title: Partner
 founder: true
 phone: 801-303-0035
 email: sbednar@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/0e9115c0-8f97-41bd-a7de-2d30e7e65882/MC2B-439+Bednar.jpg?format=750w
+photo: /people/steven-bednar.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Healthcare Law]
 oldPath: /steven-bednar
 ---

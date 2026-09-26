@@ -4,7 +4,7 @@ lastName: Kordsiemon
 title: Associate
 phone: 801-303-0046
 email: tkordsiemon@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/048d40c6-669c-4876-93ca-c95193ab7ad2/low+res+%28240+of+286%29.png?format=750w
+photo: /people/taylor-kordsiemon.jpg
 practiceAreas: [Government Defense, Commercial Litigation, Insurance Coverage, Appeals]
 oldPath: /taylor-kordsiemon
 ---

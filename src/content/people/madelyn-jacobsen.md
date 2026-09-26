@@ -4,7 +4,7 @@ lastName: Jacobsen
 title: Associate
 phone: 801-303-0056
 email: mjacobsen@mc2b.com
-photo: https://images.squarespace-cdn.com/content/v1/6142ba45fe44d242d0d23a67/886dd1a9-2ce6-4fb5-b86f-0e5b3e3f995e/low+res+%2861+of+286%29.png?format=750w
+photo: /people/madelyn-jacobsen.jpg
 practiceAreas: [Business Litigation, Labor & Employment, Municipal Government Defense]
 oldPath: /madelyn-jacobsen
 ---
