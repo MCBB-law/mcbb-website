@@ -8,7 +8,7 @@ import { pageImages, practiceImages } from '../data/images';
 
 const years = new Date().getFullYear() - site.founded;
 const people = await getPeople();
-// Everyone appears on the home page: partners first, then associates (getPeople handles the order).
+// Everyone appears on the home page, alphabetical by last name (getPeople handles the order).
 const featured = people;
 ---
 <Base>

@@ -6,8 +6,6 @@ import PersonCard from '../../components/PersonCard.astro';
 import { getPeople } from '../../data/people';
 
 const people = await getPeople();
-const partners = people.filter((p) => p.data.title === 'Partner');
-const others = people.filter((p) => p.data.title !== 'Partner');
 ---
 <Base title="People" description="Meet the lawyers of Manning Curtis Bradshaw & Bednar.">
   <PageHero
@@ -20,15 +18,12 @@ const others = people.filter((p) => p.data.title !== 'Partner');
   />
   <section class="section">
     <div class="wrap">
-      <h2 class="group">Partners</h2>
-      <div class="grid grid-4">{partners.map((p) => <PersonCard person={p} />)}</div>
-      <h2 class="group">Associates</h2>
-      <div class="grid grid-4">{others.map((p) => <PersonCard person={p} />)}</div>
+      <div class="grid team reveal-stagger">{people.map((p) => <PersonCard person={p} />)}</div>
     </div>
   </section>
 </Base>
 
 <style>
-  .group { font-size: 1.4rem; border-bottom: 1px solid var(--line); padding-bottom: .5rem; margin-bottom: 1.5rem; }
-  .group:not(:first-child) { margin-top: 4rem; }
+  .team { grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 36px 24px; }
+  @media (max-width: 520px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; } }
 </style>
