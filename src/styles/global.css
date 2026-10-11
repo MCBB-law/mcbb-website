@@ -16,6 +16,8 @@
   --white: #ffffff;
   --accent: #0d0d0d;       /* accents are black on light backgrounds */
   --accent-light: #ffffff; /* and white on dark backgrounds */
+  --clay: #B5562F;         /* sandstone accent (color option) */
+  --clay-dark: #94431F;
 
   --display: 'Jost Variable', 'Futura', 'Avenir Next', system-ui, sans-serif;
   --serif: var(--display);
@@ -76,7 +78,8 @@ p { margin: 0 0 1.1em; text-wrap: pretty; }
   align-items: center;
   gap: 12px;
 }
-.eyebrow::before { content: ''; width: 28px; height: 1px; background: currentColor; }
+.eyebrow { color: var(--clay); }
+.eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--clay); }
 .lede { font-size: 1.2rem; color: var(--muted); max-width: 44rem; }
 
 /* Square buttons with a sliding arrow */
@@ -106,6 +109,11 @@ p { margin: 0 0 1.1em; text-wrap: pretty; }
 .btn--light:hover { background: transparent; color: var(--white); }
 .btn--ghost-light { background: transparent; border-color: rgba(255,255,255,.6); color: var(--white); }
 .btn--ghost-light:hover { background: var(--white); border-color: var(--white); color: var(--ink); }
+.btn--accent { background: var(--clay); border-color: var(--clay); color: var(--white); }
+.btn--accent:hover { background: var(--clay-dark); border-color: var(--clay-dark); color: var(--white); }
+.section--accent { background: var(--clay); color: rgba(255,255,255,.88); }
+.section--accent h2, .section--accent h3 { color: var(--white); }
+.prose a, .bio a { text-decoration-color: var(--clay); text-decoration-thickness: 2px; }
 
 .grid { display: grid; gap: clamp(20px, 3vw, 32px); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
