@@ -16,11 +16,11 @@ export const pageImages: Record<string, PageImage> = {
 export const practiceImages: Record<string, PageImage> = {
   index: { src: '/images/practices.jpg', alt: 'Curving white façade of a modern building' },
   'business-litigation': { src: '/images/business-litigation.jpg', alt: 'Stacked stairways on a concrete building' },
-  'government-defense': { src: '/images/government-defense.jpg', alt: 'A row of concrete columns' },
-  'labor-employment': { src: '/images/labor-employment.jpg', alt: 'Concrete stairs rising along a wall' },
+  'government-defense': { src: '/images/government-defense.jpg', alt: 'A concrete civic building seen from below, its upper floors stepping outward', position: 'center top' },
+  'labor-employment': { src: '/images/labor-employment.jpg', alt: 'A tall tower with rows of windows rising into a white sky', position: 'center top' },
   'insurance-coverage': { src: '/images/insurance-coverage.jpg', alt: 'The curved edge of a dark building against the sky' },
-  'intellectual-property': { src: '/images/intellectual-property.jpg', alt: 'A dark glass tower with a precise grid of window frames' },
-  'real-estate-construction': { src: '/images/real-estate-construction.jpg', alt: 'Steel trusses of a bridge seen from below' },
-  'bankruptcy-restructuring': { src: '/images/bankruptcy-restructuring.jpg', alt: 'Curved panels of a building façade' },
+  'intellectual-property': { src: '/images/intellectual-property.jpg', alt: 'Dark glass panels crossed by streaks of light' },
+  'real-estate-construction': { src: '/images/real-estate-construction.jpg', alt: 'A concrete grid of beams seen from below against the sky' },
+  'bankruptcy-restructuring': { src: '/images/bankruptcy-restructuring.jpg', alt: 'The angular concrete corner of a building with cut-out openings' },
   appellate: { src: '/images/appellate.jpg', alt: 'Looking up between two curving towers' },
 };
