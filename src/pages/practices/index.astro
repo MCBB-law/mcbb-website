@@ -16,9 +16,8 @@ const img = practiceImages.index;
   />
   <section class="section">
     <div class="wrap list reveal-stagger">
-      {practices.map((p, i) => (
+      {practices.map((p) => (
         <a class="row" href={`/practices/${p.slug}/`}>
-          <span class="num">{String(i + 1).padStart(2, '0')}</span>
           <div>
             <h2>{p.title}</h2>
             <p>{p.summary}</p>
@@ -35,7 +34,7 @@ const img = practiceImages.index;
   .row:first-child { border-top: 1px solid var(--line); }
   .row {
     display: grid;
-    grid-template-columns: 64px 1fr 120px 40px;
+    grid-template-columns: 1fr 120px 40px;
     gap: 24px;
     align-items: center;
     padding: 28px 0;
@@ -48,9 +47,8 @@ const img = practiceImages.index;
   .thumb img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: transform .6s var(--ease); }
   .row:hover .thumb img { transform: scale(1.08); }
   .row p { color: var(--muted); margin: 0; max-width: 48rem; }
-  .num { font-family: var(--display); color: var(--muted); font-size: 1rem; letter-spacing: .1em; }
   .arrow { color: var(--ink); font-size: 1.4rem; transition: transform .25s var(--ease); }
   .row:hover h2 { transform: translateX(8px); }
   .row:hover .arrow { transform: translateX(4px); }
-  @media (max-width: 700px) { .row { grid-template-columns: 1fr 24px; } .num, .thumb { display: none; } }
+  @media (max-width: 700px) { .row { grid-template-columns: 1fr 24px; } .thumb { display: none; } }
 </style>

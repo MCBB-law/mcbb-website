@@ -43,12 +43,10 @@ const featured = people;
       </div>
       <div class="points reveal-stagger">
         <div>
-          <span class="n">01</span>
           <h3>Trial lawyers first</h3>
           <p>We approach every case with the courtroom in mind. Opponents know we are prepared to try the case, and that shapes how cases resolve.</p>
         </div>
         <div>
-          <span class="n">02</span>
           <h3>Judgment over activity</h3>
           <p>We focus on understanding the client’s objectives, evaluating risk realistically, and choosing strategies that advance outcomes, not just activity.</p>
         </div>
@@ -66,11 +64,10 @@ const featured = people;
         <a href="/practices/" class="btn btn--ghost">All practices</a>
       </div>
       <div class="line-grid tiles reveal-stagger">
-        {practices.map((p, i) => (
+        {practices.map((p) => (
           <a class="tile" href={`/practices/${p.slug}/`}>
             <span class="tile-img"><img src={practiceImages[p.slug].src} alt="" loading="lazy" style={`object-position:${practiceImages[p.slug].position ?? 'center'}`} /></span>
             <span class="tile-body">
-              <span class="n">{String(i + 1).padStart(2, '0')}</span>
               <h3>{p.title}</h3>
               <span class="arrow" aria-hidden="true">→</span>
             </span>
@@ -155,8 +152,7 @@ const featured = people;
 
   .approach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
   .points { display: grid; gap: 0; border-top: 1px solid var(--line); }
-  .points > div { padding: 28px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 56px 1fr; column-gap: 16px; }
-  .points .n { grid-row: span 2; font-family: var(--display); color: var(--muted); letter-spacing: .1em; padding-top: 2px; }
+  .points > div { padding: 28px 0; border-bottom: 1px solid var(--line); }
   .points h3 { text-transform: uppercase; letter-spacing: .04em; font-size: 1.15rem; margin-bottom: .4em; }
   .points p { margin: 0; color: var(--muted); }
 
@@ -169,7 +165,6 @@ const featured = people;
   .tile-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
   .tile:hover .tile-img img { transform: scale(1.06); }
   .tile-body { position: relative; padding: 22px 56px 26px 22px; flex: 1; }
-  .tile .n { display: block; font-family: var(--display); font-size: .82rem; letter-spacing: .14em; color: var(--muted); margin-bottom: 8px; }
   .tile h3 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .05em; margin: 0; }
   .tile .arrow { position: absolute; right: 22px; bottom: 24px; transition: transform .25s var(--ease); }
   .tile:hover .arrow { transform: translateX(5px); }
