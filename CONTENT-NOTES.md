@@ -42,7 +42,7 @@ All page photos are converted to black and white and stored in `public/images/`.
 | Government Defense | Concrete columns | Pascal Bullan |
 | Labor & Employment | Concrete stairs | mk. s |
 | Insurance Coverage | Curved dark building | Akira Hojo |
-| Intellectual Property | Patent drawing, U.S. Patent No. 1,424,428 (J. G. Vincent, 1922), public domain | — |
+| Intellectual Property | Dark glass tower with window grid (the patent drawing, U.S. Patent No. 1,424,428, J. G. Vincent, 1922, public domain, appears as a figure in the page text) | Ryunosuke Kikuno |
 | Real Estate & Construction | Steel bridge trusses | Mike Hindle |
 | Bankruptcy & Restructuring | Curved façade panels | Leandra Rieger |
 | Appellate | Looking up between towers | Adrian Cuj |
