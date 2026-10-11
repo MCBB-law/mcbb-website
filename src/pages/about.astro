@@ -1,8 +1,11 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import { pageImages } from '../data/images';
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 
-const clients = ['AON plc', 'British Petroleum', 'Franklin Covey', 'Intermountain Healthcare', 'Target Corporation', 'Workfront, Inc.'];
+// Brand names only (no Inc./plc). Logos would need each client's written permission.
+const clients = ['Aon', 'bp', 'Franklin Covey', 'Intermountain Healthcare', 'Target', 'Workfront'];
 const proBono = [
   {
     title: 'Permanent resident spared deportation',
@@ -23,13 +26,14 @@ const proBono = [
 ];
 ---
 <Base title="About" description={`Founded in ${site.founded}, MCBB is a Salt Lake City litigation firm with big-firm credentials and a small-firm culture.`}>
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">About MCBB</p>
-      <h1>Big-firm work. Small-firm everything else.</h1>
-      <p class="lede">Manning Curtis Bradshaw &amp; Bednar was founded in May {site.founded} and has concentrated on complex commercial litigation ever since.</p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="About MCBB"
+    title="Big-firm work. Small-firm everything else."
+    lede={`Manning Curtis Bradshaw & Bednar was founded in May ${site.founded} and has concentrated on complex commercial litigation ever since.`}
+    image={pageImages.about.src}
+    alt={pageImages.about.alt}
+    position={pageImages.about.position}
+  />
 
   <section class="section">
     <div class="wrap grid grid-2">
@@ -51,7 +55,7 @@ const proBono = [
       <p class="eyebrow">Representative clients</p>
       <h2>Trusted by national companies and local businesses</h2>
       <p class="lede">We represent clients in healthcare, automotive, insurance, hospitality, energy, and professional services, including:</p>
-      <ul class="clients">{clients.map((c) => <li>{c}</li>)}</ul>
+      <ul class="clients reveal-stagger">{clients.map((c) => <li><span>{c}</span></li>)}</ul>
     </div>
   </section>
 
@@ -68,8 +72,21 @@ const proBono = [
 </Base>
 
 <style>
-  .clients { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
-  .clients li { background: var(--white); border: 1px solid var(--line); padding: 18px 20px; font-family: var(--serif); font-size: 1.1rem; color: var(--ink); border-radius: var(--radius); }
+  .clients {
+    list-style: none; padding: 0; margin: 2.6rem 0 0;
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid #cfcfcb; border-left: 1px solid #cfcfcb;
+  }
+  .clients li {
+    border-right: 1px solid #cfcfcb; border-bottom: 1px solid #cfcfcb;
+    min-height: 120px; display: grid; place-items: center; padding: 24px 16px; text-align: center;
+  }
+  .clients span {
+    font-family: var(--display); font-weight: 500; text-transform: uppercase;
+    letter-spacing: .2em; font-size: clamp(.9rem, 1.6vw, 1.15rem); color: #6b6b6b; transition: color .25s;
+  }
+  .clients li:hover span { color: var(--ink); }
+  @media (max-width: 640px) { .clients { grid-template-columns: repeat(2, minmax(0, 1fr)); } .clients li { min-height: 92px; } }
   .pb { margin-top: 2rem; }
   .pb p { margin: 0; color: var(--muted); }
 </style>

@@ -12,6 +12,7 @@ Draft rebuild of www.mc2b.com, made with [Astro](https://astro.build) and meant 
 | News items | `src/pages/news.astro` |
 | Home, About, Careers, Contact | `src/pages/*.astro` |
 | Colors and fonts | `src/styles/global.css` |
+| Page photos | `public/images/` (which photo goes where: `src/data/images.ts`) |
 | Old URL → new URL redirects | `public/_redirects` |
 
 Paragraphs marked **Draft note** only show while the site is in preview mode.
