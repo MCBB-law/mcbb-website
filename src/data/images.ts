@@ -19,12 +19,7 @@ export const practiceImages: Record<string, PageImage> = {
   'government-defense': { src: '/images/government-defense.jpg', alt: 'A row of concrete columns' },
   'labor-employment': { src: '/images/labor-employment.jpg', alt: 'Concrete stairs rising along a wall' },
   'insurance-coverage': { src: '/images/insurance-coverage.jpg', alt: 'The curved edge of a dark building against the sky' },
-  'intellectual-property': {
-    src: '/images/intellectual-property.jpg',
-    alt: 'Patent drawing of a V-type engine, J. G. Vincent, U.S. Patent No. 1,424,428 (1922)',
-    fit: 'contain',
-    position: '50% 42%',
-  },
+  'intellectual-property': { src: '/images/intellectual-property.jpg', alt: 'A dark glass tower with a precise grid of window frames' },
   'real-estate-construction': { src: '/images/real-estate-construction.jpg', alt: 'Steel trusses of a bridge seen from below' },
   'bankruptcy-restructuring': { src: '/images/bankruptcy-restructuring.jpg', alt: 'Curved panels of a building façade' },
   appellate: { src: '/images/appellate.jpg', alt: 'Looking up between two curving towers' },
