@@ -6,6 +6,8 @@ export type Practice = {
   slug: string;
   oldPaths: string[];
   title: string;
+  shortTitle?: string; // shorter label for the home-page tiles
+  figure?: { src: string; alt: string; caption: string }; // optional image inside the page text
   summary: string;
   email?: string;
   match: RegExp;
@@ -112,6 +114,12 @@ export const practices: Practice[] = [
     slug: 'intellectual-property',
     oldPaths: ['/property'],
     title: 'Intellectual Property & Technology',
+    shortTitle: 'Intellectual Property',
+    figure: {
+      src: '/images/patent-1424428.jpg',
+      alt: 'Patent drawing of a V-type engine from U.S. Patent No. 1,424,428',
+      caption: 'J. G. Vincent, Hydrocarbon Motor, U.S. Patent No. 1,424,428 (1922), Sheet 4.',
+    },
     summary: 'Patent, trademark, copyright, and trade-secret litigation, from the trial court to the Federal Circuit.',
     email: 'IPandtechnology@mc2b.com',
     match: /intellectual/i,
