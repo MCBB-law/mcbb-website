@@ -34,6 +34,12 @@ const img = practiceImages[practice.slug];
       <article class="prose reveal">
         {PREVIEW && practice.draft && <p class="draft-note"><strong>Draft note:</strong> {practice.draft}</p>}
         {practice.intro.map((para) => <p>{para}</p>)}
+        {practice.figure && (
+          <figure class="figure">
+            <img src={practice.figure.src} alt={practice.figure.alt} loading="lazy" />
+            <figcaption>{practice.figure.caption}</figcaption>
+          </figure>
+        )}
         {practice.sections.map((s) => (
           <>
             {s.heading && <h2>{s.heading}</h2>}
@@ -69,6 +75,9 @@ const img = practiceImages[practice.slug];
 </Base>
 
 <style>
+  .figure { margin: 2.4em 0; border: 1px solid var(--line); background: #fff; padding: clamp(16px, 3vw, 32px); }
+  .figure img { width: 100%; max-width: 520px; margin: 0 auto; }
+  .figure figcaption { margin-top: 14px; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: center; }
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: clamp(32px, 5vw, 72px); align-items: start; }
   .prose > p:first-of-type:not(.draft-note), .prose > .draft-note + p { font-size: 1.2rem; line-height: 1.6; color: var(--ink); }
   .prose :global(h2) { padding-top: 1.2em; border-top: 1px solid var(--line); }

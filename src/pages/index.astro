@@ -68,7 +68,7 @@ const featured = people;
           <a class="tile" href={`/practices/${p.slug}/`}>
             <span class="tile-img"><img src={practiceImages[p.slug].src} alt="" loading="lazy" style={`object-position:${practiceImages[p.slug].position ?? 'center'}`} /></span>
             <span class="tile-body">
-              <h3>{p.title}</h3>
+              <h3>{p.shortTitle ?? p.title}</h3>
               <span class="arrow" aria-hidden="true">→</span>
             </span>
           </a>
