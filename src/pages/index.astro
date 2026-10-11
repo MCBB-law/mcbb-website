@@ -166,6 +166,9 @@ const featured = people;
   .tile:hover .tile-img img { transform: scale(1.06); }
   .tile-body { position: relative; padding: 22px 56px 26px 22px; flex: 1; }
   .tile h3 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .05em; margin: 0; }
+  /* Label row: title and arrow share one vertically centered row; fixed height keeps all tiles even. */
+  .tile .tile-body { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 92px; padding: 18px 22px; }
+  .tile .tile-body .arrow { position: static; flex: none; }
   .tile .arrow { position: absolute; right: 22px; bottom: 24px; transition: transform .25s var(--ease); }
   .tile:hover .arrow { transform: translateX(5px); }
   .tile:hover { background: var(--white); }
