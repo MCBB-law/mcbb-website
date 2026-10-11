@@ -1,0 +1,33 @@
+---
+// MCBB logo (option C): the four initials in a ruled square, a thin rule, then the firm name.
+// Drawn in CSS so it stays sharp at any size and inherits the text color (black on white, white on black).
+// Replace with the firm's final vector logo when it's ready.
+interface Props { size?: 'sm' | 'md'; showName?: boolean }
+const { size = 'md', showName = true } = Astro.props;
+---
+<span class={`logo logo--${size}`}>
+  <span class="mono" aria-hidden="true"><span>M</span><span>C</span><span>B</span><span>B</span></span>
+  {showName && <><span class="rule" aria-hidden="true"></span><span class="nm">Manning Curtis<br />Bradshaw &amp; Bednar</span></>}
+</span>
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: 16px; color: inherit; }
+  .mono {
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+    width: var(--m); height: var(--m); border: 1.5px solid currentColor; flex: none;
+  }
+  .mono span {
+    display: grid; place-items: center;
+    font-family: var(--display); font-weight: 500; font-size: calc(var(--m) * .33); line-height: 1;
+  }
+  .mono span:nth-child(1), .mono span:nth-child(2) { border-bottom: 1px solid currentColor; }
+  .mono span:nth-child(1), .mono span:nth-child(3) { border-right: 1px solid currentColor; }
+  .rule { width: 1px; height: calc(var(--m) * .78); background: currentColor; opacity: .35; flex: none; }
+  .nm {
+    font-family: var(--display); font-weight: 400; text-transform: uppercase;
+    letter-spacing: .16em; font-size: var(--n); line-height: 1.45; white-space: nowrap;
+  }
+  .logo--md { --m: 52px; --n: 12px; }
+  .logo--sm { --m: 44px; --n: 11px; gap: 13px; }
+  @media (max-width: 420px) { .logo--md { --m: 44px; --n: 10.5px; gap: 12px; } }
+</style>
