@@ -31,12 +31,12 @@ All page photos are converted to black and white and stored in `public/images/`.
 
 | Page | Photo | Photographer |
 |---|---|---|
-| Home banner | Snow peaks in darkness | Sylwia Bartyzel |
+| Home banner | Fog through a mountain forest | Dejan Zakic |
 | About | Clouds over a ridge | Daniel Mirlea |
-| People | Fog in a mountain forest | Dejan Zakic |
+| People | Arches National Park and the La Sal Mountains | Intricate Explorer |
 | Careers | Aspen trunks | Patrick Hendry |
 | Contact (and home “Contact us” band) | Wasatch Range over Salt Lake | Nic Y-C |
-| News | Bare winter branches | Markus Spiske |
+| News | Sun through fog over a pine forest | Ales Krivec |
 | Practices overview | Curved white façade | Mika Ruusunen |
 | Business Litigation | Stacked stairways | Declan Sun |
 | Government Defense | Concrete columns | Pascal Bullan |
@@ -47,5 +47,5 @@ All page photos are converted to black and white and stored in `public/images/`.
 | Bankruptcy & Restructuring | Curved façade panels | Leandra Rieger |
 | Appellate | Looking up between towers | Adrian Cuj |
 
-Spares in `photos/` if we want to swap: misty forest with sun (Ales Krivec), redwoods from below (Curated Lifestyle), snow peak (Guillaume Issaly), Turret Arch in Arches National Park (Intricate Explorer), relief-map and topography abstracts (Planet Volumes, Nick Amo), river delta aerial (Zongnan Bao), and an x-ray pen with blueprints (Alex Shuper).
+Spares in `photos/` if we want to swap: dark snow peaks (Sylwia Bartyzel, the first home banner), bare winter branches (Markus Spiske), redwoods from below (Curated Lifestyle), snow peak (Guillaume Issaly), relief-map and topography abstracts (Planet Volumes, Nick Amo), river delta aerial (Zongnan Bao), and an x-ray pen with blueprints (Alex Shuper).
 To swap a photo, ask Claude, or replace the file in `public/images/` with a black-and-white JPG of the same name.
