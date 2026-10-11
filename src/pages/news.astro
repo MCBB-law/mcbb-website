@@ -6,6 +6,7 @@ import { PREVIEW } from '../data/site';
 
 // Newest first. Add items here; anything older than a few years probably belongs off the site.
 const items: { date: string; title: string; summary: string; href?: string }[] = [
+  { date: '2026-09-30', title: 'MCBB takes on a pro bono challenge to the Box Elder County data center approvals', summary: 'MCBB is counsel of record, without charge, for Utah residents challenging the government approvals behind a proposed large-scale data center in Box Elder County.' },
   { date: '2026-08-01', title: 'Trevor J. Lee joins MCBB as a partner', summary: 'Trevor brings a trial and appellate practice focused on commercial, intellectual property, construction, and bankruptcy disputes.', href: '/people/trevor-lee/' },
   { date: '2022-07-01', title: 'MCBB Newsletter, 3rd Quarter 2022', summary: 'A Utah Supreme Court decision, wage-fixing agreements, and DOJ antitrust enforcement.' },
   { date: '2022-05-13', title: 'MCBB Newsletter, 2nd Quarter 2022', summary: 'Emotional-distress damages, tip-pool regulations, and the new federal law on forced arbitration.' },
@@ -23,7 +24,7 @@ const fmt = (d: string) => new Date(d + 'T12:00:00').toLocaleDateString('en-US',
   />
   <section class="section">
     <div class="wrap narrow">
-      {PREVIEW && <p class="draft-note"><strong>Draft note:</strong> Only one item is newer than 2022. Before launch, add a few more (other recent hires, the office move, recent results) or hide this page from the menu.</p>}
+      {PREVIEW && <p class="draft-note"><strong>Draft note:</strong> Only two items are newer than 2022. Before launch, add a few more (the office move, recent results such as the Geneva Rock appeal once the client approves) or hide this page from the menu.</p>}
       <ol class="news">
         {items.map((n) => (
           <li>
