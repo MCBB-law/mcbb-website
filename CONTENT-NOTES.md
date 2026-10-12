@@ -34,7 +34,7 @@ All page photos are converted to black and white and stored in `public/images/`.
 | Home banner | Fog through a mountain forest | Dejan Zakic |
 | About | Clouds over a ridge | Daniel Mirlea |
 | People | Arches National Park and the La Sal Mountains | Intricate Explorer |
-| Careers | Aspen trunks | Patrick Hendry |
+| Careers | Mountain ridge in morning haze | Etienne Bosiger |
 | Contact (and home “Contact us” band) | Wasatch Range over Salt Lake | Nic Y-C |
 | News | Sun through fog over a pine forest | Ales Krivec |
 | Practices overview | Curved white façade | Mika Ruusunen |
