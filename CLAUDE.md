@@ -42,7 +42,7 @@ Lawyers are listed together (partners and associates), alphabetical by last name
 
 - Black and white only. No color accents.
 - Headlines: Jost, uppercase. Body text: Inter.
-- Main pages (Home, About, People, Careers, Contact, News) open with a full-width **landscape** photo. The Practices overview and the 8 practice pages use a split header with a tall **architecture** photo. Intellectual Property uses a public-domain 1922 patent drawing (U.S. Patent No. 1,424,428).
+- Main pages (Home, About, People, Careers, Contact, News) open with a full-width **landscape** photo. The Practices overview uses a split header with a tall **architecture** photo; the architecture photos also appear on the home-page practice tiles and the Practices list. The 8 practice pages themselves have no photo: a dark header with the practice name in large type, the summary, and small headshots of the lawyers in that practice. Intellectual Property uses a public-domain 1922 patent drawing (U.S. Patent No. 1,424,428).
 - Photos are black-and-white JPGs, about 2400 px wide for banners and 1200 × 1500 for practice pages. Full-size originals are kept on Trevor's Mac, not in the repository. Photos come from the firm's Unsplash+ subscription.
 - Square buttons with an arrow, thin 1-pixel lines between grid items, gentle fade-in on scroll (turned off for visitors who prefer reduced motion).
 - Headshots display in grayscale and turn to color on hover.
