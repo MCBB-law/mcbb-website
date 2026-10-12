@@ -13,6 +13,8 @@ interface Props {
   position?: string; // CSS object-position for the photo
   fit?: 'cover' | 'contain';
 }
+// Each sentence of the title starts on its own line.
+const lines = (Astro.props.title as string).split(/(?<=\.)\s+/);
 const { eyebrow, eyebrowHref, title, lede, image, alt = '', variant = 'banner', position = 'center', fit = 'cover' } = Astro.props;
 ---
 {variant === 'banner' ? (
@@ -21,7 +23,7 @@ const { eyebrow, eyebrowHref, title, lede, image, alt = '', variant = 'banner', 
     <div class="shade" aria-hidden="true"></div>
     <div class="wrap inner reveal">
       {eyebrow && <p class="eyebrow">{eyebrowHref ? <a href={eyebrowHref}>{eyebrow}</a> : eyebrow}</p>}
-      <h1>{title}</h1>
+      <h1>{lines.map((l) => <span class="ln">{l}</span>)}</h1>
       {lede && <p class="lede">{lede}</p>}
       <slot />
     </div>
@@ -31,7 +33,7 @@ const { eyebrow, eyebrowHref, title, lede, image, alt = '', variant = 'banner', 
     <div class="wrap grid-split">
       <div class="text reveal">
         {eyebrow && <p class="eyebrow">{eyebrowHref ? <a href={eyebrowHref}>{eyebrow}</a> : eyebrow}</p>}
-        <h1>{title}</h1>
+        <h1>{lines.map((l) => <span class="ln">{l}</span>)}</h1>
         {lede && <p class="lede">{lede}</p>}
         <slot />
       </div>
@@ -43,6 +45,7 @@ const { eyebrow, eyebrowHref, title, lede, image, alt = '', variant = 'banner', 
 )}
 
 <style>
+  .ln { display: block; }
   .eyebrow a { color: inherit; text-decoration: none; }
   .eyebrow a:hover { text-decoration: underline; }
 
@@ -61,7 +64,7 @@ const { eyebrow, eyebrowHref, title, lede, image, alt = '', variant = 'banner', 
     linear-gradient(90deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.2) 55%, rgba(0,0,0,0) 85%),
     linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%); }
   .inner { position: relative; width: 100%; padding-top: 96px; padding-bottom: clamp(40px, 6vw, 72px); }
-  .hero-banner h1 { color: #fff; max-width: 16ch; }
+  .hero-banner h1 { color: #fff; max-width: 22ch; }
   .hero-banner .eyebrow { color: rgba(255,255,255,.8); }
   .hero-banner .lede { color: rgba(255,255,255,.85); }
   @keyframes settle { from { transform: scale(1.06); } to { transform: scale(1); } }
