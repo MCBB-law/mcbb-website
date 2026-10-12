@@ -12,6 +12,15 @@ export async function getStaticPaths() {
 const { person } = Astro.props as { person: Person };
 const d = person.data;
 const { Content } = await render(person);
+// Split the rendered bio at each "## " heading. Short credential sections (education, admissions,
+// clerkships, languages, affiliations, honors) go in the right-hand column; everything else stays in the main text.
+const SIDE = /^(education|licenses|clerkship|languages|professional affiliations|professional recognitions)/i;
+const bioHtml: string = (person as any).rendered?.html ?? '';
+const parts = bioHtml.split(/(?=<h2[\s>])/);
+const intro = (parts[0] ?? '').replace('<p>', '<p class="lead">');
+const sections = parts.slice(1).map((h) => ({ html: h, title: (h.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? '').replace(/<[^>]+>/g, '').trim() }));
+const sideSections = sections.filter((x) => SIDE.test(x.title));
+const mainSections = sections.filter((x) => !SIDE.test(x.title));
 const mine = practiceSlugsFor(person);
 const myPractices = practices.filter((p) => mine.includes(p.slug));
 const telHref = d.phone ? 'tel:+1' + d.phone.replace(/\D/g, '') : site.phoneHref;
@@ -27,7 +36,7 @@ const personSchema = {
 ---
 <Base title={d.name} description={`${d.name}, ${d.title.toLowerCase()} at ${site.name}. ${d.practiceAreas.join(', ')}.`}>
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
-  <section class="page-head">
+  <section class="page-head bio-hero">
     <div class="wrap bio-head">
       <div class="photo">
         {d.photo
@@ -51,7 +60,7 @@ const personSchema = {
     <div class="wrap layout">
       <article class="prose bio">
         {PREVIEW && d.draftNote && <p class="draft-note"><strong>Draft note:</strong> {d.draftNote}</p>}
-        <Content />
+        {bioHtml ? <Fragment set:html={intro + mainSections.map((x) => x.html).join('')} /> : <Content />}
       </article>
       <aside>
         {myPractices.length > 0 && (
@@ -60,6 +69,9 @@ const personSchema = {
             <ul>{myPractices.map((p) => <li><a href={`/practices/${p.slug}/`}>{p.title}</a></li>)}</ul>
           </div>
         )}
+        {sideSections.length > 0 && (
+          <div class="side-creds">{sideSections.map((x) => <Fragment set:html={x.html} />)}</div>
+        )}
       </aside>
     </div>
   </section>
@@ -67,7 +79,15 @@ const personSchema = {
 
 <style>
   .page-head .eyebrow a { color: inherit; text-decoration: none; }
-  .bio-head { display: grid; grid-template-columns: 240px 1fr; gap: clamp(24px, 4vw, 48px); align-items: end; }
+  /* Dark header band */
+  .bio-hero { background: var(--ink); border-bottom: 0; padding: clamp(56px, 7vw, 88px) 0 clamp(44px, 6vw, 64px); }
+  .bio-hero h1, .bio-hero .contact a { color: #fff; }
+  .bio-hero .lede { color: rgba(255,255,255,.75); }
+  .bio-hero .areas { color: rgba(255,255,255,.55); }
+  .bio-hero .eyebrow { color: rgba(255,255,255,.7); }
+  .bio-hero .contact a:hover { color: rgba(255,255,255,.7); }
+  .bio-hero .photo span { color: #fff; }
+  .bio-head { display: grid; grid-template-columns: 300px 1fr; gap: clamp(24px, 4vw, 48px); align-items: end; }
   .photo {
     aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden;
     background: linear-gradient(160deg, #3a3a3a, #0d0d0d);
@@ -75,18 +95,30 @@ const personSchema = {
   }
   .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: grayscale(1) contrast(1.05); }
   .photo span { font-family: var(--display); font-size: 3.2rem; color: #fff; letter-spacing: .1em; }
-  .page-head h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  .page-head h1 { font-size: clamp(2.3rem, 5vw, 4rem); }
   .page-head .lede { margin-bottom: .6rem; }
   .contact { display: flex; flex-wrap: wrap; gap: 6px 24px; margin: 0 0 .6rem; font-weight: 500; }
   .areas { color: var(--muted); font-size: .92rem; margin: 0; }
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: clamp(32px, 5vw, 72px); align-items: start; }
-  aside .card { position: sticky; top: 100px; padding: 24px; }
+  aside .card { padding: 24px; }
   aside ul { list-style: none; margin: 0; padding: 0; }
   aside li { border-bottom: 1px solid var(--line); }
   aside li:last-child { border-bottom: 0; }
   aside a { display: block; padding: 8px 0; text-decoration: none; font-size: .95rem; }
 
+  /* Credentials in the right-hand column */
+  .side-creds { margin-top: 12px; padding: 0 4px; }
+  .side-creds :global(h2) { font-family: var(--sans); font-size: .74rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin: 30px 0 8px; display: flex; align-items: center; gap: 12px; }
+  .side-creds :global(h2)::before { content: ''; width: 28px; height: 1px; background: currentColor; flex: none; }
+  .side-creds :global(ul) { list-style: none; margin: 0; padding: 0; }
+  .side-creds :global(li) { font-size: .92rem; line-height: 1.45; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .side-creds :global(li ul) { margin-top: 4px; }
+  .side-creds :global(li li) { border: 0; padding: 2px 0 2px 14px; color: var(--muted); font-size: .86rem; position: relative; }
+  .side-creds :global(li li)::before { content: '–'; position: absolute; left: 0; }
+  .side-creds :global(p) { font-size: .92rem; line-height: 1.5; }
+
   /* Bio body (Markdown) */
+  .bio :global(p.lead) { font-size: 1.3rem; line-height: 1.55; color: var(--ink); }
   .bio :global(p) { font-size: 1.05rem; }
   .bio :global(h2) { font-size: 1.05rem; font-family: var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 2.4em 0 .8em; }
   .bio :global(h3) { font-size: 1.15rem; margin: 1.4em 0 .5em; }
@@ -103,7 +135,8 @@ const personSchema = {
   .bio :global(details li) { font-size: .93rem; }
 
   @media (max-width: 860px) {
-    .bio-head { grid-template-columns: 160px 1fr; align-items: center; }
+    .bio-head { grid-template-columns: 180px 1fr; align-items: center; }
+    .bio :global(p.lead) { font-size: 1.15rem; }
     .layout { grid-template-columns: 1fr; }
     aside .card { position: static; }
   }
