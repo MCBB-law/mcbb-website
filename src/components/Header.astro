@@ -11,18 +11,20 @@ const isActive = (href: string) => path.startsWith(href);
     </a>
 
     <nav class="nav-desktop" aria-label="Main">
-      {nav.map((item) => (
+      {nav.filter((item) => item.href !== '/contact/').map((item) => (
         <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
       ))}
+      <a href={site.phoneHref} class="nav-tel">{site.phone}</a>
+      <a href="/contact/" class="btn btn--ghost nav-cta" aria-current={isActive('/contact/') ? 'page' : undefined}>Contact</a>
     </nav>
 
     <details class="nav-mobile">
       <summary aria-label="Menu"><span></span><span></span><span></span></summary>
       <nav aria-label="Main (mobile)">
+        <a href={site.phoneHref} class="nav-phone">Call {site.phone}</a>
         {nav.map((item) => (
           <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
         ))}
-        <a href={site.phoneHref} class="nav-phone">{site.phone}</a>
       </nav>
     </details>
   </div>
@@ -38,11 +40,11 @@ const isActive = (href: string) => path.startsWith(href);
   }
   .bar { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 24px; }
   .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
-  .nav-desktop { display: flex; gap: 32px; }
+  .nav-desktop { display: flex; align-items: center; gap: 28px; }
   .nav-desktop a {
     text-decoration: none;
     color: var(--text);
-    font-size: .74rem;
+    font-size: .8rem;
     font-weight: 600;
     letter-spacing: .18em;
     text-transform: uppercase;
@@ -51,6 +53,11 @@ const isActive = (href: string) => path.startsWith(href);
     transition: background-size .3s var(--ease);
   }
   .nav-desktop a:hover, .nav-desktop a[aria-current] { color: var(--ink); background-size: 100% 2px; }
+  .nav-desktop .nav-tel { margin-left: 8px; letter-spacing: .08em; font-variant-numeric: tabular-nums; }
+  .nav-desktop .nav-cta { background: transparent; padding: .7rem 1.1rem; }
+  .nav-desktop .nav-cta:hover, .nav-desktop .nav-cta[aria-current] { background: var(--ink); color: var(--white); }
+  .nav-desktop .nav-cta::after { display: none; }
+  @media (max-width: 1100px) { .nav-desktop .nav-tel { display: none; } }
 
   .nav-mobile { display: none; }
   .nav-mobile summary {
@@ -76,11 +83,11 @@ const isActive = (href: string) => path.startsWith(href);
     text-decoration: none;
     color: var(--ink);
     font-weight: 600;
-    font-size: .8rem;
+    font-size: .85rem;
     letter-spacing: .16em;
     text-transform: uppercase;
   }
-  .nav-mobile .nav-phone { border-bottom: 0; color: var(--muted); }
+  .nav-mobile .nav-phone { color: var(--clay); font-variant-numeric: tabular-nums; }
 
   @media (max-width: 900px) {
     .nav-desktop { display: none; }
