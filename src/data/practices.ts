@@ -29,6 +29,7 @@ export const practices: Practice[] = [
     metaTitle: 'Business Litigation Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Complex, high-stakes commercial disputes, handled by trial lawyers with a trial-oriented plan from day one.',
     email: 'businesslitigation@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Alan Bradshaw at abradshaw@mc2b.com, Chad Derum at cderum@mc2b.com, or Brett Gilmore at bgilmore@mc2b.com, or call 801.363.5678.',
     match: /business|commercial|class action|antitrust/i,
     intro: [
       'MCBB’s business litigators are trial lawyers with broad experience in all types of complex, high-stakes commercial litigation matters. We engage in focused, thoughtful analysis and planning at the outset of complex business cases and aggressively pursue or defend such litigation with a trial-oriented approach. We litigate the most complex cases efficiently and move them forward with focus, achieving better results for our clients in a more time- and cost-effective manner. Many of our partners have extensive backgrounds in high-profile, big-firm commercial litigation and are nationally recognized for their skill and accomplishments in this field.',
