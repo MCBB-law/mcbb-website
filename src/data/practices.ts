@@ -120,6 +120,7 @@ export const practices: Practice[] = [
     slug: 'intellectual-property',
     oldPaths: ['/property'],
     title: 'Intellectual Property & Technology',
+    metaTitle: 'Intellectual Property Litigation | Salt Lake City, Utah | MCBB',
     shortTitle: 'Intellectual Property',
     figure: {
       src: '/images/patent-1424428.jpg',
