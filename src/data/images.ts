@@ -8,7 +8,7 @@ export const pageImages: Record<string, PageImage> = {
   home: { src: '/images/home.jpg', alt: 'Fog drifting through a forest below mountain peaks', position: 'center 40%' },
   about: { src: '/images/about.jpg', alt: 'Layered mountain ridges fading into mist', position: 'center 40%' },
   people: { src: '/images/people.jpg', alt: 'A granite cliff face lit by the sun against a dark sky', position: 'center 30%' },
-  careers: { src: '/images/careers.jpg', alt: 'A sharp mountain ridge rising toward its peak in morning haze', position: 'center 40%' },
+  careers: { src: '/images/careers.jpg', alt: 'A single mountain peak rising above a sea of clouds', position: 'center 40%' },
   contact: { src: '/images/contact.jpg', alt: 'The Wasatch Range above the Salt Lake Valley', position: 'center 40%' },
   news: { src: '/images/news.jpg', alt: 'Morning sun breaking through fog over a pine forest', position: 'center 55%' },
 };
