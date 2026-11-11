@@ -14,7 +14,7 @@ const others = practices.filter((p) => p.slug !== practice.slug);
 const contactEmail = practice.email ?? site.email;
 const sectionLinks = practice.sections.filter((x) => x.heading).map((x) => ({ text: x.heading, id: x.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') }));
 ---
-<Base title={practice.title} description={practice.summary}>
+<Base title={practice.title} metaTitle={practice.metaTitle} description={practice.metaDescription ?? practice.summary}>
   <section class="ph">
     <div class="wrap">
       <p class="eyebrow"><a href="/practices/">Practices</a></p>

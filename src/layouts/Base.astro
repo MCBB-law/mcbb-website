@@ -6,10 +6,11 @@ import { site, PREVIEW } from '../data/site';
 
 interface Props {
   title?: string;
+  metaTitle?: string; // full <title> text, used as is (no "| MCBB" added)
   description?: string;
 }
-const { title, description = site.description } = Astro.props;
-const fullTitle = title ? `${title} | ${site.shortName}` : `${site.name} | Salt Lake City Business Litigation`;
+const { title, metaTitle, description = site.description } = Astro.props;
+const fullTitle = metaTitle ?? (title ? `${title} | ${site.shortName}` : `${site.name} | Salt Lake City Business Litigation`);
 const canonical = new URL(Astro.url.pathname, Astro.site);
 
 const orgSchema = {

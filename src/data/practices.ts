@@ -6,6 +6,8 @@ export type Practice = {
   slug: string;
   oldPaths: string[];
   title: string;
+  metaTitle?: string; // full browser-tab / search-result title, used as is
+  metaDescription?: string; // search-result description; defaults to the summary
   shortTitle?: string; // shorter label for the home-page tiles
   figure?: { src: string; alt: string; caption: string }; // optional image inside the page text
   summary: string;
@@ -50,6 +52,7 @@ export const practices: Practice[] = [
     slug: 'government-defense',
     oldPaths: ['/government-defense'],
     title: 'Government Defense',
+    metaTitle: 'Government Defense Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Defending cities, counties, agencies, officers, and public employees in civil-rights, land-use, employment, and other claims.',
     email: 'governmentdefense@mc2b.com',
     match: /government|municipal/i,
