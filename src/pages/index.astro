@@ -29,12 +29,6 @@ const featured = people;
     <a class="scroll-cue" href="#approach" aria-label="Scroll down"><span></span></a>
   </section>
 
-  <section class="notice">
-    <div class="wrap">
-      <p><strong>We’ve moved.</strong> Our new office is at {site.address.street}, {site.address.city}. <a href={site.mapUrl} rel="noopener">Directions</a></p>
-    </div>
-  </section>
-
   <section class="section" id="approach">
     <div class="wrap approach">
       <div class="reveal">
@@ -147,8 +141,6 @@ const featured = people;
     .hero .bg, .hero h1 .line, .hero-lede, .hero-cta, .scroll-cue span { animation: none; }
   }
 
-  .notice { background: var(--white); border-bottom: 1px solid var(--line); font-size: .92rem; }
-  .notice p { margin: 0; padding: 14px 0; }
 
   .approach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
   .points { display: grid; gap: 0; border-top: 1px solid var(--line); }
