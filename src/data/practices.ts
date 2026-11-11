@@ -172,6 +172,7 @@ export const practices: Practice[] = [
     slug: 'bankruptcy-restructuring',
     oldPaths: [],
     title: 'Bankruptcy',
+    metaTitle: 'Bankruptcy Litigation Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Litigation in bankruptcy court for debtors, creditors, trustees, and other parties in interest.',
     match: /bankruptcy/i,
     intro: [
