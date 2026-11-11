@@ -51,3 +51,4 @@ All page photos are converted to black and white and stored in `public/images/`.
 
 Spares in `photos/` if we want to swap: dark snow peaks (Sylwia Bartyzel, the first home banner), bare winter branches (Markus Spiske), redwoods from below (Curated Lifestyle), snow peak (Guillaume Issaly), relief-map and topography abstracts (Planet Volumes, Nick Amo), river delta aerial (Zongnan Bao), and an x-ray pen with blueprints (Alex Shuper).
 To swap a photo, ask Claude, or replace the file in `public/images/` with a black-and-white JPG of the same name.
+- Sara Blamires (added Nov. 11, 2026): bio copied word for word from mc2b.com. Her photo is a temporary one from her LinkedIn profile (mc2b.com has only a stock gavel image). Replace `public/people/sara-blamires.jpg` with her firm headshot before launch.
