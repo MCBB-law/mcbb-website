@@ -13,13 +13,16 @@ Christian Michalik is an associate at Manning Curtis Bradshaw & Bednar. Christia
 
 ## Education
 
-- J.D., University of Illinois Chicago School of Law (2020)
+- University of Illinois Chicago School of Law\
+  J.D. · 2020
   - Lead Publications Editor, Journal of Information Technology and Privacy Law
   - Baseball Salary Arbitration Team
   - Dean’s List
   - Dean’s Scholar
-- M.B.A., Saint Xavier University (2020)
-- B.S., University of Utah, Political Science (2017)
+- Saint Xavier University\
+  M.B.A. · 2020
+- University of Utah\
+  B.S., Political Science · 2017
 
 ## Licenses and Admissions
 

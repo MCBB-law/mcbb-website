@@ -18,8 +18,10 @@ Mr. Bednar graduated magna cum laude from the J. Reuben Clark Law School, Brigha
 
 ## Education
 
-- J.D., J. Reuben Clark Law School, Brigham Young University, magna cum laude (1990)
-- B.A., Brigham Young University (1987)
+- J. Reuben Clark Law School, Brigham Young University\
+  J.D., magna cum laude · 1990
+- Brigham Young University\
+  B.A. · 1987
 
 ## Clerkship
 

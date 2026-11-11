@@ -17,11 +17,13 @@ Apart from the law, Taylor enjoys reading and spending time with his family.
 
 ## Education
 
-- J.D., University of Virginia School of Law (2019)
+- University of Virginia School of Law\
+  J.D. · 2019
   - Editorial Team, Virginia Journal of Law and Technology
   - President, Rex E. Lee Law Society
   - Appellate Practice Clinic
-- B.A., Brigham Young University (2016)
+- Brigham Young University\
+  B.A. · 2016
 
 ## Clerkship
 

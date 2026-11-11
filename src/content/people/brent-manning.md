@@ -16,8 +16,10 @@ His recent cases include representation of: public interest groups and individua
 
 ## Education
 
-- J.D., Harvard University School of Law (1975)
-- B.A., Idaho State University (1972)
+- Harvard University School of Law\
+  J.D. · 1975
+- Idaho State University\
+  B.A. · 1972
 
 ## Licenses and Admissions
 

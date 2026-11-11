@@ -19,7 +19,8 @@ const bioHtml: string = (person as any).rendered?.html ?? '';
 const parts = bioHtml.split(/(?=<h2[\s>])/);
 const intro = (parts[0] ?? '').replace('<p>', '<p class="lead">');
 const sections = parts.slice(1).map((h) => ({ html: h, title: (h.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? '').replace(/<[^>]+>/g, '').trim() }));
-const sideSections = sections.filter((x) => SIDE.test(x.title));
+// An entry written as "School\" + new line + "Degree · Year" shows the school on top and the details below in gray.
+const sideSections = sections.filter((x) => SIDE.test(x.title)).map((x) => ({ ...x, html: x.html.replace(/<li>([^<]+)<br\s*\/?>\s*([^<]+)/g, '<li><span class="sc">$1</span><span class="mj">$2</span>') }));
 const mainSections = sections.filter((x) => !SIDE.test(x.title));
 const mine = practiceSlugsFor(person);
 const myPractices = practices.filter((p) => mine.includes(p.slug));
@@ -112,6 +113,8 @@ const personSchema = {
   .side-creds :global(li li) { border: 0; padding: 2px 0 2px 14px; color: var(--muted); font-size: .86rem; position: relative; }
   .side-creds :global(li li)::before { content: '–'; position: absolute; left: 0; }
   .side-creds :global(p) { font-size: .92rem; line-height: 1.5; }
+  .side-creds :global(.sc) { display: block; color: var(--ink); }
+  .side-creds :global(.mj) { display: block; margin-top: 2px; color: var(--muted); font-size: .84rem; }
   .practice-links a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-decoration: none; color: var(--ink); }
   .practice-links a:hover { color: var(--clay-dark); }
   .practice-links .arrow { opacity: 0; transform: translateX(-4px); transition: opacity .2s, transform .2s var(--ease); }

@@ -15,11 +15,13 @@ During law school, Mr. Longson interned for the Honorable David Nuffer, then-Chi
 
 ## Education
 
-- J.D., University of Utah S.J. Quinney College of Law (2015)
+- University of Utah S.J. Quinney College of Law\
+  J.D. · 2015
   - Order of the Coif
   - Environmental Editor, Utah Law Review
   - Pace National Environmental Law Moot Court Team, Best Brief Award
-- B.S., University of Utah, cum laude (2011)
+- University of Utah\
+  B.S., cum laude · 2011
 
 ## Licenses and Admissions
 

@@ -15,10 +15,13 @@ A native of Ammon, Idaho, Brianna is a BYU sports fan and enjoys playing basketb
 
 ## Education
 
-- J.D., J. Reuben Clark Law School, Brigham Young University (2025)
+- J. Reuben Clark Law School, Brigham Young University\
+  J.D. · 2025
   - Dean’s List
-- M.Acc., Marriott School of Business, Brigham Young University (2025)
-- B.S., Accounting, Brigham Young University (2025)
+- Marriott School of Business, Brigham Young University\
+  M.Acc. · 2025
+- Brigham Young University\
+  B.S., Accounting · 2025
 
 ## Licenses and Admissions
 

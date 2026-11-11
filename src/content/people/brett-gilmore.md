@@ -17,12 +17,14 @@ Brett attended the University of Arizona James E. Rogers College of Law, where h
 
 ## Education
 
-- J.D., University of Arizona, James E. Rogers College of Law, summa cum laude (2017)
+- University of Arizona, James E. Rogers College of Law\
+  J.D., summa cum laude · 2017
   - Order of the Coif
   - Distinguished Scholar
   - Dean’s List
   - Senior Managing Editor, Arizona Law Review
-- B.S., University of Utah (2012)
+- University of Utah\
+  B.S. · 2012
   - Dean’s List
 
 ## Licenses and Admissions

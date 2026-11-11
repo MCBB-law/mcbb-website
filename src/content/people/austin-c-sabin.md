@@ -15,8 +15,10 @@ Austin graduated cum laude from the J. Reuben Clark Law School where he served o
 
 ## Education
 
-- J.D., J. Reuben Clark Law School, Brigham Young University, cum laude (2024)
-- B.S., Finance, Brigham Young University (2021)
+- J. Reuben Clark Law School, Brigham Young University\
+  J.D., cum laude · 2024
+- Brigham Young University\
+  B.S., Finance · 2021
 
 ## Clerkship
 

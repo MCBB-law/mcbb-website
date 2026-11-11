@@ -13,11 +13,14 @@ Trent Ferrin is an associate at Manning Curtis Bradshaw & Bednar. Before joining
 
 ## Education
 
-- J.D., University of Oregon School of Law (2022)
+- University of Oregon School of Law\
+  J.D. · 2022
   - Order of the Coif
   - Excellence in Written Advocacy Award
-- B.S., Weber State University, Public Relations, Advertising, and Applied Communications (2019)
-- B.A., Weber State University, French
+- Weber State University\
+  B.S., Public Relations, Advertising, and Applied Communications · 2019
+- Weber State University\
+  B.A., French
 
 ## Licenses and Admissions
 
