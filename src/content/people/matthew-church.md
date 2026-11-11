@@ -35,7 +35,7 @@ Engagements range from filing and appearance support to full participation in di
 
 ## Municipal Defense
 
-One of Matt’s primary practice areas is civil rights claims and government defense. He has successfully defended municipalities and their employees against constitutional claims, employment disputes, personal injury accidents, land-use appeals, and premises liability claims (“slip and fall”). In addition, Matt provides training to governmental entities and their officers regarding the Utah Governmental Immunity Act, Section 1983 claims, and other liability related topics.
+One of Matt’s primary practice areas is civil rights claims and [government defense](/practices/government-defense/). He has successfully defended municipalities and their employees against constitutional claims, employment disputes, personal injury accidents, land-use appeals, and premises liability claims (“slip and fall”). In addition, Matt provides training to governmental entities and their officers regarding the Utah Governmental Immunity Act, Section 1983 claims, and other liability related topics.
 
 ## Licenses and Admissions
 
