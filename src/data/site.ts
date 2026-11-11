@@ -30,7 +30,7 @@ export const nav: { href: string; label: string; footerLabel?: string }[] = [
   { href: '/practices/', label: 'Practices' },
   { href: '/people/', label: 'People' },
   { href: '/about/', label: 'About' },
-  { href: '/news/', label: 'News & Insights', footerLabel: 'News' },
+  { href: '/news/', label: 'News & Insights' },
   { href: '/careers/', label: 'Careers' },
   { href: '/contact/', label: 'Contact' },
 ];
