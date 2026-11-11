@@ -77,6 +77,7 @@ export const practices: Practice[] = [
     metaTitle: 'Labor & Employment Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Litigation, agency proceedings, and day-to-day counsel for employers from ten-person start-ups to national companies.',
     email: 'laborandemployment@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Steve Bednar at sbednar@mc2b.com or Mitch Longson at mlongson@mc2b.com, or call 801.363.5678.',
     match: /labor|employment|erisa/i,
     intro: [
       'MCBB’s labor and employment practice is consistently recognized as one of the best and most respected in the State. Our attorneys are trusted by some of the region’s largest and most well-known employers. We provide legal representation and counsel to employers of every size and complexity, and from a diverse range of industries. Whether you are a local startup with ten employees or a national company with 10,000 employees, MCBB has the knowledge, experience and capability to successfully guide your company through any labor and employment law issue or dispute in an efficient and cost-effective manner.',
