@@ -154,6 +154,7 @@ export const practices: Practice[] = [
     metaTitle: 'Real Estate & Construction Attorneys | Utah | MCBB',
     summary: 'Construction, lien, bond, title, lease, and land-use disputes for owners, developers, builders, contractors, and lenders.',
     email: 'realestateandconstruction@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Trevor Lee at tlee@mc2b.com or call 801.363.5678.',
     match: /construction|real estate/i,
     intro: [
       'MCBB represents property owners, developers, builders, construction contractors and creditors in all areas pertaining to real estate, including the following:',
