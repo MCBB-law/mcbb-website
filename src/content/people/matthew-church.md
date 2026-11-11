@@ -13,7 +13,7 @@ metaDescription: "Matt Church is a Utah trial attorney at Manning Curtis Bradsha
 
 Matt Church is a partner at Manning Curtis Bradshaw & Bednar in Salt Lake City. Matt defends ERISA benefit denial claims in the United States District Court for the District of Utah, represents Utah cities, counties, and special districts against constitutional, employment, and tort claims, and litigates commercial disputes for businesses across the state.
 
-Matt’s commercial practice covers breach of contract, business divorce and partnership disputes, non-compete and non-solicitation agreements, fraud, tortious interference, unfair competition, trade secrets, and product liability. He also maintains an active insurance coverage practice covering declaratory judgment actions, coverage opinions, bad faith claims, and policy exclusions.
+Matt’s commercial practice covers breach of contract, business divorce and partnership disputes, non-compete and non-solicitation agreements, fraud, tortious interference, unfair competition, trade secrets, and product liability. He also maintains an active [insurance coverage practice](/practices/insurance-coverage/) covering declaratory judgment actions, coverage opinions, bad faith claims, and policy exclusions.
 
 Matt serves as local counsel for firms outside Utah litigating in Utah state and federal courts, and sponsors out-of-state attorneys for pro hac vice admission under the Utah Supreme Court’s rules.
 
