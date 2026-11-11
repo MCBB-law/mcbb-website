@@ -5,7 +5,7 @@
 export type PageImage = { src: string; alt: string; position?: string; fit?: 'cover' | 'contain' };
 
 export const pageImages: Record<string, PageImage> = {
-  home: { src: '/images/home.jpg', alt: 'Fog drifting through a forest below mountain peaks', position: 'center 40%' },
+  home: { src: '/images/home.jpg', alt: 'Fog drifting through a forest below mountain peaks', position: 'center 20%' },
   about: { src: '/images/about.jpg', alt: 'Layered mountain ridges fading into mist', position: 'center 40%' },
   people: { src: '/images/people.jpg', alt: 'A granite cliff face lit by the sun against a dark sky', position: 'center 30%' },
   careers: { src: '/images/careers.jpg', alt: 'A single mountain peak rising above a sea of clouds', position: 'center 40%' },
