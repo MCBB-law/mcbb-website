@@ -26,7 +26,7 @@ const year = new Date().getFullYear();
     <div>
       <p class="f-label">Explore</p>
       <ul>
-        {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        {nav.map((n) => <li><a href={n.href}>{n.footerLabel ?? n.label}</a></li>)}
       </ul>
     </div>
   </div>

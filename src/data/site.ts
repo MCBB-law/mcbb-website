@@ -26,11 +26,11 @@ export const site = {
     'https://www.google.com/maps/search/?api=1&query=201+South+Main+Street+Suite+750+Salt+Lake+City+UT+84111',
 };
 
-export const nav = [
+export const nav: { href: string; label: string; footerLabel?: string }[] = [
   { href: '/practices/', label: 'Practices' },
   { href: '/people/', label: 'People' },
   { href: '/about/', label: 'About' },
-  { href: '/news/', label: 'News' },
+  { href: '/news/', label: 'News & Insights', footerLabel: 'News' },
   { href: '/careers/', label: 'Careers' },
   { href: '/contact/', label: 'Contact' },
 ];
