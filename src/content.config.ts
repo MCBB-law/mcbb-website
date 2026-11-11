@@ -17,6 +17,8 @@ const people = defineCollection({
     practiceAreas: z.array(z.string()), // as shown on the bio
     oldPath: z.string().optional(),
     draftNote: z.string().optional(),   // shown only in preview mode
+    metaTitle: z.string().optional(),       // full browser-tab / search-result title, used as is
+    metaDescription: z.string().optional(), // search-result description
   }),
 });
 

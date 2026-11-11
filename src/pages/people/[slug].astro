@@ -34,7 +34,7 @@ const personSchema = {
   ...(d.phone ? { telephone: d.phone } : {}),
 };
 ---
-<Base title={d.name} description={`${d.name}, ${d.title.toLowerCase()} at ${site.name}. ${d.practiceAreas.join(', ')}.`}>
+<Base title={d.name} metaTitle={d.metaTitle} description={d.metaDescription ?? `${d.name}, ${d.title.toLowerCase()} at ${site.name}. ${d.practiceAreas.join(', ')}.`}>
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <section class="page-head bio-hero">
     <div class="wrap bio-head">
