@@ -86,7 +86,7 @@ export const practices: Practice[] = [
         body: ['In addition to the areas described above, MCBB’s labor and employment expertise and capabilities include:'],
         list: [
           'Collective bargaining agreements', 'Disability law compliance', 'Discrimination and civil rights claims (all forms and categories)',
-          'Drug and alcohol testing / policies', 'Fair Labor Standards Act (FLSA)', 'Family Medical Leave Act (FMLA)',
+          'Drug and alcohol testing / policies', 'Fair Labor Standards Act (FLSA)', 'Family and Medical Leave Act (FMLA)',
           'Genetic Information Nondiscrimination Act', 'Harassment and hostile work-environment claims', 'Labor-management relations / unions',
           'National Labor Relations Board representation', 'OSHA and workplace safety', 'Privacy, HIPAA and data security in the workplace',
           'Reductions-in-force', 'Retaliation claims', 'Unemployment claims and benefits', 'Wage-and-hour issues', 'Whistleblower claims',
