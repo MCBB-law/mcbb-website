@@ -32,7 +32,7 @@ All page photos are converted to black and white and stored in `public/images/`.
 | Page | Photo | Photographer |
 |---|---|---|
 | Home banner | Fog through a mountain forest | Dejan Zakic |
-| About | Clouds over a ridge | Daniel Mirlea |
+| About | Layered mountain ridges in mist | Joshua Earle |
 | People | Sunlit granite cliff against a dark sky | Denis Lešák |
 | Careers | Mountain ridge in morning haze | Etienne Bosiger |
 | Contact (and home “Contact us” band) | Wasatch Range over Salt Lake | Nic Y-C |
