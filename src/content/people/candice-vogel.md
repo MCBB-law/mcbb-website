@@ -15,8 +15,10 @@ Prior to joining the firm, Ms. Vogel served as a judicial clerk to the Honorable
 
 ## Education
 
-- J.D., University of Pittsburgh School of Law, cum laude (1996)
-- B.A., Pennsylvania State University (1993)
+- University of Pittsburgh School of Law\
+  J.D., cum laude · 1996
+- Pennsylvania State University\
+  B.A. · 1993
 
 ## Clerkship
 

@@ -19,9 +19,11 @@ In her spare time, Victoria enjoys spending time with her family and her dog, hi
 
 ## Education
 
-- J.D., Loyola University New Orleans College of Law, New Orleans, LA (2023)
+- Loyola University New Orleans College of Law, New Orleans, LA\
+  J.D. · 2023
   - Certificate in Law, Technology, and Entrepreneurship
-- B.A., Utah Valley University, Russian and Political Science, summa cum laude (2019)
+- Utah Valley University\
+  B.A., Russian and Political Science, summa cum laude · 2019
 
 ## Licenses and Admissions
 

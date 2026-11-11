@@ -36,6 +36,13 @@ Astro (static site). No database; all content is in files.
 | Old URL → new URL redirects | `public/_redirects` |
 | Open questions, typo fixes, photo credits | `CONTENT-NOTES.md` |
 
+Education entries in a bio are written as two lines: the school, ending with a backslash, then the degree, any major or honors, and the year, for example:
+
+```
+- Northwestern University\
+  B.S., Electrical Engineering · 2007
+```
+
 Lawyers are listed together (partners and associates), alphabetical by last name, on the People page, the home page, and each practice page.
 
 ## Design (black-and-white redesign)

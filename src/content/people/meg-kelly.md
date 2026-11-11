@@ -13,9 +13,11 @@ Margaret Kelly is an associate at Manning Curtis Bradshaw & Bednar. During law s
 
 ## Education
 
-- J.D., University of Oregon School of Law (2023)
+- University of Oregon School of Law\
+  J.D. · 2023
   - Articles Editor, Oregon Law Review
-- B.A., Brigham Young University (2019)
+- Brigham Young University\
+  B.A. · 2019
 
 ## Licenses and Admissions
 

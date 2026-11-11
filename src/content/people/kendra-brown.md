@@ -15,7 +15,8 @@ Prior to joining Manning Curtis Bradshaw & Bednar Kendra served as a career cler
 
 ## Education
 
-- J.D., S.J. Quinney College of Law, University of Utah (2017)
+- S.J. Quinney College of Law, University of Utah\
+  J.D. · 2017
   - Executive Managing Editor, Utah Law Review
   - CALI Excellence Award, Legal Writing
 

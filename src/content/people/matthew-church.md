@@ -44,9 +44,11 @@ One of Matt’s primary practice areas is civil rights claims and [government de
 
 ## Education
 
-- J.D., University of Utah S.J. Quinney College of Law (2015)
+- University of Utah S.J. Quinney College of Law\
+  J.D. · 2015
   - New York City Bar Association Finalist (National Moot Court Competition)
-- B.S., University of Utah, Public Speaking & Speech Communication (2012)
+- University of Utah\
+  B.S., Public Speaking & Speech Communication · 2012
 
 ## Community Activities
 

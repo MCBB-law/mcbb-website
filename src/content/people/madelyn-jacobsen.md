@@ -15,9 +15,11 @@ Madelyn is originally from Southern California and enjoys cooking, camping, and 
 
 ## Education
 
-- J.D., J. Reuben Clark Law School, Brigham Young University, cum laude (2025)
+- J. Reuben Clark Law School, Brigham Young University\
+  J.D., cum laude · 2025
   - Associate Editor, BYU Education & Law Journal
-- B.S., Political Science, Brigham Young University, cum laude (2022)
+- Brigham Young University\
+  B.S., Political Science, cum laude · 2022
 
 ## Licenses and Admissions
 

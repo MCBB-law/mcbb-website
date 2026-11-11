@@ -16,8 +16,10 @@ Mr. Bradshaw served as a judicial clerk to the Honorable J. Thomas Greene, Unite
 
 ## Education
 
-- J.D., University of Utah School of Law (1986)
-- B.S., University of Utah (1983)
+- University of Utah School of Law\
+  J.D. · 1986
+- University of Utah\
+  B.S. · 1983
 
 ## Licenses and Admissions
 

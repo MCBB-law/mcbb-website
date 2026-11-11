@@ -21,12 +21,14 @@ Mr. Derum has earned recognition as a Mountain States Super Lawyer, a member of 
 
 ## Education
 
-- J.D., University of Utah S.J. Quinney College of Law (2002)
+- University of Utah S.J. Quinney College of Law\
+  J.D. · 2002
   - Articles Editor, Utah Law Review
   - William H. Leary Scholar
   - National Moot Court Team
   - Stephen Pierre Traynor Legal Writing Prize
-- B.A., Loyola Marymount University, cum laude (1995)
+- Loyola Marymount University\
+  B.A., cum laude · 1995
 
 ## Clerkship
 

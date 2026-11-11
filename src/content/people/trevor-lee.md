@@ -20,9 +20,12 @@ Outside of the office, Trevor enjoys skiing, mountain biking, backpacking, and f
 
 ## Education
 
-- J.D., Northwestern University (2014)
-- M.A., DePaul University (2011)
-- B.S., Northwestern University (2007)
+- Northwestern University\
+  J.D. · 2014
+- DePaul University\
+  M.A., Writing · 2011
+- Northwestern University\
+  B.S., Electrical Engineering · 2007
 
 ## Licenses and Admissions
 
