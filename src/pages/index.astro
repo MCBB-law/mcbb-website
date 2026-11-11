@@ -153,7 +153,9 @@ const featured = people;
   .btn--ghost-accent { border-color: var(--clay); color: var(--clay); }
   .btn--ghost-accent:hover { background: var(--clay); color: #fff; }
 
-  .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* Flex instead of grid so a short last row is centered, with no empty gray cells. Hairlines come from each tile's shadow overlapping in the 1px gap. */
+  .tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 1px; padding: 1px; background: none; border: 0; }
+  .tiles > .tile { width: calc((100% - 3px) / 4); box-shadow: 0 0 0 1px var(--line); }
   .tile { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--paper); }
   .tile-img { aspect-ratio: 4 / 3; overflow: hidden; background: #f4f4f2; }
   .tile-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
@@ -166,8 +168,8 @@ const featured = people;
   .tile .arrow { position: absolute; right: 22px; bottom: 24px; color: var(--clay); transition: transform .25s var(--ease); }
   .tile:hover .arrow { transform: translateX(5px); }
   .tile:hover { background: var(--white); }
-  @media (max-width: 1000px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 520px) { .tiles { grid-template-columns: 1fr; } .tile { flex-direction: row; } .tile-img { width: 38%; aspect-ratio: 1; } }
+  @media (max-width: 1000px) { .tiles > .tile { width: calc((100% - 1px) / 2); } }
+  @media (max-width: 520px) { .tiles > .tile { width: 100%; } .tile { flex-direction: row; } .tile-img { width: 38%; aspect-ratio: 1; } }
 
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stats > div { padding: 8px clamp(16px, 3vw, 40px); border-left: 1px solid rgba(255,255,255,.3); }
