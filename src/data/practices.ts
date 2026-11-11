@@ -58,6 +58,7 @@ export const practices: Practice[] = [
     metaTitle: 'Government Defense Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Defending cities, counties, agencies, officers, and public employees in civil-rights, land-use, employment, and other claims.',
     email: 'governmentdefense@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Matt Church at mchurch@mc2b.com or Kendra Brown at kbrown@mc2b.com, or call 801.363.5678.',
     match: /government|municipal/i,
     intro: [
       'MCBB’s government defense practice group consists of highly respected attorneys with extensive experience representing cities, counties, municipalities, police officers, and other governmental agencies and employees in a variety of matters. Such matters include labor and employment, land use and zoning, breach of contract, personal injury, premises liability, constitutional torts, and water rights. Regardless of the type of claim at issue, MCBB has the experience to successfully represent governmental entities and their employees.',
