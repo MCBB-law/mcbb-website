@@ -147,6 +147,7 @@ export const practices: Practice[] = [
     slug: 'real-estate-construction',
     oldPaths: ['/real-estate-construction'],
     title: 'Real Estate & Construction',
+    metaTitle: 'Real Estate & Construction Attorneys | Utah | MCBB',
     summary: 'Construction, lien, bond, title, lease, and land-use disputes for owners, developers, builders, contractors, and lenders.',
     email: 'realestateandconstruction@mc2b.com',
     match: /construction|real estate/i,
