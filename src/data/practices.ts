@@ -179,6 +179,7 @@ export const practices: Practice[] = [
     title: 'Bankruptcy',
     metaTitle: 'Bankruptcy Litigation Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Litigation in bankruptcy court for debtors, creditors, trustees, and other parties in interest.',
+    contact: 'To speak with a lawyer in this practice, contact Trevor Lee at tlee@mc2b.com or Brett Gilmore at bgilmore@mc2b.com, or call 801.363.5678.',
     match: /bankruptcy/i,
     intro: [
       'MCBB represents debtors, creditors, trustees, and other parties in interest in bankruptcy proceedings in the United States Bankruptcy Court for the District of Utah, the United States District Court for the District of Utah, and the Tenth Circuit.',
