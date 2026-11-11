@@ -33,6 +33,9 @@ Prior to joining Manning Curtis Bradshaw & Bednar Kendra served as a career cler
 
 ## Professional Affiliations and Activities
 
-- Mountain States Super Lawyers®, Rising Star, Government Relations (2025–2026)
 - Executive Committee of the Utah State Bar Litigation Section
 - Member, American Inns of Court, David K. Watkiss–Sutherland II Inn of Court
+
+## Professional Recognitions and Honors
+
+- Mountain States Super Lawyers®, Rising Star, Government Relations (2025–2026)
