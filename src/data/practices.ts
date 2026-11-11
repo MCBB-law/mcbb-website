@@ -72,6 +72,7 @@ export const practices: Practice[] = [
     slug: 'labor-employment',
     oldPaths: ['/labor-employment'],
     title: 'Labor & Employment',
+    metaTitle: 'Labor & Employment Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Litigation, agency proceedings, and day-to-day counsel for employers from ten-person start-ups to national companies.',
     email: 'laborandemployment@mc2b.com',
     match: /labor|employment|erisa/i,
