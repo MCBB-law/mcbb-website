@@ -207,6 +207,7 @@ export const practices: Practice[] = [
     metaTitle: 'Utah Appellate Attorneys | Salt Lake City | MCBB',
     summary: 'Appeals in the Tenth Circuit, other federal courts of appeals, and the Utah appellate courts, including cases tried by other counsel.',
     email: 'appeals@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Matt Church at mchurch@mc2b.com, Trevor Lee at tlee@mc2b.com, or Kendra Brown at kbrown@mc2b.com, or call 801.363.5678.',
     match: /appell|appeals/i,
     intro: [
       'MCBB’s appellate practice includes extensive experience in appeals of all types, including in federal appellate courts, state appellate courts, and administrative appeals. MCBB’s appellate lawyers appear frequently before the Tenth Circuit, as well as various other federal courts of appeal, and we have successfully argued numerous appeals before the Utah Court of Appeals and the Utah Supreme Court.',
