@@ -198,6 +198,7 @@ export const practices: Practice[] = [
     slug: 'appellate',
     oldPaths: ['/apellate-law', '/appellate-law'],
     title: 'Appellate',
+    metaTitle: 'Utah Appellate Attorneys | Salt Lake City | MCBB',
     summary: 'Appeals in the Tenth Circuit, other federal courts of appeals, and the Utah appellate courts, including cases tried by other counsel.',
     email: 'appeals@mc2b.com',
     match: /appell|appeals/i,
