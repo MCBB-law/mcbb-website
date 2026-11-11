@@ -20,8 +20,8 @@ Text for practice pages and bios was copied word for word from mc2b.com on Sept.
 - Headshots: `scripts/import-headshots.sh` copies every photo from Squarespace into the site itself. Run it once on a Mac (see the top of the script), then commit and push.
 
 ## Needs a decision
-- Headshots (Nov. 11, 2026): every headshot was re-cropped to the same 4:5 frame (640 × 800) with the face the same size and the eyes at the same height, and given matched brightness, contrast, and color balance. Trevor’s two photos were also lightened slightly. Alan Bradshaw, Brett Gilmore, Chad Derum, and Candice Vogel are a little tighter than the rest because their original files are cropped close; wider originals from the photographer would fix that. The unedited files are in the Git history.
-- Christian Michalik: the live site shows a stock photo, not a headshot. His bio shows initials until a real photo is added to `public/people/christian-j-michalik.jpg`.
+- Headshots (Nov. 11, 2026): every photo except Trevor’s was replaced with the newer version now on mc2b.com (downloaded Nov. 11; originals kept in `photos/mc2b-current/` on Trevor’s Mac, not in Git). All were cropped to the same 4:5 frame (640 × 800) with the eyes at the same height, and the face brightness was matched across everyone, so faces look the same in black and white. Trevor kept his own new headshot, lightened to match. The mc2b.com files are landscape crops, so the faces fill more of the frame than before; wider originals from the photographer would allow a looser crop.
+- Christian Michalik: his headshot comes from mc2b.com (added Nov. 11, 2026).
 - Confirm Carson Fuller has left the firm.
 - Bankruptcy page is new draft copy for the bankruptcy lawyers to rewrite.
 - Business Litigation lists all 18 lawyers, because every bio includes business or commercial litigation.
