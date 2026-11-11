@@ -12,6 +12,7 @@ export type Practice = {
   figure?: { src: string; alt: string; caption: string }; // optional image inside the page text
   summary: string;
   email?: string;
+  contact?: string; // replaces the default “Talk to our team” sentence; emails and the phone number become links
   match: RegExp;
   intro: string[];
   listIntro?: string[];
@@ -201,5 +202,34 @@ export const practices: Practice[] = [
       'MCBB is fortunate to have several attorneys who previously served as law clerks to appellate courts, including at the Utah Court of Appeals, the Utah Supreme Court, and federal circuit courts. MCBB’s experience and skill in appellate practice uniquely positions the firm to successfully handle appeals of all types.',
     ],
     sections: [],
+  },
+  {
+    slug: 'utah-local-counsel',
+    oldPaths: ['/utah-local-counsel'],
+    title: 'Utah Local Counsel',
+    metaTitle: 'Utah Local Counsel | District of Utah Pro Hac Vice Sponsor | MCBB',
+    metaDescription: 'Utah local counsel for out-of-state firms in the District of Utah and Utah state courts: pro hac vice sponsorship, filing support, and trial work.',
+    summary: 'Local counsel and pro hac vice sponsorship for out-of-state firms in the District of Utah and the Utah state courts.',
+    contact: 'To discuss a local counsel engagement, contact Matt Church at mchurch@mc2b.com, Trevor J. Lee at tlee@mc2b.com, or Mitch M. Longson at mlongson@mc2b.com.',
+    match: /local counsel/i,
+    intro: [
+      'MCBB serves as local counsel for firms outside Utah with cases in the United States District Court for the District of Utah and in the Utah state courts. We sponsor out-of-state lawyers for pro hac vice admission in both court systems and appear as counsel of record.',
+      'Our lawyers are trial lawyers who practice in these courts every day. Lead counsel gets a Utah partner who knows the judges and the local practice, not just a signature block.',
+    ],
+    sections: [
+      {
+        heading: 'How we work with lead counsel',
+        body: [
+          'Local counsel arrangements vary, and we do not impose a single model.',
+          'Sponsorship and filing support. Pro hac vice sponsorship, appearance of record, electronic filing, service, and compliance with local rules and standing orders. Lead counsel runs the case.',
+          'Working local counsel. Everything above, plus hearings, local motion practice, discovery disputes, and depositions in Utah, and a read on how a particular judge is likely to receive an argument.',
+          'Full co-counsel. Shared responsibility for strategy, briefing, expert work, and trial, divided by agreement.',
+        ],
+      },
+      { heading: 'Pro hac vice admission in Utah', body: ['We sponsor out-of-state lawyers for pro hac vice admission in the District of Utah and in the Utah state courts. We prepare and file the application, tell you what each court requires of you and of us, and stay on as counsel of record for the life of the case.'] },
+      { heading: 'Matters we handle', body: ['We do not limit local counsel work by practice area. It comes up most often in commercial and business litigation, including contract, partnership, non-compete, trade secret, intellectual property, and construction disputes. We also serve as local counsel in ERISA and employee benefits litigation, insurance coverage and bad faith, employment matters, bankruptcy proceedings, and personal injury defense.'] },
+      { heading: 'Why Utah experience matters', body: ['Practice in Utah turns on familiarity that does not travel. Judges in the District of Utah keep their own standing orders and expectations on briefing, discovery conferences, and motion practice. The Utah state courts run on their own scheduling and disclosure rules, and Utah’s expert disclosure rules differ from the federal rules in ways that have caught out-of-state counsel who assumed otherwise. Local counsel who already know these things save lead counsel the cost of learning them mid-case.'] },
+      { heading: 'Starting an engagement', body: ['Send us the case caption, the court, and your next deadline. We will check conflicts and reply within one business day.'] },
+    ],
   },
 ];

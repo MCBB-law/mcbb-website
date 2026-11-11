@@ -5,7 +5,7 @@ title: Partner
 phone: 801-303-0036
 email: mlongson@mc2b.com
 photo: /people/mitch-longson.jpg
-practiceAreas: [Labor & Employment, Business Litigation]
+practiceAreas: [Labor & Employment, Business Litigation, Utah Local Counsel]
 oldPath: /mitch-longson
 ---
 

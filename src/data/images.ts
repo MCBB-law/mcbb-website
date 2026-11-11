@@ -23,4 +23,6 @@ export const practiceImages: Record<string, PageImage> = {
   'real-estate-construction': { src: '/images/real-estate-construction.jpg', alt: 'A concrete grid of beams seen from below against the sky' },
   'bankruptcy-restructuring': { src: '/images/bankruptcy-restructuring.jpg', alt: 'The angular concrete corner of a building with cut-out openings' },
   appellate: { src: '/images/appellate.jpg', alt: 'Looking up between two curving towers' },
+  // No photo of its own yet; reuses the Practices overview photo.
+  'utah-local-counsel': { src: '/images/practices.jpg', alt: 'Curving white façade of a modern building' },
 };

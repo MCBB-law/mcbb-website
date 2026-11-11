@@ -5,7 +5,7 @@ title: Partner
 phone: 801-303-0049
 email: tlee@mc2b.com
 photo: /people/trevor-lee.jpg
-practiceAreas: [Commercial Litigation, Appellate, Intellectual Property and Technology, Construction, Bankruptcy]
+practiceAreas: [Commercial Litigation, Appellate, Intellectual Property and Technology, Construction, Bankruptcy, Utah Local Counsel]
 oldPath: /trevor-lee
 ---
 

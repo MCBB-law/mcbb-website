@@ -4,7 +4,7 @@ import PersonCard from '../../components/PersonCard.astro';
 import { practices, type Practice } from '../../data/practices';
 import { getPeople, practiceSlugsFor, initials } from '../../data/people';
 import { site, PREVIEW } from '../../data/site';
-import { inline } from '../../data/inline';
+import { inline, contactLine } from '../../data/inline';
 
 export function getStaticPaths() {
   return practices.map((p) => ({ params: { slug: p.slug }, props: { practice: p } }));
@@ -69,7 +69,9 @@ const sectionLinks = practice.sections.filter((x) => x.heading).map((x) => ({ te
         )}
         <div class="card talk">
           <p class="eyebrow">Talk to our team</p>
-          <p>To speak with a lawyer in this practice, email <a href={`mailto:${contactEmail}`}>{contactEmail}</a> or call <a href={site.phoneHref}>{site.phone}</a>.</p>
+          {practice.contact
+            ? <p set:html={contactLine(practice.contact)} />
+            : <p>To speak with a lawyer in this practice, email <a href={`mailto:${contactEmail}`}>{contactEmail}</a> or call <a href={site.phoneHref}>{site.phone}</a>.</p>}
           <a class="btn" href="/contact/">Contact us</a>
         </div>
         </div>
