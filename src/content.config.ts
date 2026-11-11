@@ -14,6 +14,7 @@ const people = defineCollection({
     phone: z.string().optional(),
     email: z.string().optional(),
     photo: z.string().optional(),  // URL or /people/file.jpg in public/
+    cardPhoto: z.string().optional(), // optional different headshot for the People grid and home page cards
     practiceAreas: z.array(z.string()), // as shown on the bio
     oldPath: z.string().optional(),
     draftNote: z.string().optional(),   // shown only in preview mode

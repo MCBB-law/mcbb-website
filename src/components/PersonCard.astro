@@ -6,8 +6,8 @@ const d = person.data;
 ---
 <a class="person" href={`/people/${person.id}/`}>
   <div class="photo">
-    {d.photo
-      ? <img src={d.photo} alt={`Portrait of ${d.name}`} loading="lazy" width="400" height="500" />
+    {(d.cardPhoto ?? d.photo)
+      ? <img src={d.cardPhoto ?? d.photo} alt={`Portrait of ${d.name}`} loading="lazy" width="400" height="500" />
       : <span aria-hidden="true">{initials(d.name)}</span>}
   </div>
   <p class="name">{d.name}</p>

@@ -33,7 +33,7 @@ All page photos are converted to black and white and stored in `public/images/`.
 |---|---|---|
 | Home banner | Fog through a mountain forest | Dejan Zakic |
 | About | Clouds over a ridge | Daniel Mirlea |
-| People | Arches National Park and the La Sal Mountains | Intricate Explorer |
+| People | Sunlit granite cliff against a dark sky | Denis Lešák |
 | Careers | Mountain ridge in morning haze | Etienne Bosiger |
 | Contact (and home “Contact us” band) | Wasatch Range over Salt Lake | Nic Y-C |
 | News | Sun through fog over a pine forest | Ales Krivec |
@@ -46,6 +46,7 @@ All page photos are converted to black and white and stored in `public/images/`.
 | Real Estate & Construction | Concrete beam grid from below | Ahmed (Unsplash) |
 | Bankruptcy & Restructuring | Angular concrete corner with cut-outs | Wang Binghua |
 | Appellate | Looking up between towers | Adrian Cuj |
+| Utah Local Counsel | Two stone-clad towers with tall dark windows | Supplied by Trevor (photographer not recorded) |
 
 Spares in `photos/` if we want to swap: dark snow peaks (Sylwia Bartyzel, the first home banner), bare winter branches (Markus Spiske), redwoods from below (Curated Lifestyle), snow peak (Guillaume Issaly), relief-map and topography abstracts (Planet Volumes, Nick Amo), river delta aerial (Zongnan Bao), and an x-ray pen with blueprints (Alex Shuper).
 To swap a photo, ask Claude, or replace the file in `public/images/` with a black-and-white JPG of the same name.
