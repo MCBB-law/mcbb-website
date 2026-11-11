@@ -132,6 +132,7 @@ export const practices: Practice[] = [
     },
     summary: 'Patent, trademark, copyright, and trade-secret litigation, from the trial court to the Federal Circuit.',
     email: 'IPandtechnology@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Trevor Lee at tlee@mc2b.com or Chad Derum at cderum@mc2b.com, or call 801.363.5678.',
     match: /intellectual/i,
     intro: [
       'MCBB’s trial lawyers have extensive experience litigating the most complex types of intellectual property disputes, including in the areas of patent, copyright, and trademark infringement, trade secret and information misappropriation, unfair competition, manufacturing, distribution, and licensing disputes, cybersquatting and other Internet-related disputes, breaches of non-disclosure agreements, and other matters involving intellectual property rights. We have helped clients protect their intellectual property rights through litigation, and we have defended clients accused of infringing others’ intellectual property rights.',
