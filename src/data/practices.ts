@@ -26,6 +26,7 @@ export const practices: Practice[] = [
     slug: 'business-litigation',
     oldPaths: ['/business-litigation'],
     title: 'Business Litigation',
+    metaTitle: 'Business Litigation Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Complex, high-stakes commercial disputes, handled by trial lawyers with a trial-oriented plan from day one.',
     email: 'businesslitigation@mc2b.com',
     match: /business|commercial|class action|antitrust/i,
