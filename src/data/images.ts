@@ -10,6 +10,7 @@ export const pageImages: Record<string, PageImage> = {
   people: { src: '/images/people.jpg', alt: 'A granite cliff face lit by the sun against a dark sky', position: 'center 30%' },
   careers: { src: '/images/careers.jpg', alt: 'A single mountain peak rising above a sea of clouds', position: 'center 40%' },
   contact: { src: '/images/contact.jpg', alt: 'The Wasatch Range above the Salt Lake Valley', position: 'center 40%' },
+  practices: { src: '/images/practices-banner.jpg', alt: 'Red rock cliffs and fog-wrapped peaks above a valley of brush' },
   news: { src: '/images/news.jpg', alt: 'Morning sun breaking through fog over a pine forest', position: 'center 55%' },
 };
 
