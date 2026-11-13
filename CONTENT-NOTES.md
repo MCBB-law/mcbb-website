@@ -36,6 +36,7 @@ All page photos are converted to black and white and stored in `public/images/`.
 | About | Layered mountain ridges in mist | Joshua Earle |
 | People | Sunlit granite cliff against a dark sky | Denis Lešák |
 | Careers | Mountain peak above a sea of clouds | Ales Krivec |
+| Practices | Red rock cliffs and foggy peaks | Dan Hadar |
 | Contact (and home “Contact us” band) | Wasatch Range over Salt Lake | Nic Y-C |
 | News | Sun through fog over a pine forest | Ales Krivec |
 | Practices overview | Curved white façade | Mika Ruusunen |
