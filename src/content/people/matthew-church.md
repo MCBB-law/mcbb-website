@@ -7,7 +7,7 @@ email: mchurch@mc2b.com
 photo: /people/matthew-church.jpg
 practiceAreas: [ERISA Litigation, Insurance Coverage, Municipal Defense, Commercial Litigation, Local Counsel]
 oldPath: /matthew-church
-metaTitle: "Matt Church | Utah Trial Attorney | ERISA & Municipal Defense"
+metaTitle: "Matt Church | Utah Trial Attorney | ERISA & Local Counsel"
 metaDescription: "Matt Church is a Utah trial attorney at Manning Curtis Bradshaw & Bednar in Salt Lake City. ERISA defense, municipal defense, commercial litigation, and local counsel."
 ---
 
