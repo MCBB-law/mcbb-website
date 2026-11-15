@@ -212,7 +212,7 @@ export const practices: Practice[] = [
     contact: 'To speak with a lawyer in this practice, contact Matt Church at mchurch@mc2b.com, Trevor Lee at tlee@mc2b.com, or Kendra Brown at kbrown@mc2b.com, or call 801.363.5678.',
     match: /appell|appeals/i,
     intro: [
-      'MCBB’s appellate practice includes extensive experience in appeals of all types, including in federal appellate courts, state appellate courts, and administrative appeals. MCBB’s appellate lawyers appear frequently before the Tenth Circuit, as well as various other federal courts of appeal, and we have successfully argued numerous appeals before the Utah Court of Appeals and the Utah Supreme Court.',
+      'MCBB’s appellate practice includes extensive experience in appeals of all types, including in federal appellate courts, state appellate courts, and administrative appeals. MCBB’s appellate lawyers appear frequently before the Tenth Circuit, as well as various other federal courts of appeals, and we have successfully argued numerous appeals before the Utah Court of Appeals and the Utah Supreme Court.',
       'Our clients in these appeals range from large publicly traded corporations to technology startups to individuals. MCBB is well-equipped to represent clients on appeal in cases we have handled in lower courts. In addition, we are prepared to handle appeals where clients have been represented by other counsel in lower courts.',
       'MCBB is fortunate to have several attorneys who previously served as law clerks to appellate courts, including at the Utah Court of Appeals, the Utah Supreme Court, and federal circuit courts. MCBB’s experience and skill in appellate practice uniquely positions the firm to successfully handle appeals of all types.',
     ],
