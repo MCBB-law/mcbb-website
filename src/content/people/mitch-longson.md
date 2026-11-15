@@ -7,6 +7,7 @@ email: mlongson@mc2b.com
 photo: /people/mitch-longson.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Utah Local Counsel]
 oldPath: /mitch-longson
+metaTitle: "Mitch M. Longson | Utah Employment Attorney | MCBB"
 ---
 
 Mitch M. Longson is a partner at Manning Curtis Bradshaw & Bednar. Mr. Longson’s practice focuses primarily on labor and employment matters and general commercial litigation. He takes a solutions-oriented approach to helping clients navigate complex employment problems and commercial disputes, and when those problems wind up in the courtroom, Mr. Longson uses a wealth of diverse litigation experience to achieve the best outcomes possible for his clients. Mr. Longson practices extensively in state and federal courts, the Utah Labor Commission, the EEOC, and in arbitration, representing clients ranging from Fortune 500 companies to small businesses, local governments and quasi-governmental entities, individuals, and everything in between. Mr. Longson also dedicates a portion of his practice to environmental and natural resources issues, aiding clients in protecting public lands and resources throughout Utah that he loves.
