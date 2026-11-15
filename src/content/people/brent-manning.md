@@ -8,6 +8,7 @@ email: bmanning@mc2b.com
 photo: /people/brent-manning.jpg
 practiceAreas: [Business Litigation, Intellectual Property & Technology, Class Actions, Antitrust & Trade]
 oldPath: /brent-manning
+metaTitle: "Brent V. Manning | Utah Business Litigation Attorney | MCBB"
 ---
 
 Brent V. Manning is one of the founding partners of Manning Curtis Bradshaw & Bednar. He is active in the community and the Bar and has served in many significant positions in both. He is included among The Best Lawyers in America® in the area of Litigation – Antitrust and Commercial Litigation, as a Mountain States Super Lawyers® in the areas of Business Litigation, Civil Litigation, Antitrust and Antitrust Litigation, and as one of Utah’s Legal Elite in the Utah Business magazine. He is AV-rated preeminent in Martindale-Hubbell® with a 5 of 5 rating in all rated categories.
