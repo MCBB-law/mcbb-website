@@ -7,6 +7,7 @@ email: cvogel@mc2b.com
 photo: /people/candice-vogel.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Employment Law Consulting & Counseling]
 oldPath: /candice-vogel
+metaTitle: "Candice A. Vogel | Utah Employment Attorney | MCBB"
 ---
 
 Candice Anderson Vogel is a partner at Manning Curtis Bradshaw & Bednar with a practice in employment law and commercial litigation. Ms. Vogel advises clients of all sizes regarding federal and state employment laws and represents employers in federal, state and administrative proceedings. Ms. Vogel has experience in numerous areas of employment law, including the Age Discrimination in Employment Act, the Americans with Disabilities Act, the Fair Labor Standards Act, the Family and Medical Leave Act, Title VII discrimination based on sex, race, religion, pregnancy and national origin, state law wrongful termination, and employment-related state law tort claims. Ms. Vogel has also participated in numerous mediations, successfully representing employers with their employment law claims. Additionally, Ms. Vogel has extensive speaking experience, advising human resources personnel, managers and employees on matters such as prevention of harassment and discrimination in the workplace, compliance with state and federal employment laws, employee handbooks and how to avoid employment related lawsuits.
