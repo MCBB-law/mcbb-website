@@ -8,7 +8,7 @@ photo: /people/matthew-church.jpg
 practiceAreas: [ERISA Litigation, Insurance Coverage, Municipal Defense, Commercial Litigation, Local Counsel]
 oldPath: /matthew-church
 metaTitle: "Matt Church | Utah Trial Attorney | ERISA & Local Counsel"
-metaDescription: "Matt Church is a Utah trial attorney at Manning Curtis Bradshaw & Bednar in Salt Lake City. ERISA defense, municipal defense, commercial litigation, and local counsel."
+metaDescription: "Matt Church is a Utah trial attorney at Manning Curtis Bradshaw & Bednar in Salt Lake City. ERISA defense, Utah local counsel for out-of-state firms, commercial litigation, and constitutional and municipal litigation."
 ---
 
 Matt Church is a partner at Manning Curtis Bradshaw & Bednar in Salt Lake City. Matt defends ERISA benefit denial claims in the United States District Court for the District of Utah, represents Utah cities, counties, and special districts against constitutional, employment, and tort claims, and litigates commercial disputes for businesses across the state.
