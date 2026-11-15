@@ -5,7 +5,7 @@ title: Associate
 phone: 801-303-0034
 email: tferrin@mc2b.com
 photo: /people/trent-ferrin.jpg
-practiceAreas: [Business Litigation, Government Defense, Labor & Employment]
+practiceAreas: [Business Litigation, Constitutional & Municipal Litigation, Labor & Employment]
 oldPath: /trent-ferrin
 ---
 
