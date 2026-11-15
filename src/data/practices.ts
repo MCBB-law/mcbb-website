@@ -225,7 +225,7 @@ export const practices: Practice[] = [
     metaTitle: 'Utah Local Counsel | District of Utah Pro Hac Vice Sponsor | MCBB',
     metaDescription: 'Utah local counsel for out-of-state firms in the District of Utah and Utah state courts: pro hac vice sponsorship, filing support, and trial work.',
     summary: 'Local counsel and pro hac vice sponsorship for out-of-state firms in the District of Utah and the Utah state courts.',
-    contact: 'To discuss a local counsel engagement, contact Matt Church at mchurch@mc2b.com, Trevor J. Lee at tlee@mc2b.com, or Mitch M. Longson at mlongson@mc2b.com.',
+    contact: 'To discuss a local counsel engagement, contact Matt Church at mchurch@mc2b.com, Trevor Lee at tlee@mc2b.com, or Mitch Longson at mlongson@mc2b.com.',
     match: /local counsel/i,
     intro: [
       'MCBB serves as local counsel for firms outside Utah with cases in the United States District Court for the District of Utah and in the Utah state courts. We sponsor out-of-state lawyers for pro hac vice admission in both court systems and appear as counsel of record.',
