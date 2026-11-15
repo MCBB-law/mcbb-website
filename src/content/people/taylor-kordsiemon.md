@@ -5,7 +5,7 @@ title: Associate
 phone: 801-303-0046
 email: tkordsiemon@mc2b.com
 photo: /people/taylor-kordsiemon.jpg
-practiceAreas: [Government Defense, Commercial Litigation, Insurance Coverage, Appeals]
+practiceAreas: [Constitutional & Municipal Litigation, Commercial Litigation, Insurance Coverage, Appeals]
 oldPath: /taylor-kordsiemon
 ---
 
