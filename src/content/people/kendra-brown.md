@@ -5,7 +5,7 @@ title: Partner
 phone: 801-303-0032
 email: kbrown@mc2b.com
 photo: /people/kendra-brown.jpg
-practiceAreas: [Appeals, Commercial Litigation, Municipal Government Defense]
+practiceAreas: [Appeals, Commercial Litigation, Constitutional & Municipal Litigation]
 oldPath: /kendra-brown
 ---
 
