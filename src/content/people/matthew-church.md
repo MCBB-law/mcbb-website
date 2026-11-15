@@ -59,7 +59,7 @@ One of Matt’s primary practice areas is [constitutional and municipal litigati
 
 ## Appellate Cases
 
-Matt has experience representing clients in appellate proceedings in both state and federal courts. He has successfully briefed and argued numerous appeals on a wide range of issues, including commercial disputes, insurance coverage, and government defense.
+Matt has experience representing clients in appellate proceedings in both state and federal courts. He has successfully briefed and argued numerous appeals on a wide range of issues, including commercial disputes, insurance coverage, and constitutional and municipal litigation.
 
 - *Gordon v. Nostrom*, 2024 UT 18, 552 P.3d 200 (Utah 2024)
 - *Doutre v. Box Elder County*, 2024 UT App 58, 548 P.3d 914 (Utah App. 2024)
