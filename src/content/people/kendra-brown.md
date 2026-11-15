@@ -7,6 +7,7 @@ email: kbrown@mc2b.com
 photo: /people/kendra-brown.jpg
 practiceAreas: [Appeals, Commercial Litigation, Constitutional & Municipal Litigation]
 oldPath: /kendra-brown
+metaTitle: "Kendra M. Brown | Utah Appellate Attorney | MCBB"
 ---
 
 Kendra M. Brown is a partner with Manning Curtis Bradshaw & Bednar where her practice focuses on appeals, commercial and employment litigation, and constitutional and municipal litigation. Kendra also has extensive experience in professional liability and legal malpractice defense, and she has drafted numerous appeals before both state and federal appellate courts.
