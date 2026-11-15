@@ -7,6 +7,7 @@ email: tferrin@mc2b.com
 photo: /people/trent-ferrin.jpg
 practiceAreas: [Business Litigation, Constitutional & Municipal Litigation, Labor & Employment]
 oldPath: /trent-ferrin
+metaTitle: "Trent E. Ferrin | Utah Litigation Attorney | MCBB"
 ---
 
 Trent Ferrin is an associate at Manning Curtis Bradshaw & Bednar. Before joining the firm, Trent was an Assistant Attorney General for the Utah Attorney General’s Office, where he represented the State in various commercial and real estate matters. During law school, Trent externed for the Honorable Mark D. Clarke, Magistrate Judge for the United States District Court for the District of Oregon, and clerked for a firm in Eugene, Oregon.
