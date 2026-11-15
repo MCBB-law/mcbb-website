@@ -8,6 +8,7 @@ photo: /people/brianna-espinosa.jpg
 practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation, Tax Law and Litigation, Business Formation and Transactions]
 oldPath: /brianna-espinosa
 metaTitle: "Brianna N. Espinosa | Utah Litigation Attorney | MCBB"
+metaDescription: "Brianna N. Espinosa is an associate at MCBB in Salt Lake City, practicing tax controversy, business litigation, and employment law."
 ---
 
 Brianna N. Espinosa (formerly Brianna N. Landon) is an associate at Manning Curtis Bradshaw & Bednar, where her practice focuses on tax controversy, commercial litigation, employment law, and constitutional and municipal litigation. Her tax practice includes representing businesses and governmental entities in disputes and challenges involving the Utah State Tax Commission and other taxing authorities, as well as in tax litigation and administrative proceedings concerning the interpretation, application, and enforcement of state and local tax laws. Before attending law school, Brianna was a tax consulting intern at Ernst & Young. During law school, she externed for the Honorable Jennifer A. Mabey of Utah’s Fourth District Court and served as president of the BYU Tax Policy Association, where she led initiatives exploring the intersection of tax policy and public interest.
