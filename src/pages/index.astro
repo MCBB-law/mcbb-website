@@ -186,6 +186,8 @@ const featured = people;
   .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
   .team { grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: 28px 20px; }
+  /* Desktop: five to a row, with a short last row centered (flex instead of grid). */
+  @media (min-width: 1001px) { .team { display: flex; flex-wrap: wrap; justify-content: center; } .team > :global(.person) { width: calc((100% - 80px) / 5); } }
   @media (max-width: 520px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
   @media (max-width: 860px) { .approach { grid-template-columns: 1fr; } }
