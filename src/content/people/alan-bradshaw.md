@@ -8,6 +8,7 @@ email: abradshaw@mc2b.com
 photo: /people/alan-bradshaw.jpg
 practiceAreas: [Appellate Law, Business Litigation, Insurance Coverage]
 oldPath: /alan-bradshaw
+metaTitle: "Alan C. Bradshaw | Utah Insurance Coverage Attorney | MCBB"
 ---
 
 Alan C. Bradshaw is one of the founding partners of Manning Curtis Bradshaw & Bednar where he practices commercial litigation with an emphasis on insurance coverage. Mr. Bradshaw assists policyholder insureds in obtaining recovery and compensation from insurance companies including payment of defense costs and settlements. He has extensive experience with liability, property, D&O and other types of insurance or reinsurance. Clients who Mr. Bradshaw has represented in obtaining insurance recoveries include Intermountain Healthcare, Management & Training Corporation, Sinclair Oil, United States Specialty Sports Association, and the United Methodist Church. Mr. Bradshaw also has extensive experience in complex litigation involving contracts, torts, and intellectual property. He has represented plaintiffs in obtaining million dollar verdicts, including a 2014 verdict for fraud and breach of contract totaling $37 million.
