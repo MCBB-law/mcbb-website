@@ -9,7 +9,7 @@ practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Munici
 oldPath: /victoria-a-bindrup
 ---
 
-Victoria Bindrup is an associate at Manning Curtis Bradshaw & Bednar. She focuses her practice on business litigation, government defense, and employment law, representing municipalities, government agencies, employers, and individuals in complex state and federal litigation. Victoria has experience in personal injury, wrongful death, transportation defense, product liability, employment, premises liability, professional liability, medical malpractice defense, and other general civil litigation matters.
+Victoria Bindrup is an associate at Manning Curtis Bradshaw & Bednar. She focuses her practice on business litigation, constitutional and municipal litigation, and employment law, representing municipalities, government agencies, employers, and individuals in complex state and federal litigation. Victoria has experience in personal injury, wrongful death, transportation defense, product liability, employment, premises liability, professional liability, medical malpractice defense, and other general civil litigation matters.
 
 Before joining the firm, Victoria practiced at Jones Skelton & Hochuli, PLC, Arizona’s largest trial and appellate insurance-defense firm where she managed a diverse range of civil litigation cases and gained extensive experience in all phases of litigation, including trial preparation, and motions practice.
 
