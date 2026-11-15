@@ -7,6 +7,7 @@ email: bgilmore@mc2b.com
 photo: /people/brett-gilmore.jpg
 practiceAreas: [Appellate Law, Bankruptcy, Business Litigation, Commercial Litigation, Labor & Employment]
 oldPath: /brett-gilmore
+metaTitle: "Brett C. Gilmore | Utah Commercial Litigation Attorney | MCBB"
 ---
 
 Brett C. Gilmore is a partner at Manning Curtis Bradshaw & Bednar. Brett provides strategic, effective, and results-oriented representation in a wide range of demanding and complex litigation scenarios. His practice covers many areas of commercial litigation, including business and contract disputes, public records requests, non-competes and other restrictive covenants, professional negligence defense, employment litigation, intellectual property litigation, construction litigation, and appeals. He excels in high-stakes situations that require disciplined strategy, clear judgment, and decisive action and has won cases in state and federal trial courts and courts of appeal throughout the country. Brett prides himself on strategic and creative thinking, and clients value his no-nonsense approach to litigation.
