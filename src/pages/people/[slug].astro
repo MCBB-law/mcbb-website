@@ -49,7 +49,7 @@ const personSchema = {
         <h1>{d.name}</h1>
         <p class="lede">{d.founder ? 'Founding Partner' : d.title}</p>
         <p class="contact">
-          {d.phone && <a href={telHref}>{d.phone}</a>}
+          {d.phone && <a href={telHref}>{d.phone.replace(/-/g, '.')}</a>}
           {d.email && <a href={`mailto:${d.email}`}>{d.email}</a>}
         </p>
         <p class="areas">{d.practiceAreas.join(' · ')}</p>
