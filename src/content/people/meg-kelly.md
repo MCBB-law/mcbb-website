@@ -7,6 +7,7 @@ email: mkelly@mc2b.com
 photo: /people/meg-kelly.jpg
 practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation]
 oldPath: /meg-kelly
+metaTitle: "Margaret “Meg” Kelly | Utah Litigation Attorney | MCBB"
 ---
 
 Margaret Kelly is an associate at Manning Curtis Bradshaw & Bednar. During law school, Ms. Kelly was an extern for the Honorable Paige Petersen, Associate Justice on the Utah Supreme Court and interned for the Honorable Keith Kelly of Utah’s Third District Court. Ms. Kelly also worked as a law clerk at the Disability Law Center, where she primarily focused on fair housing and employment law issues.
