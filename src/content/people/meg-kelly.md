@@ -5,7 +5,7 @@ title: Associate
 phone: 801-303-0041
 email: mkelly@mc2b.com
 photo: /people/meg-kelly.jpg
-practiceAreas: [Business Litigation, Labor & Employment, Municipal Government Defense]
+practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation]
 oldPath: /meg-kelly
 ---
 
