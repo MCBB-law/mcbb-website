@@ -5,7 +5,7 @@ title: Associate
 phone: 801-303-0051
 email: bespinosa@mc2b.com
 photo: /people/brianna-espinosa.jpg
-practiceAreas: [Business Litigation, Labor & Employment, Municipal Government Defense, Tax Law and Litigation, Business Formation and Transactions]
+practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation, Tax Law and Litigation, Business Formation and Transactions]
 oldPath: /brianna-espinosa
 ---
 
