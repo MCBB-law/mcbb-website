@@ -5,7 +5,7 @@ title: Associate
 phone: 801-303-0040
 email: vbindrup@mc2b.com
 photo: /people/victoria-a-bindrup.jpg
-practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation, Construction Defect Litigation, Insurance Defense Litigation]
+practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation, Construction Defect Litigation]
 oldPath: /victoria-a-bindrup
 ---
 
