@@ -7,6 +7,7 @@ email: cmichalik@mc2b.com
 practiceAreas: [Business Litigation, Commercial Litigation, Constitutional & Municipal Litigation]
 oldPath: /christian-j-michalik
 photo: /people/christian-j-michalik.jpg
+metaTitle: "Christian J. Michalik | Utah Litigation Attorney | MCBB"
 ---
 
 Christian Michalik is an associate at Manning Curtis Bradshaw & Bednar. Christian hails from Michigan but considers Utah to be home. Prior to joining Manning Curtis Bradshaw & Bednar, Christian was an Assistant Attorney General for the Utah Attorney General’s Office, where he represented the State in various civil rights matters. Before returning to Utah, Christian practiced at two large national law firms in Chicago, where he represented local and state entities in high stakes civil rights actions involving damages claims exceeding $20 million, as well as national athletic organizations in high profile discrimination and abuse cases. Additionally, Christian represented large insurance carriers in environmental disputes with potential exposures exceeding $250 million.
