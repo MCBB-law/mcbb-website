@@ -7,6 +7,7 @@ email: asabin@mc2b.com
 photo: /people/austin-c-sabin.jpg
 practiceAreas: [Business Litigation, Bankruptcy, Constitutional & Municipal Litigation, Labor & Employment]
 oldPath: /austin-c-sabin
+metaTitle: "Austin C. Sabin | Utah Litigation Attorney | MCBB"
 ---
 
 Austin Sabin is an associate at Manning Curtis Bradshaw & Bednar. His practice has focused on complex litigation cases that involve a variety of issues—including commercial leases, employment disputes, insurance arrangements, agreements, and sophisticated contracts. Austin has experience with both federal and state courts and practiced in Texas before coming to Utah.
