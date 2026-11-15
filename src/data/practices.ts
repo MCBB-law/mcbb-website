@@ -112,6 +112,7 @@ export const practices: Practice[] = [
     title: 'Insurance Coverage',
     summary: 'Representing policyholders, not insurers, to recover the defense and indemnity their policies promise.',
     email: 'insurancecoverage@mc2b.com',
+    contact: 'To speak with a lawyer in this practice, contact Alan Bradshaw at abradshaw@mc2b.com or call 801.363.5678.',
     match: /insurance coverage/i,
     intro: [
       'Unlike many law firms who routinely represent insurance companies, MCBB’s insurance coverage representation is focused on MCBB’s clients: the insureds. MCBB assists its policyholder clients in maximizing available insurance, and reducing or eliminating loss to the client. MCBB has been successful in turning flat denials by insurers into substantial recoveries. MCBB has assisted businesses and individuals in obtaining tens of millions of dollars in “defense cost” payments reluctantly made by insurers to help defeat liability claims brought by third-party plaintiffs against MCBB’s clients.',
