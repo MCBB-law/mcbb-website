@@ -8,6 +8,7 @@ photo: /people/trevor-lee.jpg
 cardPhoto: /people/trevor-lee-card.jpg
 practiceAreas: [Commercial Litigation, Appellate, Intellectual Property and Technology, Construction, Bankruptcy, Utah Local Counsel]
 oldPath: /trevor-lee
+metaTitle: "Trevor J. Lee | Utah Trial & Appellate Attorney | MCBB"
 ---
 
 Trevor J. Lee is a partner at Manning Curtis Bradshaw & Bednar. Trevor is a trial and appellate litigator, and has experience in a wide range of industries, including construction, biotech, public lands, computer science, life sciences, pharmaceuticals, financial services, and consumer products, among others. Trevor’s clients range from Fortune 500 companies, to small businesses and nonprofits, to closely held businesses and individuals.
