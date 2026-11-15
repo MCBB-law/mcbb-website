@@ -7,6 +7,7 @@ email: mjacobsen@mc2b.com
 photo: /people/madelyn-jacobsen.jpg
 practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation]
 oldPath: /madelyn-jacobsen
+metaTitle: "Madelyn Jacobsen | Utah Litigation Attorney | MCBB"
 ---
 
 Madelyn Jacobsen is an associate at Manning Curtis Bradshaw & Bednar. During law school, she was an extern for Chief Justice Matthew Durrant of the Utah Supreme Court and interned with the U.S. Senate Judiciary Committee. She also worked as a law clerk at the Utah Attorney General’s Office (Litigation Division), focusing on civil rights, employment law, and torts.
