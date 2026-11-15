@@ -207,7 +207,7 @@ export const practices: Practice[] = [
     slug: 'appellate',
     oldPaths: ['/apellate-law', '/appellate-law'],
     title: 'Appellate',
-    metaTitle: 'Utah Appellate Attorneys | Salt Lake City | MCBB',
+    metaTitle: 'Appellate Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Appeals in the Tenth Circuit, other federal courts of appeals, and the Utah appellate courts, including cases tried by other counsel.',
     email: 'appeals@mc2b.com',
     contact: 'To speak with a lawyer in this practice, contact Matt Church at mchurch@mc2b.com, Trevor Lee at tlee@mc2b.com, or Kendra Brown at kbrown@mc2b.com, or call 801.363.5678.',
