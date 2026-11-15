@@ -9,7 +9,7 @@ practiceAreas: [Appeals, Commercial Litigation, Constitutional & Municipal Litig
 oldPath: /kendra-brown
 ---
 
-Kendra M. Brown is a partner with Manning Curtis Bradshaw & Bednar where her practice focuses on appeals, commercial and employment litigation, and municipal government defense. Kendra also has extensive experience in professional liability and legal malpractice defense, and she has drafted numerous appeals before both state and federal appellate courts.
+Kendra M. Brown is a partner with Manning Curtis Bradshaw & Bednar where her practice focuses on appeals, commercial and employment litigation, and constitutional and municipal litigation. Kendra also has extensive experience in professional liability and legal malpractice defense, and she has drafted numerous appeals before both state and federal appellate courts.
 
 Prior to joining Manning Curtis Bradshaw & Bednar Kendra served as a career clerk to Justice Diana Hagen at the Utah Supreme Court, and she clerked for Judge Kate Appleby and Judge Diana Hagen at the Utah Court of Appeals. During law school, Kendra worked with Judge Michele M. Christiansen Forster at the Utah Court of Appeals, the Appellate Division at the Salt Lake Legal Defenders Association, and a local boutique appellate law firm.
 
