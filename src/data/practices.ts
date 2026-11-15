@@ -110,6 +110,7 @@ export const practices: Practice[] = [
     slug: 'insurance-coverage',
     oldPaths: ['/insurance-coverage'],
     title: 'Insurance Coverage',
+    metaTitle: 'Insurance Coverage Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Representing policyholders, not insurers, to recover the defense and indemnity their policies promise.',
     email: 'insurancecoverage@mc2b.com',
     contact: 'To speak with a lawyer in this practice, contact Alan Bradshaw at abradshaw@mc2b.com or call 801.363.5678.',
