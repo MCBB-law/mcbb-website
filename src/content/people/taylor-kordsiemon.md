@@ -7,6 +7,7 @@ email: tkordsiemon@mc2b.com
 photo: /people/taylor-kordsiemon.jpg
 practiceAreas: [Constitutional & Municipal Litigation, Commercial Litigation, Insurance Coverage, Appeals]
 oldPath: /taylor-kordsiemon
+metaTitle: "Taylor P. Kordsiemon | Utah Litigation & Appellate Attorney | MCBB"
 ---
 
 Taylor P. Kordsiemon is an associate at Manning Curtis Bradshaw & Bednar, where his practice focuses on constitutional and municipal litigation, commercial litigation, insurance coverage, and appeals. He has defended numerous governmental entities against claims for personal injury, breach of contract, access to government records, and constitutional torts. On the commercial side, Taylor has both prosecuted and defended claims for breach of contract, fraud, trademark infringement, property disputes, and other business torts. Apart from traditional commercial litigation, Taylor’s practice also includes handling insurance-related issues such as subrogation, coverage questions, bad faith claims, policy exclusions, and ERISA cases. In addition to briefing numerous appeals in both the state and federal courts, Taylor has also argued before the Utah Supreme Court.
