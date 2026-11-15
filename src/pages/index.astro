@@ -155,7 +155,7 @@ const featured = people;
 
   /* Flex instead of grid so a short last row is centered, with no empty gray cells. Hairlines come from each tile's shadow overlapping in the 1px gap. */
   .tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 1px; padding: 1px; background: none; border: 0; }
-  .tiles > .tile { width: calc((100% - 3px) / 4); box-shadow: 0 0 0 1px var(--line); }
+  .tiles > .tile { width: calc((100% - 2px) / 3); box-shadow: 0 0 0 1px var(--line); }
   .tile { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--paper); }
   .tile-img { aspect-ratio: 4 / 3; overflow: hidden; background: #f4f4f2; }
   .tile-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
