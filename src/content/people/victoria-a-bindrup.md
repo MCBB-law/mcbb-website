@@ -7,6 +7,7 @@ email: vbindrup@mc2b.com
 photo: /people/victoria-a-bindrup.jpg
 practiceAreas: [Business Litigation, Labor & Employment, Constitutional & Municipal Litigation, Construction Defect Litigation]
 oldPath: /victoria-a-bindrup
+metaTitle: "Victoria A. Bindrup | Utah Litigation Attorney | MCBB"
 ---
 
 Victoria Bindrup is an associate at Manning Curtis Bradshaw & Bednar. She focuses her practice on business litigation, constitutional and municipal litigation, and employment law, representing municipalities, government agencies, employers, and individuals in complex state and federal litigation. Victoria has experience in personal injury, wrongful death, transportation defense, product liability, employment, premises liability, professional liability, medical malpractice defense, and other general civil litigation matters.
