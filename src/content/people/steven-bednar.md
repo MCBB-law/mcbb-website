@@ -8,6 +8,7 @@ email: sbednar@mc2b.com
 photo: /people/steven-bednar.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Healthcare Law]
 oldPath: /steven-bednar
+metaTitle: "Steven C. Bednar | Utah Employment Attorney | MCBB"
 ---
 
 Steven C. Bednar is one of the founding partners of Manning Curtis Bradshaw & Bednar where he practices employment law. Mr. Bednar also teaches Trial Advocacy as an adjunct professor at BYU Law School, drawing on more than thirty years of federal, state, and administrative litigation experience in virtually every area of employment law. Much of Mr. Bednar’s practice is devoted to providing practical consulting to employers in all areas of employment-related regulation.
