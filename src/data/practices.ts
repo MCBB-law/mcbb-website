@@ -55,6 +55,7 @@ export const practices: Practice[] = [
     slug: 'government-defense',
     oldPaths: ['/government-defense'],
     title: 'Government Defense',
+    shortTitle: 'Constitutional Law',
     metaTitle: 'Government Defense Attorneys | Salt Lake City, Utah | MCBB',
     summary: 'Defending cities, counties, agencies, officers, and public employees in civil-rights, land-use, employment, and other claims.',
     email: 'governmentdefense@mc2b.com',
