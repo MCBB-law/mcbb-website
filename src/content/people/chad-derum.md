@@ -7,6 +7,7 @@ email: cderum@mc2b.com
 photo: /people/chad-derum.jpg
 practiceAreas: [Labor & Employment, Business Litigation, Appellate Law, Intellectual Property & Technology]
 oldPath: /chad-derum
+metaTitle: "Chad R. Derum | Utah Business Litigation Attorney | MCBB"
 ---
 
 Chad R. Derum is a partner at Manning Curtis Bradshaw & Bednar. Mr. Derum is a business lawyer, focusing his practice on difficult commercial cases and employment-related matters. His practice spans state and federal courts and includes extensive arbitration experience.
