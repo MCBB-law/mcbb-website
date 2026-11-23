@@ -5,7 +5,7 @@ title: Associate
 phone: 801-303-0044
 email: sblamires@mc2b.com
 photo: /people/sara-blamires.jpg
-practiceAreas: [Business Litigation, Government Defense, Labor & Employment, Real Estate & Construction]
+practiceAreas: [Business Litigation, Constitutional & Municipal Litigation, Labor & Employment, Real Estate & Construction]
 oldPath: /sara-blamires
 draftNote: "Copied word for word from mc2b.com (Nov. 11, 2026), including its typos, for Sara or a partner to confirm: “Genva” (Geneva), “a selected for a Global Law Seminar,” “Attorney Generals Office” (no apostrophe), and her B.S. listed as 2025, the same year as her J.D. Her photo is a temporary one from her LinkedIn profile; replace it with her firm headshot before launch."
 metaTitle: "Sara E. Blamires | Utah Litigation Attorney | MCBB"
