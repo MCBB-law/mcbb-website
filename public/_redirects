@@ -13,7 +13,8 @@
 /search                     /                                      301
 # Bios moved under /people/
 /steven-bednar              /people/steven-bednar/                 301
-/victoria-a-bindrup         /people/victoria-a-bindrup/            301
+/victoria-a-bindrup         /people/victoria-bindrup/            301
+/people/victoria-a-bindrup/   /people/victoria-bindrup/   301
 /alan-bradshaw              /people/alan-bradshaw/                 301
 /kendra-brown               /people/kendra-brown/                  301
 /matthew-church             /people/matthew-church/                301
@@ -26,8 +27,10 @@
 /taylor-kordsiemon          /people/taylor-kordsiemon/             301
 /trevor-lee                 /people/trevor-lee/                    301
 /mitch-longson              /people/mitch-longson/                 301
-/christian-j-michalik       /people/christian-j-michalik/          301
-/austin-c-sabin             /people/austin-c-sabin/                301
+/christian-j-michalik       /people/christian-michalik/          301
+/people/christian-j-michalik/   /people/christian-michalik/   301
+/austin-c-sabin             /people/austin-sabin/                301
+/people/austin-c-sabin/   /people/austin-sabin/   301
 /brent-manning              /people/brent-manning/                 301
 /candice-vogel              /people/candice-vogel/                 301
 # Former lawyer page still in search results

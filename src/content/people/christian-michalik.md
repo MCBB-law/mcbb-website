@@ -6,7 +6,7 @@ phone: 801-363-5678
 email: cmichalik@mc2b.com
 practiceAreas: [Business Litigation, Commercial Litigation, Constitutional & Municipal Litigation]
 oldPath: /christian-j-michalik
-photo: /people/christian-j-michalik.jpg
+photo: /people/christian-michalik.jpg
 metaTitle: "Christian J. Michalik | Utah Litigation Attorney | MCBB"
 ---
 

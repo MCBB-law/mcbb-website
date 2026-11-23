@@ -4,7 +4,7 @@ lastName: Sabin
 title: Associate
 phone: 801-303-0050
 email: asabin@mc2b.com
-photo: /people/austin-c-sabin.jpg
+photo: /people/austin-sabin.jpg
 practiceAreas: [Business Litigation, Bankruptcy, Constitutional & Municipal Litigation, Labor & Employment]
 oldPath: /austin-c-sabin
 metaTitle: "Austin C. Sabin | Utah Litigation Attorney | MCBB"
