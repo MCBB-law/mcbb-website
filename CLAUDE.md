@@ -8,12 +8,12 @@ This file gives Claude the background on the new website for Manning Curtis Brad
 - **Preview site:** https://mcbb-preview.netlify.app (updates automatically from the `main` branch).
 - **Code:** https://github.com/MCBB-law/mcbb-website
 - **Hosting:** Netlify. Every pull request gets its own Deploy Preview link, posted as a comment on the pull request.
-- **Project lead:** Trevor J. Lee (tlee@mc2b.com). Partners edit through pull requests; nothing is merged into `main` without a person checking the preview first.
+- **Project lead:** Trevor J. Lee (tlee@mc2b.com). While the site is a draft, Trevor has authorized Claude to commit straight to main. Partners queue edits on the MCBB Website Edits page, and Claude makes them on main.
 
 ## How to make changes (for Claude Code)
 
-- Work on a branch and open a pull request. Never push straight to `main`.
-- Run `npm install` and then `npm run build` before opening the pull request; the build must pass.
+- Commit straight to main and push when Trevor asks for a change or when running the Website Edits page edits. Use a branch and pull request only when Trevor asks for one. Before launch, ask Trevor whether direct commits should continue.
+- Run `npm install` and then `npm run build` before pushing; the build must pass.
 - Make only the change that was asked for. Don't reword bios or practice text unless asked.
 - Say in the pull request, in plain English, what changed and which pages to check.
 
