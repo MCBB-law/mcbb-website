@@ -17,7 +17,7 @@ export const pageImages: Record<string, PageImage> = {
 export const practiceImages: Record<string, PageImage> = {
   index: { src: '/images/practices.jpg', alt: 'Curving white façade of a modern building' },
   'business-litigation': { src: '/images/business-litigation.jpg', alt: 'Stacked stairways on a concrete building' },
-  'government-defense': { src: '/images/government-defense.jpg', alt: 'A concrete civic building seen from below, its upper floors stepping outward', position: 'center top' },
+  'constitutional-municipal-litigation': { src: '/images/government-defense.jpg', alt: 'A concrete civic building seen from below, its upper floors stepping outward', position: 'center top' },
   'labor-employment': { src: '/images/labor-employment.jpg', alt: 'A tall tower with rows of windows rising into a white sky', position: 'center top' },
   'insurance-coverage': { src: '/images/insurance-coverage.jpg', alt: 'The curved edge of a dark building against the sky' },
   'intellectual-property': { src: '/images/intellectual-property.jpg', alt: 'Dark glass panels crossed by streaks of light' },

@@ -1,6 +1,7 @@
 # Old Squarespace URLs -> new pages (301 = permanent, keeps search ranking)
 /business-litigation        /practices/business-litigation/        301
-/government-defense         /practices/government-defense/         301
+/government-defense         /practices/constitutional-municipal-litigation/         301
+/practices/government-defense/   /practices/constitutional-municipal-litigation/   301
 /labor-employment           /practices/labor-employment/           301
 /insurance-coverage         /practices/insurance-coverage/         301
 /property                   /practices/intellectual-property/      301
