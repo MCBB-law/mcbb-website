@@ -38,7 +38,7 @@ const isActive = (href: string) => path.startsWith(href);
     top: 0;
     z-index: 20;
   }
-  .bar { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 24px; }
+  .bar { display: flex; align-items: center; justify-content: space-between; min-height: 98px; gap: 24px; }
   .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
   .nav-desktop { display: flex; align-items: center; gap: 28px; }
   .nav-desktop a {
@@ -57,7 +57,8 @@ const isActive = (href: string) => path.startsWith(href);
   .nav-desktop .nav-cta { background: transparent; padding: .7rem 1.1rem; }
   .nav-desktop .nav-cta:hover, .nav-desktop .nav-cta[aria-current] { background: var(--ink); color: var(--white); }
   .nav-desktop .nav-cta::after { display: none; }
-  @media (max-width: 1100px) { .nav-desktop .nav-tel { display: none; } }
+  @media (max-width: 1180px) { .nav-desktop .nav-tel { display: none; } }
+  @media (max-width: 1060px) { .nav-desktop { gap: 16px; } .nav-desktop a { letter-spacing: .14em; } }
 
   .nav-mobile { display: none; }
   .nav-mobile summary {
